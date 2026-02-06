@@ -8,7 +8,8 @@
       "Bash(du:*)",
       "Bash(curl:*)",
       "Bash(ls:*)",
-      "Read(//Users/ocohen/git/empowertech-website/**)"
+      "Read(//Users/ocohen/git/empowertech-website/**)",
+      "Bash(identify:*)"
     ]
   }
 }

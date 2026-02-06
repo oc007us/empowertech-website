@@ -1,4 +1,7 @@
 ---
+import { Image } from 'astro:assets';
+import logo from '../assets/EmpowerAI_logo_white_bg_v1.png';
+
 const navLinks = [
   { label: 'Platform', href: '#platform' },
   { label: 'Delivery', href: '#delivery' },
@@ -10,7 +13,7 @@ const navLinks = [
 <nav class="navbar" id="navbar">
   <div class="nav-inner container">
     <a href="/" class="nav-logo">
-      <img src="/logo.png" alt="Empower AI" width="160" height="47" />
+      <Image src={logo} alt="Empower AI" height={36} quality={90} />
     </a>
 
     <!-- Mobile toggle -->
