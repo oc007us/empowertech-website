@@ -1,0 +1,199 @@
+---
+import InnerPageLayout from '../../layouts/InnerPageLayout.astro';
+import InvertedImage from '../../components/InvertedImage.astro';
+import SectionCTA from '../../components/SectionCTA.astro';
+import slide07 from '../../assets/images/platform-slides/07_autonomy_ladder_with_policy_gates.png';
+import slide08 from '../../assets/images/platform-slides/08_multi_agent_orchestration.png';
+import slide12 from '../../assets/images/platform-slides/12_copilot_vs_autopilot.png';
+import slide13 from '../../assets/images/platform-slides/13_vertical_pack_showcase.png';
+import slide14 from '../../assets/images/platform-slides/14_decision_context_graph.png';
+import slide15 from '../../assets/images/platform-slides/15_moat_stack.png';
+---
+
+<InnerPageLayout
+  title="Agentic Orchestration — Empower AI"
+  description="From copilot to governed autopilot — policy-bounded autonomy for the enterprise."
+  heroLabel="Agentic Orchestration"
+  heroTitle="Enterprise Agentic Orchestration"
+  heroSubtitle="The enterprise AI landscape is shifting from tools that suggest to systems that act. Empower AI delivers governed agentic orchestration — a platform where AI agents reason, decide, and execute within policy-bounded guardrails."
+>
+
+  <section class="inner-section container">
+    <div class="content-grid">
+      <div class="prose">
+        <h2>The Three Moats</h2>
+        <p>Empower AI's competitive position rests on three reinforcing moats — the most distilled expression of why this platform wins.</p>
+        <h3>Semantic Moat</h3>
+        <p>Ontology-grounded meaning, provenance, and temporal truth. The platform understands domain structure, relationships, and causal paths. This understanding compounds over time.</p>
+        <h3>Execution Moat</h3>
+        <p>Safe write-backs with typed contracts, idempotency, and verification. The platform doesn't just recommend — it acts, with production-grade reliability and reversibility.</p>
+        <h3>Trust Moat</h3>
+        <p>Governance, evaluation, and operations infrastructure built for regulated environments. Every decision is traceable, every action is auditable, every outcome is verifiable.</p>
+      </div>
+      <div class="fade-in">
+        <InvertedImage src={slide15} alt="The Three Moats: Semantic, Execution, Trust" />
+      </div>
+    </div>
+  </section>
+
+  <section class="inner-section alt-bg">
+    <div class="container">
+      <div class="content-grid">
+        <div class="prose">
+          <h2>Copilot to Governed Autopilot</h2>
+          <p>The AI industry has largely settled on the "copilot" model: AI suggests, humans execute. This collapses under the weight of enterprise complexity — where thousands of decisions per day require consistency, traceability, and speed.</p>
+          <table class="data-table">
+            <thead>
+              <tr><th></th><th>Copilot</th><th>Governed Autopilot</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Model</strong></td><td>AI suggests, humans execute</td><td>AI executes within policy gates, humans oversee</td></tr>
+              <tr><td><strong>Output</strong></td><td>Answers and drafts</td><td>Business actions with verified outcomes</td></tr>
+              <tr><td><strong>Governance</strong></td><td>Human judgment as the only gate</td><td>Policy gates + approvals + verification + audit</td></tr>
+              <tr><td><strong>Scalability</strong></td><td>Limited by human throughput</td><td>Scales with governance, not headcount</td></tr>
+              <tr><td><strong>Accountability</strong></td><td>Implicit (human did it)</td><td>Explicit (full decision trace)</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="fade-in">
+          <InvertedImage src={slide12} alt="Copilot vs. Autopilot — from suggestions to policy-gated, verified outcomes" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="inner-section container">
+    <div class="content-grid">
+      <div class="prose">
+        <h2>The Autonomy Ladder</h2>
+        <p>Organizations progress through a structured autonomy ladder based on risk tolerance, domain maturity, and governance readiness.</p>
+        <div class="ladder-levels">
+          <div class="ladder-level">
+            <span class="level-badge">Level 1</span>
+            <div><strong>Assist</strong> — The system retrieves information and surfaces relevant knowledge. Humans make all decisions.</div>
+          </div>
+          <div class="ladder-level">
+            <span class="level-badge">Level 2</span>
+            <div><strong>Draft</strong> — The system generates recommendations and proposed next steps. Humans review and approve.</div>
+          </div>
+          <div class="ladder-level">
+            <span class="level-badge">Level 3</span>
+            <div><strong>Approve</strong> — The system prepares fully formed actions with evidence. Humans approve or reject.</div>
+          </div>
+          <div class="ladder-level">
+            <span class="level-badge">Level 4</span>
+            <div><strong>Low-Risk Autopilot</strong> — The system executes autonomously within tight policy bounds for well-understood decisions.</div>
+          </div>
+          <div class="ladder-level">
+            <span class="level-badge">Level 5</span>
+            <div><strong>Policy-Bounded Autonomy</strong> — Broad autonomy within explicit governance frameworks. Kill switches and escalation paths built in.</div>
+          </div>
+        </div>
+      </div>
+      <div class="fade-in">
+        <InvertedImage src={slide07} alt="The Autonomy Ladder — from Suggest to Policy-Bounded Full Autonomy" />
+      </div>
+    </div>
+  </section>
+
+  <section class="inner-section alt-bg">
+    <div class="container">
+      <div class="content-grid">
+        <div class="prose">
+          <h2>Specialist Agents, Not Monoliths</h2>
+          <p>Empower AI decomposes complex enterprise tasks into specialist agents:</p>
+          <ul>
+            <li><strong>Retrieval agents</strong> — Access and synthesize from the Semantic Knowledge Fabric</li>
+            <li><strong>Policy agents</strong> — Evaluate governance rules, constraints, and regulatory requirements</li>
+            <li><strong>Planning agents</strong> — Determine optimal action sequences given goals and constraints</li>
+            <li><strong>Execution agents</strong> — Carry out approved actions against enterprise systems</li>
+            <li><strong>Verification agents</strong> — Confirm outcomes match expectations and flag discrepancies</li>
+          </ul>
+          <p>An orchestrator routes tasks to the right specialists, manages dependencies, and ensures the full decision trace is captured.</p>
+        </div>
+        <div class="fade-in">
+          <InvertedImage src={slide08} alt="Multi-Agent Orchestration" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="inner-section container">
+    <div class="content-grid">
+      <div class="prose">
+        <h2>The Decision Context Graph</h2>
+        <p>Every decision produces a node in the Decision Context Graph — a persistent, queryable record that connects:</p>
+        <ul>
+          <li><strong>Evidence</strong> — What data and knowledge informed the decision</li>
+          <li><strong>Policy</strong> — Which rules and constraints were applied</li>
+          <li><strong>Approvals</strong> — Who or what authorized the action</li>
+          <li><strong>Actions</strong> — What was executed and against which systems</li>
+          <li><strong>Outcomes</strong> — What resulted and whether it matched expectations</li>
+        </ul>
+        <p>This graph enables similarity search, precedent-based reasoning, and continuous improvement.</p>
+      </div>
+      <div class="fade-in">
+        <InvertedImage src={slide14} alt="Decision Context Graph" />
+      </div>
+    </div>
+  </section>
+
+  <section class="inner-section alt-bg">
+    <div class="container">
+      <div class="content-grid">
+        <div class="prose">
+          <h2>Vertical Packs</h2>
+          <p>Empower AI separates universal platform capabilities from industry-specific configuration through the Vertical Pack model.</p>
+          <p><strong>Each Vertical Pack defines:</strong></p>
+          <ul>
+            <li><strong>Semantics</strong> — Domain ontologies and taxonomies</li>
+            <li><strong>Policy</strong> — Industry-specific rules, regulations, and constraints</li>
+            <li><strong>Actions</strong> — System integrations and permitted operations</li>
+            <li><strong>Plays</strong> — Proven workflow patterns for common scenarios</li>
+            <li><strong>Evaluations</strong> — Quality metrics and success criteria</li>
+            <li><strong>UX</strong> — Domain-appropriate user interfaces</li>
+          </ul>
+          <p>New verticals are shipped by packaging — not by rewiring the platform.</p>
+        </div>
+        <div class="fade-in">
+          <InvertedImage src={slide13} alt="Vertical Pack Showcase" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <SectionCTA
+    secondaryText="Explore Solutions"
+    secondaryHref="/solutions/"
+  />
+</InnerPageLayout>
+
+<style>
+  .ladder-levels {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    margin-top: var(--space-6);
+  }
+
+  .ladder-level {
+    display: flex;
+    gap: var(--space-4);
+    align-items: flex-start;
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-normal);
+  }
+
+  .level-badge {
+    flex-shrink: 0;
+    padding: var(--space-1) var(--space-3);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: var(--radius-sm);
+    background: rgba(50, 69, 255, 0.15);
+    color: #6b8aff;
+    white-space: nowrap;
+  }
+</style>

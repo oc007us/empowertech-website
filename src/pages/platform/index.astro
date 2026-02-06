@@ -1,0 +1,255 @@
+---
+import InnerPageLayout from '../../layouts/InnerPageLayout.astro';
+import InvertedImage from '../../components/InvertedImage.astro';
+import SectionCTA from '../../components/SectionCTA.astro';
+import { Image } from 'astro:assets';
+import slide01 from '../../assets/images/platform-slides/01_horizontal_core_vertical_packs.png';
+import semanticLifecycle from '../../assets/images/diagrams/Semantic-Intelligence-Lifecycle.png';
+import vcWhat from '../../assets/images/vc/WhatIsEmpowerAI.png';
+---
+
+<InnerPageLayout
+  title="Platform Overview — Empower AI"
+  description="Empower AI is an AI-native enterprise platform that bridges knowledge, data, and execution in a unified reasoning and agentic layer."
+  heroLabel="The Platform"
+  heroTitle="What Is Empower AI"
+  heroSubtitle="An AI-native enterprise platform that bridges knowledge, data, and execution in a unified reasoning and agentic layer. LLMs generate language. Empower AI generates understanding."
+>
+
+  <section class="inner-section container">
+    <div class="content-grid">
+      <div class="prose">
+        <h2>Governed Agentic Orchestration</h2>
+        <p>
+          Empower AI delivers enterprise-grade, explainable, governed agentic orchestration — the defining
+          capability that separates it from every other AI platform on the market.
+        </p>
+        <p>
+          Where copilots suggest and humans execute, Empower AI operates as a governed autopilot: AI agents
+          reason, decide, and act within policy-bounded guardrails, across any vertical. Every decision carries
+          a complete trace — what triggered it, what evidence was considered, which policies were applied, and
+          who approved. Every action is verifiable, reversible, and auditable.
+        </p>
+        <p>
+          This is not incremental improvement over existing AI tools. It is a category shift — from systems
+          that answer questions to a system of action that executes business processes intelligently, with full accountability.
+        </p>
+      </div>
+      <div class="dark-image fade-in">
+        <Image src={vcWhat} alt="What is Empower AI — 6-capability hub diagram" width={560} quality={80} />
+      </div>
+    </div>
+  </section>
+
+  <section class="inner-section alt-bg">
+    <div class="container">
+      <div class="content-grid">
+        <div class="prose">
+          <h2>Horizontal Core, Vertical Packs</h2>
+          <p>The platform architecture follows a horizontal-core, vertical-pack model:</p>
+          <ul>
+            <li><strong>One governed runtime</strong> provides the knowledge fabric, reasoning engine, governance framework, and execution layer — universal across every deployment.</li>
+            <li><strong>Vertical Packs</strong> define domain-specific semantics, policies, actions, workflow patterns, evaluations, and user interfaces — shipping new industries by packaging, not by rebuilding.</li>
+          </ul>
+          <p>Available and in-development Vertical Packs span Life Sciences, Financial Services, Healthcare/Payer, Manufacturing, and Public Sector.</p>
+        </div>
+        <div class="fade-in">
+          <InvertedImage src={slide01} alt="Enterprise AI Architecture: Empower AI Core + Vertical Packs" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="inner-section container">
+    <div class="content-grid">
+      <div class="prose">
+        <h2>RAG Is Recall — Empower AI Is Reasoning</h2>
+        <p>The gap between Empower AI and conventional AI tools is not a matter of degree — it is categorical.</p>
+        <ul>
+          <li><strong>RAG is recall. Empower AI is reasoning.</strong> RAG retrieves fragments. Empower AI synthesizes truth.</li>
+          <li><strong>LLMs are autocomplete for language.</strong> Empower AI is a cognitive engine for knowledge — capable of reasoning, connecting, and deciding.</li>
+          <li><strong>RAG can recall facts.</strong> Empower AI constructs frameworks — it understands the conceptual structure behind those facts, allowing it to reason and act.</li>
+        </ul>
+      </div>
+      <div class="dark-image fade-in">
+        <Image src={semanticLifecycle} alt="Semantic Intelligence Lifecycle: Ingest, Extract, Model, Fuse, Generate, Operate" width={560} quality={80} />
+      </div>
+    </div>
+  </section>
+
+  <section class="inner-section alt-bg">
+    <div class="container prose">
+      <h2>From "Ask Your Data" to "Act on Your Data Intelligently"</h2>
+      <p>Most enterprise AI today falls into a narrow pattern: ask a question, get an answer. Empower AI moves beyond this paradigm — it executes existing business processes intelligently, across domains, with traceable reasoning and auditable decision trails.</p>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Approach</th>
+            <th>Limitation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>LLMs and Copilots</strong></td>
+            <td>Great for conversations and drafting, but lack context, data access, provenance, and actionability</td>
+          </tr>
+          <tr>
+            <td><strong>RAG and Chat-over-Docs</strong></td>
+            <td>Retrieve information but do not reason or execute</td>
+          </tr>
+          <tr>
+            <td><strong>Custom ML Pipelines</strong></td>
+            <td>Powerful but costly, siloed, slow to adapt, and disconnected from evolving knowledge</td>
+          </tr>
+          <tr>
+            <td><strong>Empower AI</strong></td>
+            <td>Fuses domain knowledge, enterprise data, and agentic execution into a single governed platform</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="inner-section container prose">
+    <h2>The Upload-and-Run Paradigm</h2>
+    <p>Every department already has frameworks, data, and models. With Empower AI, they can turn those into living, reasoning, and acting AI agents — in days, not months.</p>
+    <div class="steps-grid">
+      <div class="step-card card fade-in">
+        <div class="step-num">1</div>
+        <h3>Upload your knowledge frameworks</h3>
+        <p>Ontologies, playbooks, KPIs, regulatory frameworks, vulnerability definitions, or any domain-specific logic.</p>
+      </div>
+      <div class="step-card card fade-in">
+        <div class="step-num">2</div>
+        <h3>Connect your data sources</h3>
+        <p>Structured, semi-structured, text, logs, interactions, or any combination.</p>
+      </div>
+      <div class="step-card card fade-in">
+        <div class="step-num">3</div>
+        <h3>Configure an agent or flow</h3>
+        <p>Using the Empower DSL or visual builder to define goals, policies, and actions.</p>
+      </div>
+      <div class="step-card card fade-in">
+        <div class="step-num">4</div>
+        <h3>Run</h3>
+        <p>The platform reasons over your knowledge and data, makes evidence-based decisions, and triggers actions with full traceability.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="inner-section alt-bg">
+    <div class="container prose">
+      <h2>What Makes Empower AI Different</h2>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Differentiator</th>
+            <th>What It Means</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Knowledge Fusion</strong></td><td>Understands frameworks, policies, and domain logic — not just text fragments</td></tr>
+          <tr><td><strong>Reasoning and Inference</strong></td><td>Produces explainable, cross-domain intelligence with causal reasoning</td></tr>
+          <tr><td><strong>Rapid Customization</strong></td><td>DSL and model-driven engineering auto-generates domain-specific AI applications</td></tr>
+          <tr><td><strong>Agentic Execution</strong></td><td>Operates autonomously across systems and data with policy-bounded governance</td></tr>
+          <tr><td><strong>Time-to-Value</strong></td><td>Up and producing measurable results in days</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="inner-section container prose">
+    <h2>Use Cases Across the Enterprise</h2>
+    <p>Empower AI applies the same knowledge-fusion-plus-agentic-execution pattern to any business function:</p>
+    <div class="use-case-grid">
+      <div class="card fade-in">
+        <h3>Marketing & Sales</h3>
+        <p>Generate actionable market and customer insights, plan next-best actions, and trigger CRM workflows automatically.</p>
+      </div>
+      <div class="card fade-in">
+        <h3>Supply Chain</h3>
+        <p>Identify vulnerabilities, explain causality, and recommend proactive mitigation actions linked to evidence.</p>
+      </div>
+      <div class="card fade-in">
+        <h3>Finance & Compliance</h3>
+        <p>Continuously monitor regulatory updates, assess compliance risks, and maintain a live compliance gap map.</p>
+      </div>
+      <div class="card fade-in">
+        <h3>Customer Experience</h3>
+        <p>Classify feedback, correlate with support metrics, surface actionable themes, and trigger proactive escalation.</p>
+      </div>
+      <div class="card fade-in">
+        <h3>Service & Support</h3>
+        <p>Orchestrate resolution workflows with reasoning access to product manuals, issue logs, and known-fix datasets.</p>
+      </div>
+      <div class="card fade-in">
+        <h3>Healthcare & Life Sciences</h3>
+        <p>Guide clinicians and teams with evidence-based intelligence, citation trails, and regulatory-grade reasoning.</p>
+      </div>
+    </div>
+  </section>
+
+  <SectionCTA
+    secondaryText="See the Architecture"
+    secondaryHref="/platform/architecture/"
+  />
+</InnerPageLayout>
+
+<style>
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-6);
+    margin-top: var(--space-8);
+  }
+
+  .step-card {
+    text-align: center;
+  }
+
+  .step-num {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--space-4);
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--color-accent-1), var(--color-accent-2));
+    color: var(--color-white);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-lg);
+  }
+
+  .step-card h3 {
+    margin-top: 0;
+  }
+
+  .use-case-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+    margin-top: var(--space-8);
+  }
+
+  .use-case-grid h3 {
+    margin-top: 0;
+  }
+
+  @media (max-width: 1024px) {
+    .steps-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .use-case-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .steps-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

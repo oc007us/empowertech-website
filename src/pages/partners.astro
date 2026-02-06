@@ -1,0 +1,335 @@
+---
+import InnerPageLayout from '../layouts/InnerPageLayout.astro';
+import SectionCTA from '../components/SectionCTA.astro';
+import { Image } from 'astro:assets';
+import partnerImg from '../assets/images/vc/EmpowerPartnerProgram.png';
+---
+
+<InnerPageLayout
+  title="Partner Program — Empower AI"
+  description="A network of trusted delivery partners trained and certified on Empower methods, tooling, and best practices."
+  heroLabel="Partner Ecosystem"
+  heroTitle="Scale Through Partners"
+  heroSubtitle="A network of trusted delivery partners trained and certified on Empower methods, tooling, and best practices — enabling safe scale across industries and geographies."
+>
+
+  <section class="inner-section container">
+    <div class="prose" style="text-align:center;max-width:720px;margin-inline:auto;margin-bottom:var(--space-12)">
+      <h2>Partner Tiers</h2>
+      <p>Three tiers designed around deepening commitment, capability, and mutual investment.</p>
+    </div>
+
+    <div class="tiers-grid">
+      <div class="card tier-card fade-in">
+        <div class="tier-badge tier-1">Tier 1</div>
+        <h3>Registered Partner</h3>
+        <p class="tier-who">Boutique consultancies, small SIs, vertical specialists</p>
+        <ul>
+          <li>Sales enablement kit (deck, demos, one-pagers)</li>
+          <li>Access to reference architectures + best practices</li>
+          <li>Lead registration eligibility</li>
+        </ul>
+        <p class="tier-req">Basic training + agreement</p>
+      </div>
+
+      <div class="card tier-card tier-featured fade-in">
+        <div class="tier-badge tier-2">Tier 2</div>
+        <h3>Certified Delivery Partner</h3>
+        <p class="tier-who">Firms actively implementing for clients</p>
+        <ul>
+          <li>Certification badge</li>
+          <li>Implementation accelerators + templates</li>
+          <li>Joint solution packaging (vertical kits)</li>
+          <li>Deal support / solution engineering office hours</li>
+          <li>Lead sharing (performance-based)</li>
+        </ul>
+        <p class="tier-req">Certified staff + first successful deployment</p>
+      </div>
+
+      <div class="card tier-card fade-in">
+        <div class="tier-badge tier-3">Tier 3</div>
+        <h3>Premier / Strategic Partner</h3>
+        <p class="tier-who">Top partners with repeatable delivery (including global SIs)</p>
+        <ul>
+          <li>Co-selling + joint account planning</li>
+          <li>Priority roadmap influence</li>
+          <li>Advanced enablement (train-the-trainer)</li>
+          <li>Early access features + partner sandbox</li>
+          <li>Joint marketing / case studies</li>
+        </ul>
+        <p class="tier-req">Volume targets, quality SLAs, annual business plan</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="inner-section alt-bg">
+    <div class="container">
+      <div class="prose" style="text-align:center;max-width:720px;margin-inline:auto;margin-bottom:var(--space-12)">
+        <h2>Certification Tracks</h2>
+        <p>Three stackable tracks ensure partners deliver consistent, governed outcomes.</p>
+      </div>
+
+      <div class="certs-grid">
+        <div class="cert-card card fade-in">
+          <div class="cert-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/>
+              <line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/>
+            </svg>
+          </div>
+          <h3>Platform Engineer</h3>
+          <p>Deployment patterns, multi-tenant ops, security, RBAC, observability, upgrade playbooks</p>
+          <div class="cert-details">
+            <h4>What You Learn</h4>
+            <ul>
+              <li>Cloud, on-premises, and air-gapped deployment architectures</li>
+              <li>Multi-tenant configuration and isolation patterns</li>
+              <li>Security hardening, RBAC, and compliance controls</li>
+              <li>Observability stack setup and monitoring</li>
+              <li>Upgrade and rollback procedures</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cert-card card fade-in">
+          <div class="cert-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="5" r="3"/><circle cx="5" cy="19" r="3"/><circle cx="19" cy="19" r="3"/>
+              <line x1="12" y1="8" x2="5" y2="16"/><line x1="12" y1="8" x2="19" y2="16"/>
+            </svg>
+          </div>
+          <h3>Semantic Modeler</h3>
+          <p>Ontology/taxonomy foundations, semantic ingestion, provenance, constraints, anti-hallucination</p>
+          <div class="cert-details">
+            <h4>What You Learn</h4>
+            <ul>
+              <li>Ontology design and taxonomy management</li>
+              <li>Semantic ingestion pipeline configuration</li>
+              <li>Provenance tracking and temporal truth management</li>
+              <li>Constraint definition for anti-hallucination</li>
+              <li>Knowledge graph optimization and quality assurance</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cert-card card fade-in">
+          <div class="cert-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4"/>
+            </svg>
+          </div>
+          <h3>Agentic Workflow Builder</h3>
+          <p>Orchestration templates, tool-calling + guardrails, progressive delegation, testing + audit traces</p>
+          <div class="cert-details">
+            <h4>What You Learn</h4>
+            <ul>
+              <li>Agent orchestration pattern design</li>
+              <li>Tool-calling configuration with guardrails</li>
+              <li>Progressive delegation and autonomy ladder implementation</li>
+              <li>Decision trace capture and audit trail configuration</li>
+              <li>Testing, evaluation, and quality assurance for agentic workflows</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="inner-section container">
+    <div class="content-grid">
+      <div class="prose">
+        <h2>The Empower Delivery Model</h2>
+        <p>Empower AI is designed for partner-led delivery from the ground up. The platform provides:</p>
+        <ul>
+          <li><strong>Repeatable playbooks</strong> — Proven implementation patterns for each vertical and use case</li>
+          <li><strong>Reference architectures</strong> — Pre-built deployment patterns for cloud, on-prem, and air-gapped environments</li>
+          <li><strong>Vertical starter kits</strong> — Domain-specific ontologies, policies, and workflow templates</li>
+          <li><strong>Evaluation harnesses</strong> — Built-in quality assurance tools for validating implementations</li>
+          <li><strong>Partner sandbox</strong> — Dedicated environments for learning, testing, and demo preparation</li>
+        </ul>
+        <h3>Why Partner with Empower AI?</h3>
+        <ul>
+          <li>Differentiate your AI practice with governed, explainable capabilities</li>
+          <li>Expand into regulated industries with compliance-ready solutions</li>
+          <li>Reduce delivery risk with proven patterns and accelerators</li>
+          <li>Build recurring revenue through managed service offerings</li>
+        </ul>
+      </div>
+      <div class="dark-image fade-in">
+        <Image src={partnerImg} alt="Empower AI Partner Program overview" width={560} quality={80} />
+      </div>
+    </div>
+  </section>
+
+  <SectionCTA
+    title="Become a Partner"
+    subtitle="Join our partner ecosystem and bring governed AI to regulated enterprises."
+    primaryText="Contact Us"
+    primaryHref="mailto:partners@empowertech.ai"
+    secondaryText="Explore the Platform"
+    secondaryHref="/platform/"
+  />
+</InnerPageLayout>
+
+<style>
+  .tiers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+  }
+
+  .tier-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .tier-featured {
+    border-color: rgba(50, 69, 255, 0.3);
+    background: linear-gradient(180deg, rgba(50, 69, 255, 0.06) 0%, var(--color-card) 100%);
+  }
+
+  .tier-badge {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    padding: var(--space-1) var(--space-3);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: var(--radius-sm);
+  }
+
+  .tier-1 { background: rgba(107, 114, 128, 0.2); color: #9ca3af; }
+  .tier-2 { background: rgba(50, 69, 255, 0.15); color: #6b8aff; }
+  .tier-3 { background: rgba(188, 82, 238, 0.15); color: #d48bee; }
+
+  .tier-card h3 {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-white);
+  }
+
+  .tier-who {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    font-style: italic;
+  }
+
+  .tier-card ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    flex-grow: 1;
+  }
+
+  .tier-card li {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    padding-left: var(--space-5);
+    position: relative;
+  }
+
+  .tier-card li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--color-accent-1);
+  }
+
+  .tier-req {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--color-border);
+    margin-top: auto;
+  }
+
+  .certs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+  }
+
+  .cert-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .cert-icon {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-md);
+    background: rgba(50, 69, 255, 0.08);
+    color: var(--color-accent-1);
+  }
+
+  .cert-card h3 {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-white);
+  }
+
+  .cert-card > p {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-relaxed);
+  }
+
+  .cert-details {
+    margin-top: var(--space-4);
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .cert-details h4 {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-white);
+    margin-bottom: var(--space-3);
+  }
+
+  .cert-details ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .cert-details li {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    padding-left: var(--space-5);
+    position: relative;
+    line-height: var(--line-height-normal);
+  }
+
+  .cert-details li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--color-accent-1);
+  }
+
+  @media (max-width: 1024px) {
+    .tiers-grid,
+    .certs-grid {
+      grid-template-columns: 1fr;
+      max-width: 520px;
+      margin-inline: auto;
+    }
+  }
+</style>

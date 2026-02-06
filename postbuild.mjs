@@ -1,11 +1,26 @@
 // Post-build: convert absolute asset paths to relative for file:// compatibility
-import { readFileSync, writeFileSync } from 'fs';
+import { readFileSync, writeFileSync, readdirSync, statSync } from 'fs';
+import { join, relative, dirname } from 'path';
 
-const htmlPath = './docs/index.html';
-let html = readFileSync(htmlPath, 'utf-8');
+const root = './docs';
 
-// Convert absolute paths to relative: href="/..." → href="./..."  and  src="/..." → src="./..."
-html = html.replace(/(href|src|content)="\/(?!\/)/g, '$1="./');
+function processDir(dir) {
+  for (const entry of readdirSync(dir)) {
+    const full = join(dir, entry);
+    if (statSync(full).isDirectory()) {
+      processDir(full);
+    } else if (entry.endsWith('.html')) {
+      // Compute relative prefix from this file to the docs root
+      const depth = relative(root, dirname(full));
+      const prefix = depth ? depth.split('/').map(() => '..').join('/') + '/' : './';
 
-writeFileSync(htmlPath, html);
-console.log('postbuild: converted absolute paths to relative in index.html');
+      let html = readFileSync(full, 'utf-8');
+      html = html.replace(/(href|src|content)="\/(?!\/)/g, `$1="${prefix}`);
+      writeFileSync(full, html);
+      console.log(`postbuild: fixed paths in ${full} (prefix: ${prefix})`);
+    }
+  }
+}
+
+processDir(root);
+console.log('postbuild: done');

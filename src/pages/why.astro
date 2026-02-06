@@ -1,0 +1,187 @@
+---
+import InnerPageLayout from '../layouts/InnerPageLayout.astro';
+import InvertedImage from '../components/InvertedImage.astro';
+import SectionCTA from '../components/SectionCTA.astro';
+import { Image } from 'astro:assets';
+import slide15 from '../assets/images/platform-slides/15_moat_stack.png';
+import palantir from '../assets/images/diagrams/Empower-Positioning-vs-Palantir.png';
+---
+
+<InnerPageLayout
+  title="Why Empower AI Wins"
+  description="Competitive differentiation in the enterprise AI landscape — three reinforcing moats that deepen over time."
+  heroLabel="Why Empower"
+  heroTitle="Why Empower AI Wins"
+  heroSubtitle="Enterprise AI is crowded with tools that generate text and retrieve documents. In regulated, high-stakes environments, these tools consistently fall short. Empower AI is purpose-built for the domains where generic AI fails."
+>
+
+  <section class="inner-section container">
+    <div class="content-grid">
+      <div class="prose">
+        <h2>The Three Moats</h2>
+        <p>Empower AI's competitive position is built on three reinforcing advantages that deepen over time.</p>
+        <h3>1. The Semantic Moat</h3>
+        <p>Ontology-grounded knowledge graphs capture meaning, relationships, temporal truth, and provenance. This semantic foundation enables reasoning that flat retrieval systems cannot approximate, and it compounds as more knowledge is ingested.</p>
+        <h3>2. The Execution Moat</h3>
+        <p>Typed action registries, safe write-backs with idempotency and verification, policy gates, and rollback patterns enable production-grade autonomous execution. Competitors that remain informational cannot match the business value.</p>
+        <h3>3. The Trust Moat</h3>
+        <p>Governance, evaluation, and operational infrastructure built for the most demanding regulatory environments. Every decision is traced, every action is auditable, every outcome is verifiable. This trust infrastructure is the hardest moat to replicate.</p>
+        <p>These moats are mutually reinforcing. Semantic depth enables better execution. Verified execution generates trusted outcomes. Trusted outcomes feed back into richer semantic understanding.</p>
+      </div>
+      <div class="fade-in">
+        <InvertedImage src={slide15} alt="The Three Moats: Semantic, Execution, Trust" />
+      </div>
+    </div>
+  </section>
+
+  <section class="inner-section alt-bg">
+    <div class="container prose">
+      <h2>The Core Problem with Generic AI</h2>
+      <p>A Large Language Model can read everything, but it does not understand anything. It generates beautifully written maps of the world — but they are still flat ink on paper. Empower AI walks the terrain.</p>
+      <div class="comparison-cards">
+        <div class="card fade-in">
+          <h3>RAG is recall. Empower AI is reasoning.</h3>
+          <p>RAG retrieves fragments. Empower AI synthesizes truth. RAG says "Here is what was said." Empower AI says "Here is what it means, why it matters, and what to do next."</p>
+        </div>
+        <div class="card fade-in">
+          <h3>LLMs are autocomplete for language.</h3>
+          <p>Empower AI is a cognitive engine for knowledge — capable of reasoning, connecting, and deciding.</p>
+        </div>
+        <div class="card fade-in">
+          <h3>RAG can recall facts.</h3>
+          <p>Empower AI constructs frameworks — it understands the conceptual structure behind those facts, allowing it to reason and act.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="inner-section container prose">
+    <h2>Empower AI vs. RAG/LLM Wrappers</h2>
+    <table class="data-table">
+      <thead>
+        <tr><th>Dimension</th><th>RAG/LLM Wrappers</th><th>Empower AI</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Knowledge</strong></td><td>Flat context windows</td><td>Semantic fusion of frameworks, policies, and domain models</td></tr>
+        <tr><td><strong>Reasoning</strong></td><td>Pattern completion</td><td>Structured, explainable, evidence-based reasoning</td></tr>
+        <tr><td><strong>Data</strong></td><td>Text chunks or embeddings</td><td>Full multimodal integration</td></tr>
+        <tr><td><strong>Actionability</strong></td><td>Conversational only</td><td>Declarative agentic execution</td></tr>
+        <tr><td><strong>Explainability</strong></td><td>None or token logs</td><td>Provenance, references, audit trails</td></tr>
+        <tr><td><strong>Speed</strong></td><td>Weeks to months</td><td>Days</td></tr>
+        <tr><td><strong>Maintainability</strong></td><td>Manual reindexing</td><td>Continuous ingestion, semantic versioning</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="inner-section alt-bg">
+    <div class="container prose">
+      <h2>Proof Points from the Field</h2>
+      <div class="proof-grid">
+        <div class="card fade-in">
+          <div class="proof-stat gradient-text">Seconds</div>
+          <p>One right answer — grounded in the customer's own documents, not hallucinated.</p>
+        </div>
+        <div class="card fade-in">
+          <div class="proof-stat gradient-text">90%+</div>
+          <p>Accuracy in service workflows — without model training, powered by structured enterprise knowledge.</p>
+        </div>
+        <div class="card fade-in">
+          <div class="proof-stat gradient-text">Private</div>
+          <p>Deployed securely in private cloud — no data leaves, no retraining needed.</p>
+        </div>
+        <div class="card fade-in">
+          <div class="proof-stat gradient-text">Weeks</div>
+          <p>From zero to live — not months — and easily extensible across teams.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="inner-section container">
+    <div class="content-grid">
+      <div class="prose">
+        <h2>Why Generic AI Fails in Regulated Domains</h2>
+        <ul>
+          <li><strong>Regulatory requirements demand traceability.</strong> Auditors need to see exactly how a decision was made. LLMs and RAG systems cannot provide this.</li>
+          <li><strong>Hallucinations are dangerous.</strong> In clinical, safety, and compliance contexts, a fabricated answer can cause real harm.</li>
+          <li><strong>Domain complexity exceeds context windows.</strong> Enterprise decisions require synthesizing information across dozens of documents, systems, and data types.</li>
+          <li><strong>Actions must be governed.</strong> Enterprise AI must execute within policy bounds, with approvals, verification, and rollback capability.</li>
+        </ul>
+      </div>
+      <div class="dark-image fade-in">
+        <Image src={palantir} alt="Empower AI positioning in the enterprise AI landscape" width={560} quality={80} />
+      </div>
+    </div>
+  </section>
+
+  <section class="inner-section alt-bg">
+    <div class="container prose">
+      <h2>Detailed Comparison Matrix</h2>
+      <table class="data-table">
+        <thead>
+          <tr><th>Capability</th><th>LLM + RAG</th><th>Copilots</th><th>Custom ML</th><th>Empower AI</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Knowledge</strong></td><td>Text fragments</td><td>Vendor-scoped</td><td>Curated sets</td><td>Ontology-grounded graph</td></tr>
+          <tr><td><strong>Reasoning</strong></td><td>Pattern matching</td><td>Vendor suggestions</td><td>Statistical inference</td><td>Causal, multi-hop</td></tr>
+          <tr><td><strong>Context</strong></td><td>One query window</td><td>App-bounded</td><td>Model-bounded</td><td>Persistent knowledge fabric</td></tr>
+          <tr><td><strong>Output</strong></td><td>Fluent text</td><td>App actions</td><td>Predictions</td><td>Structured insight + actions</td></tr>
+          <tr><td><strong>Trust</strong></td><td>Probabilistic</td><td>Vendor-dependent</td><td>Model-dependent</td><td>Deterministic provenance</td></tr>
+          <tr><td><strong>Actionability</strong></td><td>Informational</td><td>Within vendor</td><td>Custom integration</td><td>Governed execution</td></tr>
+          <tr><td><strong>Speed</strong></td><td>Weeks-months</td><td>Vendor rollout</td><td>Months-years</td><td>Days</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <SectionCTA
+    secondaryText="Explore the Platform"
+    secondaryHref="/platform/"
+  />
+</InnerPageLayout>
+
+<style>
+  .comparison-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+    margin-top: var(--space-8);
+  }
+
+  .comparison-cards h3 {
+    margin-top: 0;
+  }
+
+  .proof-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-6);
+    margin-top: var(--space-8);
+  }
+
+  .proof-stat {
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--space-3);
+  }
+
+  .proof-grid p {
+    font-size: var(--font-size-sm);
+  }
+
+  @media (max-width: 1024px) {
+    .comparison-cards {
+      grid-template-columns: 1fr;
+    }
+
+    .proof-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .proof-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

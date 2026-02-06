@@ -1,0 +1,62 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  href: string;
+  icon: string;
+}
+
+const { title, description, href, icon } = Astro.props;
+---
+
+<a href={href} class="industry-card card fade-in">
+  <div class="industry-icon" set:html={icon} />
+  <h3>{title}</h3>
+  <p>{description}</p>
+  <span class="industry-link">Learn more &rarr;</span>
+</a>
+
+<style>
+  .industry-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .industry-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-md);
+    background: rgba(50, 69, 255, 0.1);
+    color: var(--color-accent-1);
+  }
+
+  .industry-card h3 {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-white);
+  }
+
+  .industry-card p {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-relaxed);
+    flex-grow: 1;
+  }
+
+  .industry-link {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-accent-1);
+    transition: color var(--transition-fast);
+  }
+
+  .industry-card:hover .industry-link {
+    color: var(--color-accent-2);
+  }
+</style>

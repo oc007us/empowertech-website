@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import logo from '../assets/EmpowerAI_logo_white_bg_v1.png';
+import logo from '../assets/EmpowerAI_logo_transparent.png';
 ---
 
 <footer id="contact" class="footer">
@@ -17,22 +17,20 @@ import logo from '../assets/EmpowerAI_logo_white_bg_v1.png';
       <div class="footer-links">
         <h4>Platform</h4>
         <ul>
-          <li><a href="#platform">What is Empower AI</a></li>
-          <li><a href="#platform">Value Pillars</a></li>
-          <li><a href="#delivery">Delivery Model</a></li>
-          <li><a href="#why">Why Empower</a></li>
-          <li><a href="#partners">Partner Program</a></li>
+          <li><a href="/platform/">Platform Overview</a></li>
+          <li><a href="/platform/architecture/">Architecture</a></li>
+          <li><a href="/platform/agentic/">Agentic Orchestration</a></li>
+          <li><a href="/why/">Why Empower</a></li>
+          <li><a href="/partners/">Partners</a></li>
         </ul>
       </div>
 
       <div class="footer-links">
-        <h4>Industries</h4>
+        <h4>Solutions</h4>
         <ul>
-          <li><a href="#platform">Healthcare</a></li>
-          <li><a href="#platform">Life Sciences</a></li>
-          <li><a href="#platform">Medical Devices</a></li>
-          <li><a href="#platform">Pharma</a></li>
-          <li><a href="#platform">Insurance</a></li>
+          <li><a href="/solutions/pharma/">Pharma & Life Sciences</a></li>
+          <li><a href="/solutions/field-service/">Field Service & Support</a></li>
+          <li><a href="/solutions/healthcare/">Healthcare & Payer</a></li>
         </ul>
       </div>
 
@@ -68,8 +66,6 @@ import logo from '../assets/EmpowerAI_logo_white_bg_v1.png';
   .footer-logo {
     margin-bottom: var(--space-4);
     opacity: 0.9;
-    filter: invert(1) hue-rotate(180deg);
-    mix-blend-mode: screen;
   }
 
   .footer-tagline {

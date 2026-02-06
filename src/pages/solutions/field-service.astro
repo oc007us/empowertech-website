@@ -1,0 +1,207 @@
+---
+import InnerPageLayout from '../../layouts/InnerPageLayout.astro';
+import InvertedImage from '../../components/InvertedImage.astro';
+import SectionCTA from '../../components/SectionCTA.astro';
+import { Image } from 'astro:assets';
+import semanticLifecycle from '../../assets/images/diagrams/Semantic-Intelligence-Lifecycle.png';
+import slide04 from '../../assets/images/platform-slides/04_semantic_knowledge_fabric.png';
+import slide09 from '../../assets/images/platform-slides/09_integration_write_back.png';
+---
+
+<InnerPageLayout
+  title="Field Service & Support Solutions — Empower AI"
+  description="Empower AI transforms fragmented technical knowledge into trusted, actionable intelligence for life sciences service organizations."
+  heroLabel="Field Service & Support"
+  heroTitle="AI for Field Service and Support Excellence"
+  heroSubtitle="Transform fragmented technical knowledge into a living, intelligent system that understands your instruments, workflows, and people — enabling faster service, higher uptime, and unparalleled customer trust."
+>
+
+  <section class="inner-section container">
+    <div class="prose" style="max-width:800px">
+      <h2>Proven Results from Day One</h2>
+      <p>Empower AI delivers measurable, differentiated outcomes for field service organizations:</p>
+    </div>
+    <div class="results-grid">
+      <div class="result-card card fade-in">
+        <div class="result-value gradient-text">Seconds</div>
+        <p>One right answer — grounded in your own documents, not hallucinated</p>
+      </div>
+      <div class="result-card card fade-in">
+        <div class="result-value gradient-text">90%+</div>
+        <p>Accuracy in service workflows — without model training</p>
+      </div>
+      <div class="result-card card fade-in">
+        <div class="result-value gradient-text">Weeks</div>
+        <p>From zero to live — not months — and easily extensible</p>
+      </div>
+      <div class="result-card card fade-in">
+        <div class="result-value gradient-text">Private</div>
+        <p>Deployed securely in private cloud — no data leaves</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="inner-section alt-bg">
+    <div class="container prose">
+      <h2>Strategic Business Alignment</h2>
+      <table class="data-table">
+        <thead>
+          <tr><th>Business Objective</th><th>How Empower AI Contributes</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Revenue Growth</strong></td><td>Improved service delivery increases attach rates, contract renewals, and cross-sell opportunities</td></tr>
+          <tr><td><strong>Customer Satisfaction</strong></td><td>Enhanced uptime, resolution speed, and service quality drive loyalty and retention</td></tr>
+          <tr><td><strong>Profitability</strong></td><td>Reduced cost-per-service event, fewer escalations, and higher technician efficiency</td></tr>
+          <tr><td><strong>Competitive Differentiation</strong></td><td>AI-driven service support becomes a market differentiator</td></tr>
+          <tr><td><strong>Compliance & Security</strong></td><td>Fully traceable and explainable operations in private cloud</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="inner-section container">
+    <div class="content-grid">
+      <div class="prose">
+        <h2>The Challenge</h2>
+        <p>Critical service knowledge remains locked in fragmented file structures, legacy SharePoint folders, and static PDFs. The result is measurable and costly:</p>
+        <ul>
+          <li><strong>Long resolution times</strong> — Engineers cannot quickly find the right diagnostic path for complex instrument failures</li>
+          <li><strong>Inconsistent quality across geographies</strong> — Knowledge availability varies by region, team, and experience level</li>
+          <li><strong>Costly escalations</strong> — Senior experts spend disproportionate time on issues resolvable at lower tiers</li>
+          <li><strong>Low AI confidence</strong> — Corporate AI tools lack domain expertise and deliver generic answers</li>
+          <li><strong>Pressure to do more with less</strong> — Faster, smarter service without expanding headcount</li>
+        </ul>
+      </div>
+      <div class="fade-in">
+        <InvertedImage src={slide04} alt="Enterprise Intelligence Foundation — Semantic Knowledge Fabric" />
+      </div>
+    </div>
+  </section>
+
+  <section class="inner-section alt-bg">
+    <div class="container">
+      <div class="content-grid">
+        <div class="prose">
+          <h2>How Empower AI Solves It</h2>
+          <h3>Rapid Ontology Construction</h3>
+          <p>Automatically builds a detailed, domain-specific knowledge graph from existing technical manuals, service logs, CRM notes, and support documents. The system learns your organization's own expert language.</p>
+          <h3>Knowledge Fabric with Provenance</h3>
+          <p>Every answer is grounded in a verifiable source. Engineers can see where information came from — document, paragraph, author, and version — building confidence and traceability.</p>
+          <h3>AI-Driven Reasoning</h3>
+          <p>Field engineers can ask complex, multi-dimensional questions and receive synthesized answers with cited evidence — resolving complex issues in seconds.</p>
+        </div>
+        <div class="dark-image fade-in">
+          <Image src={semanticLifecycle} alt="Semantic Intelligence Lifecycle" width={560} quality={80} />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="inner-section container">
+    <div class="content-grid">
+      <div class="prose">
+        <h2>Agentic Automation</h2>
+        <p>The platform integrates with existing systems (CRM, ticketing, service logs) to generate recommended actions, parts lists, and step-by-step guidance — seamlessly feeding field and back-office workflows.</p>
+      </div>
+      <div class="fade-in">
+        <InvertedImage src={slide09} alt="Enterprise Integration and Write-Back" />
+      </div>
+    </div>
+  </section>
+
+  <section class="inner-section alt-bg">
+    <div class="container prose">
+      <h2>KPI Impact</h2>
+      <table class="data-table">
+        <thead>
+          <tr><th>KPI</th><th>How Empower AI Helps</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>First-Time Fix Rate</strong></td><td>Surfaces exact repair paths with contextual backing, enabling resolution on the first visit</td></tr>
+          <tr><td><strong>Mean Time to Resolution</strong></td><td>Real-time guided diagnostics reduce troubleshooting from hours to minutes</td></tr>
+          <tr><td><strong>Escalation Rate</strong></td><td>Evidence-based troubleshooting enables Tier-1 resolution of Tier-2/3 issues</td></tr>
+          <tr><td><strong>Repeat Visits</strong></td><td>Accurate root-cause identification eliminates misdiagnosis repeat visits</td></tr>
+          <tr><td><strong>Onboarding Time</strong></td><td>Embedded domain expertise accelerates new hire productivity</td></tr>
+          <tr><td><strong>CSAT / NPS</strong></td><td>Faster, more accurate support directly improves customer satisfaction</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="inner-section container prose">
+    <h2>Preserving Institutional Knowledge</h2>
+    <p>One of the most valuable benefits: Empower AI captures and codifies tribal expertise into a living service intelligence fabric. When veteran engineers retire or change roles, their accumulated knowledge becomes a searchable, reusable organizational asset that compounds in value over time.</p>
+
+    <h2 style="margin-top:var(--space-12)">Getting Started</h2>
+    <div class="getting-started-grid">
+      <div class="card fade-in"><strong>1.</strong> Select a product line or service domain with high issue volume</div>
+      <div class="card fade-in"><strong>2.</strong> Ingest existing documentation — manuals, service logs, known-fix databases</div>
+      <div class="card fade-in"><strong>3.</strong> Deploy within your secure environment — no data leaves the perimeter</div>
+      <div class="card fade-in"><strong>4.</strong> Measure impact against baseline KPIs within 30-60 days</div>
+      <div class="card fade-in"><strong>5.</strong> Scale across additional product lines, geographies, and tiers</div>
+    </div>
+  </section>
+
+  <SectionCTA
+    subtitle="See how Empower AI can transform your field service operations."
+    secondaryText="View All Solutions"
+    secondaryHref="/solutions/"
+  />
+</InnerPageLayout>
+
+<style>
+  .results-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-6);
+    margin-top: var(--space-8);
+  }
+
+  .result-card {
+    text-align: center;
+  }
+
+  .result-value {
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--space-3);
+  }
+
+  .result-card p {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-normal);
+  }
+
+  .getting-started-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: var(--space-4);
+    margin-top: var(--space-8);
+  }
+
+  .getting-started-grid .card {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-normal);
+    padding: var(--space-6);
+  }
+
+  @media (max-width: 1024px) {
+    .results-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .getting-started-grid {
+      grid-template-columns: 1fr;
+      max-width: 520px;
+      margin-inline: auto;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .results-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

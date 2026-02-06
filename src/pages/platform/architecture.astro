@@ -1,0 +1,222 @@
+---
+import InnerPageLayout from '../../layouts/InnerPageLayout.astro';
+import InvertedImage from '../../components/InvertedImage.astro';
+import SectionCTA from '../../components/SectionCTA.astro';
+import slide01 from '../../assets/images/platform-slides/01_horizontal_core_vertical_packs.png';
+import slide03 from '../../assets/images/platform-slides/03_decision_trace_pipeline.png';
+import slide04 from '../../assets/images/platform-slides/04_semantic_knowledge_fabric.png';
+import slide05 from '../../assets/images/platform-slides/05_knowledge_accretion_flywheel.png';
+import slide06 from '../../assets/images/platform-slides/06_governance_provenance.png';
+import slide08 from '../../assets/images/platform-slides/08_multi_agent_orchestration.png';
+import slide09 from '../../assets/images/platform-slides/09_integration_write_back.png';
+import slide10 from '../../assets/images/platform-slides/10_deployment_options.png';
+import slide11 from '../../assets/images/platform-slides/11_trust_ops_control_plane.png';
+---
+
+<InnerPageLayout
+  title="Platform Architecture — Empower AI"
+  description="Enterprise-grade infrastructure for governed, explainable AI. Layered architecture combining semantic grounding, governed execution, and operational control."
+  heroLabel="Architecture"
+  heroTitle="Platform Architecture and Technology"
+  heroSubtitle="A layered architecture designed for enterprise-grade AI that reasons, acts, and explains — across any vertical, in any deployment model."
+>
+
+  <section class="inner-section container">
+    <div class="content-grid">
+      <div class="prose">
+        <h2>Horizontal Core, Vertical Packs</h2>
+        <p>The architecture separates the universal platform core from vertical-specific customization — the foundational design principle that enables Empower AI to serve any enterprise domain from a single governed runtime.</p>
+        <ul>
+          <li><strong>One governed runtime for any enterprise domain</strong> — The horizontal core provides the knowledge fabric, reasoning engine, governance framework, and execution layer.</li>
+          <li><strong>Vertical Packs</strong> define domain-specific semantics (ontologies and taxonomies), policies (rules and constraints), actions (system integrations), plays (workflow patterns), evaluations (quality metrics), and UX (user-facing interfaces).</li>
+          <li><strong>Ship new verticals by packaging — not rewiring the platform.</strong> Each new industry or use case is a configuration, not a rebuild.</li>
+        </ul>
+      </div>
+      <div class="fade-in">
+        <InvertedImage src={slide01} alt="Enterprise AI Architecture: Empower AI Core + Vertical Packs" />
+      </div>
+    </div>
+  </section>
+
+  <section class="inner-section alt-bg">
+    <div class="container">
+      <div class="content-grid">
+        <div class="prose">
+          <h2>Semantic Knowledge Fabric</h2>
+          <p>The Semantic Knowledge Fabric is the grounding layer that gives Empower AI its ability to understand — not just retrieve.</p>
+          <ul>
+            <li><strong>Ontology-grounded semantic graph</strong> — Domain knowledge is represented as structured ontologies, not flat text chunks.</li>
+            <li><strong>Entity resolution</strong> — Shared meaning across sources. The system resolves entities across disparate datasets to create a unified representation.</li>
+            <li><strong>Temporal truth and provenance</strong> — Every fact carries its source, timestamp, and lineage.</li>
+            <li><strong>Fact resolution across sources</strong> — When sources contain conflicting information, the knowledge fabric resolves contradictions through provenance-aware reasoning.</li>
+          </ul>
+        </div>
+        <div class="fade-in">
+          <InvertedImage src={slide04} alt="Semantic Knowledge Fabric with Ontology, Temporal Truth, Fact Resolution, and Decision Traces" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="inner-section container">
+    <div class="content-grid">
+      <div class="prose">
+        <h2>The Decision Trace Pipeline</h2>
+        <p>Empower AI does not bolt on explainability after the fact. Every recommendation, decision, and action is explainable by construction.</p>
+        <p>Every action carries a complete trace:</p>
+        <ul>
+          <li><strong>Trigger</strong> — What initiated the decision (user query, scheduled task, event, or upstream agent)</li>
+          <li><strong>Context</strong> — The knowledge, data, and state the system considered</li>
+          <li><strong>Evidence</strong> — Specific sources, citations, and data points that support the conclusion</li>
+          <li><strong>Policy</strong> — Which governance rules and constraints were applied</li>
+          <li><strong>Approvals</strong> — Who reviewed and approved (human or automated gate)</li>
+        </ul>
+        <p>This trace is replayable and auditable by default. Any decision can be reconstructed to show exactly what the system saw, how it reasoned, and why it reached its conclusion.</p>
+      </div>
+      <div class="fade-in">
+        <InvertedImage src={slide03} alt="Decision Trace Pipeline" />
+      </div>
+    </div>
+  </section>
+
+  <section class="inner-section alt-bg">
+    <div class="container">
+      <div class="content-grid">
+        <div class="prose">
+          <h2>Knowledge Accretion: The Compounding Advantage</h2>
+          <p>Unlike systems that start from zero with every query, Empower AI accumulates institutional knowledge over time.</p>
+          <ul>
+            <li><strong>Outcomes feed back</strong> into precedent and policy refinement. Each resolved case enriches the platform's understanding.</li>
+            <li><strong>Better decisions over time — measurably.</strong> The system tracks decision quality and uses outcomes to improve future reasoning.</li>
+            <li><strong>Institutional knowledge becomes searchable and reusable.</strong> Tribal expertise, historical decisions, and domain-specific patterns are captured and preserved.</li>
+          </ul>
+          <p>This creates a compounding advantage: the longer the platform operates, the more valuable it becomes.</p>
+        </div>
+        <div class="fade-in">
+          <InvertedImage src={slide05} alt="Knowledge Accretion Flywheel" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="inner-section container">
+    <div class="content-grid">
+      <div class="prose">
+        <h2>Governance and Provenance</h2>
+        <p>Enterprise AI requires governance that scales with autonomy. Empower AI provides:</p>
+        <ul>
+          <li><strong>Versioned ontology, policy, action contracts, and evaluation suites</strong> — Every component is versioned and tracked.</li>
+          <li><strong>Signed changes and audit trails</strong> — For compliance readiness across regulated industries (GxP, HIPAA, CMS, FDA).</li>
+          <li><strong>Safe evolution without breaking production autonomy</strong> — Updates are managed through controlled releases.</li>
+        </ul>
+      </div>
+      <div class="fade-in">
+        <InvertedImage src={slide06} alt="Governance and Provenance — Versioned Artifacts" />
+      </div>
+    </div>
+  </section>
+
+  <section class="inner-section alt-bg">
+    <div class="container">
+      <div class="content-grid">
+        <div class="prose">
+          <h2>Multi-Agent Orchestration</h2>
+          <p>Empower AI uses a specialist-agent architecture rather than monolithic models.</p>
+          <ul>
+            <li><strong>Orchestrator routes tasks to specialist agents</strong> — Each agent handles a specific capability: retrieval, policy evaluation, planning, execution, or verification.</li>
+            <li><strong>Separation of duties</strong> — Decomposing complex tasks into specialized steps reduces hallucinations and increases reliability.</li>
+            <li><strong>Composable agent pipelines</strong> — New capabilities are added by composing agents, not by retraining or rebuilding.</li>
+          </ul>
+        </div>
+        <div class="fade-in">
+          <InvertedImage src={slide08} alt="Multi-Agent Orchestration" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="inner-section container">
+    <div class="content-grid">
+      <div class="prose">
+        <h2>Enterprise Integration: Read and Write</h2>
+        <p>Empower AI is not limited to answering questions — it safely interacts with enterprise systems.</p>
+        <ul>
+          <li><strong>Canonical enterprise layer</strong> — Normalizes data and operations across disparate systems (CRM, ERP, QMS, LIMS, CTMS, ticketing, and more).</li>
+          <li><strong>Typed Action Registry</strong> — Safe connectors with defined contracts for every write-back operation.</li>
+          <li><strong>Idempotent, verifiable, and reversible writes</strong> — Write-backs use diffs, idempotency keys, and verification checks.</li>
+          <li><strong>Policy gates, approvals, and exception routing</strong> — Every action passes through governance checks before execution.</li>
+        </ul>
+      </div>
+      <div class="fade-in">
+        <InvertedImage src={slide09} alt="Enterprise Integration and Write-Back" />
+      </div>
+    </div>
+  </section>
+
+  <section class="inner-section alt-bg">
+    <div class="container">
+      <div class="content-grid">
+        <div class="prose">
+          <h2>Deployment Flexibility</h2>
+          <p>The same semantics, policies, and governance apply regardless of where the platform runs.</p>
+          <ul>
+            <li><strong>Cloud, on-premises, or air-gapped deployments</strong> — Same platform, same behavior.</li>
+            <li><strong>Data residency and security constraints</strong> — Supports regulatory requirements for data locality and isolation.</li>
+            <li><strong>Private cloud operation</strong> — No data leaves the customer's environment. No external LLM dependencies required.</li>
+          </ul>
+        </div>
+        <div class="fade-in">
+          <InvertedImage src={slide10} alt="Deployment Options — Cloud, On-Premises, Air-Gapped" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="inner-section container">
+    <div class="content-grid">
+      <div class="prose">
+        <h2>Trust and Ops Control Plane</h2>
+        <p>Production AI requires operational visibility. The Trust and Ops Control Plane provides:</p>
+        <ul>
+          <li><strong>Replay and drift detection</strong> — Monitor for changes in input patterns, output quality, or behavior over time.</li>
+          <li><strong>Evaluation suites</strong> — Continuous assessment of reasoning quality, evidence coverage, and policy adherence.</li>
+          <li><strong>Cost and latency monitoring</strong> — Operational metrics for production agents.</li>
+          <li><strong>Outcome verification</strong> — Track whether actions achieved their intended results.</li>
+          <li><strong>Policy violation alerting</strong> — Immediate notification when agents approach governance boundaries.</li>
+        </ul>
+      </div>
+      <div class="fade-in">
+        <InvertedImage src={slide11} alt="Trust and Ops Control Plane" />
+      </div>
+    </div>
+  </section>
+
+  <section class="inner-section alt-bg">
+    <div class="container prose">
+      <h2>Empower AI vs. Conventional Approaches</h2>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>LLMs / RAGs</th>
+            <th>Empower AI</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Knowledge</strong></td><td>Flat context windows; unstructured text fragments</td><td>Semantic fusion via ontology-grounded graphs</td></tr>
+          <tr><td><strong>Reasoning</strong></td><td>Pattern completion; correlational</td><td>Structured, causal, multi-hop, evidence-based</td></tr>
+          <tr><td><strong>Data</strong></td><td>Text chunks or embeddings</td><td>Full multimodal integration (structured + unstructured)</td></tr>
+          <tr><td><strong>Actionability</strong></td><td>Conversational only</td><td>Declarative agentic execution with write-backs</td></tr>
+          <tr><td><strong>Explainability</strong></td><td>None or token-level logs</td><td>Full provenance, citations, audit trails, decision traces</td></tr>
+          <tr><td><strong>Speed</strong></td><td>Weeks to months</td><td>Days (instant-on Knowledge Fusion Core)</td></tr>
+          <tr><td><strong>Maintainability</strong></td><td>Manual reindexing</td><td>Continuous ingestion, semantic versioning</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <SectionCTA
+    secondaryText="Explore Agentic Orchestration"
+    secondaryHref="/platform/agentic/"
+  />
+</InnerPageLayout>

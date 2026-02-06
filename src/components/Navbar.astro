@@ -1,12 +1,25 @@
 ---
 import { Image } from 'astro:assets';
-import logo from '../assets/EmpowerAI_logo_white_bg_v1.png';
+import logo from '../assets/EmpowerAI_logo_transparent.png';
 
-const navLinks = [
-  { label: 'Platform', href: '#platform' },
-  { label: 'Delivery', href: '#delivery' },
-  { label: 'Why Empower', href: '#why' },
-  { label: 'Partners', href: '#partners' },
+const currentPath = Astro.url.pathname;
+
+const isActive = (href: string) => {
+  if (href === '/') return currentPath === '/' || currentPath === '/index.html';
+  return currentPath.startsWith(href);
+};
+
+const platformLinks = [
+  { label: 'Platform Overview', href: '/platform/' },
+  { label: 'Architecture', href: '/platform/architecture/' },
+  { label: 'Agentic Orchestration', href: '/platform/agentic/' },
+];
+
+const solutionLinks = [
+  { label: 'Solutions Overview', href: '/solutions/' },
+  { label: 'Pharma & Life Sciences', href: '/solutions/pharma/' },
+  { label: 'Field Service & Support', href: '/solutions/field-service/' },
+  { label: 'Healthcare & Payer', href: '/solutions/healthcare/' },
 ];
 ---
 
@@ -26,11 +39,30 @@ const navLinks = [
 
     <div class="nav-menu">
       <ul class="nav-links">
-        {navLinks.map((link) => (
-          <li><a href={link.href} class="nav-link">{link.label}</a></li>
-        ))}
+        <!-- Platform dropdown -->
+        <li class="nav-dropdown">
+          <a href="/platform/" class:list={['nav-link', { active: isActive('/platform/') }]}>Platform <svg class="dd-arrow" width="10" height="6" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a>
+          <ul class="dropdown-menu">
+            {platformLinks.map((link) => (
+              <li><a href={link.href} class:list={['dropdown-link', { active: currentPath === link.href }]}>{link.label}</a></li>
+            ))}
+          </ul>
+        </li>
+
+        <!-- Solutions dropdown -->
+        <li class="nav-dropdown">
+          <a href="/solutions/" class:list={['nav-link', { active: isActive('/solutions/') }]}>Solutions <svg class="dd-arrow" width="10" height="6" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a>
+          <ul class="dropdown-menu">
+            {solutionLinks.map((link) => (
+              <li><a href={link.href} class:list={['dropdown-link', { active: currentPath === link.href }]}>{link.label}</a></li>
+            ))}
+          </ul>
+        </li>
+
+        <li><a href="/why/" class:list={['nav-link', { active: isActive('/why/') }]}>Why Empower</a></li>
+        <li><a href="/partners/" class:list={['nav-link', { active: isActive('/partners/') }]}>Partners</a></li>
       </ul>
-      <a href="#contact" class="btn btn-primary nav-cta">Request a Demo</a>
+      <a href="mailto:info@empowertech.ai" class="btn btn-primary nav-cta">Request a Demo</a>
     </div>
   </div>
 </nav>
@@ -58,8 +90,6 @@ const navLinks = [
 
   .nav-logo img {
     height: 36px;
-    filter: invert(1) hue-rotate(180deg);
-    mix-blend-mode: screen;
     width: auto;
   }
 
@@ -81,9 +111,13 @@ const navLinks = [
     color: var(--color-text-secondary);
     transition: color var(--transition-fast);
     position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
   }
 
-  .nav-link:hover {
+  .nav-link:hover,
+  .nav-link.active {
     color: var(--color-white);
   }
 
@@ -99,13 +133,70 @@ const navLinks = [
     border-radius: 1px;
   }
 
-  .nav-link:hover::after {
+  .nav-link:hover::after,
+  .nav-link.active::after {
     width: 100%;
+  }
+
+  .dd-arrow {
+    transition: transform var(--transition-fast);
   }
 
   .nav-cta {
     padding: var(--space-2) var(--space-6);
     font-size: var(--font-size-sm);
+  }
+
+  /* Dropdown */
+  .nav-dropdown {
+    position: relative;
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: -12px;
+    padding-top: 12px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4px);
+    transition: all var(--transition-base);
+    z-index: 100;
+  }
+
+  .dropdown-menu ul {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-2) 0;
+    min-width: 220px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+  }
+
+  .nav-dropdown:hover .dropdown-menu,
+  .nav-dropdown:focus-within .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .nav-dropdown:hover .dd-arrow {
+    transform: rotate(180deg);
+  }
+
+  .dropdown-link {
+    display: block;
+    padding: var(--space-2) var(--space-4);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    transition: all var(--transition-fast);
+    white-space: nowrap;
+  }
+
+  .dropdown-link:hover,
+  .dropdown-link.active {
+    color: var(--color-white);
+    background: rgba(50, 69, 255, 0.08);
   }
 
   /* Hamburger — hidden on desktop */
@@ -165,11 +256,44 @@ const navLinks = [
     .nav-links {
       flex-direction: column;
       align-items: center;
-      gap: var(--space-8);
+      gap: var(--space-6);
     }
 
     .nav-link {
       font-size: var(--font-size-xl);
+    }
+
+    /* Dropdowns expand inline on mobile */
+    .nav-dropdown {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .dropdown-menu {
+      position: static;
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+      padding-top: var(--space-3);
+    }
+
+    .dropdown-menu ul {
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      min-width: unset;
+      padding: 0;
+      text-align: center;
+    }
+
+    .dropdown-link {
+      font-size: var(--font-size-base);
+      padding: var(--space-1) var(--space-4);
+    }
+
+    .dd-arrow {
+      display: none;
     }
 
     /* Open state */
@@ -194,7 +318,7 @@ const navLinks = [
 
 <script>
   // Close mobile menu on link click
-  document.querySelectorAll('.nav-link, .nav-cta').forEach((link) => {
+  document.querySelectorAll('.nav-link, .nav-cta, .dropdown-link').forEach((link) => {
     link.addEventListener('click', () => {
       const toggle = document.getElementById('nav-toggle') as HTMLInputElement;
       if (toggle) toggle.checked = false;

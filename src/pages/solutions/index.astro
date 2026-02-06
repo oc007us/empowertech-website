@@ -1,0 +1,108 @@
+---
+import InnerPageLayout from '../../layouts/InnerPageLayout.astro';
+import IndustryCard from '../../components/IndustryCard.astro';
+import SectionCTA from '../../components/SectionCTA.astro';
+
+const pharmaIcon = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v6.5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 .5-.5V2"/><path d="M9 2H5a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-4"/><path d="M12 12v6"/><path d="M9 15h6"/></svg>';
+const fieldIcon = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>';
+const healthIcon = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>';
+---
+
+<InnerPageLayout
+  title="Solutions — Empower AI"
+  description="Empower AI delivers governed, explainable AI solutions for regulated industries — from pharma to healthcare to field service."
+  heroLabel="Solutions"
+  heroTitle="AI Solutions for Regulated Industries"
+  heroSubtitle="Empower AI applies the same governed agentic orchestration platform across verticals — delivering domain-specific intelligence with full explainability and compliance-readiness."
+>
+
+  <section class="inner-section container">
+    <div class="prose" style="text-align:center;max-width:720px;margin-inline:auto;margin-bottom:var(--space-12)">
+      <h2>Industry Solutions</h2>
+      <p>Each solution is built on the Empower AI platform core — semantic knowledge fabric, agentic orchestration, and governed execution — customized with domain-specific Vertical Packs.</p>
+    </div>
+
+    <div class="solutions-grid">
+      <IndustryCard
+        title="Pharma & Life Sciences"
+        description="Unify knowledge across Medical, Commercial, Regulatory, Safety, R&D, and Tech Ops. FDA CDS alignment, GxP-ready provenance, and governed agentic workflows."
+        href="/solutions/pharma/"
+        icon={pharmaIcon}
+      />
+      <IndustryCard
+        title="Field Service & Support"
+        description="Transform fragmented technical knowledge into a living intelligence system — enabling faster service, higher uptime, and 90%+ accuracy in service workflows."
+        href="/solutions/field-service/"
+        icon={fieldIcon}
+      />
+      <IndustryCard
+        title="Healthcare & Payer"
+        description="Regulated-ready AI for health plans, TPAs, and provider-sponsored systems — from claims automation to compliance intelligence to fraud detection."
+        href="/solutions/healthcare/"
+        icon={healthIcon}
+      />
+    </div>
+  </section>
+
+  <section class="inner-section alt-bg">
+    <div class="container prose">
+      <h2>Solutions by Outcome</h2>
+      <div class="outcome-grid">
+        <div class="card fade-in">
+          <h3>Reliable Knowledge Retrieval</h3>
+          <p>Evidence-backed answers with full provenance — no hallucination, no guessing. Every response grounded in verifiable sources.</p>
+        </div>
+        <div class="card fade-in">
+          <h3>Agentic Workflows</h3>
+          <p>Systems of action that execute business processes intelligently — across systems, with policy-bounded governance and decision traces.</p>
+        </div>
+        <div class="card fade-in">
+          <h3>Governance & Auditability</h3>
+          <p>Full decision traces, constraints, and policy enforcement. Audit-ready by default for regulated environments.</p>
+        </div>
+        <div class="card fade-in">
+          <h3>Private Deployment</h3>
+          <p>Cloud, on-premises, and air-gapped deployment patterns. No data leaves your environment. No external LLM dependencies required.</p>
+        </div>
+        <div class="card fade-in">
+          <h3>Multi-Modal Ingestion</h3>
+          <p>PDFs, tables, images, transcripts, structured data, and voice — far beyond typical RAG capabilities.</p>
+        </div>
+        <div class="card fade-in">
+          <h3>Rapid Time-to-Value</h3>
+          <p>From zero to live in weeks, not months. DSL and model-driven engineering auto-generates domain-specific AI applications.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <SectionCTA />
+</InnerPageLayout>
+
+<style>
+  .solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+  }
+
+  .outcome-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+    margin-top: var(--space-8);
+  }
+
+  .outcome-grid h3 {
+    margin-top: 0;
+  }
+
+  @media (max-width: 1024px) {
+    .solutions-grid,
+    .outcome-grid {
+      grid-template-columns: 1fr;
+      max-width: 520px;
+      margin-inline: auto;
+    }
+  }
+</style>

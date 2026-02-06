@@ -101,6 +101,10 @@ import partnerImg from '../assets/EmpowerPartnerProgram.png';
     <div class="partners-image fade-in">
       <Image src={partnerImg} alt="Empower AI Partner Program overview" width={900} quality={80} />
     </div>
+
+    <div class="partners-learn-more fade-in">
+      <a href="/partners/" class="btn btn-secondary">Learn More About the Partner Program &rarr;</a>
+    </div>
   </div>
 </section>
 
@@ -260,6 +264,11 @@ import partnerImg from '../assets/EmpowerPartnerProgram.png';
   .partners-image {
     display: flex;
     justify-content: center;
+  }
+
+  .partners-learn-more {
+    text-align: center;
+    margin-top: var(--space-10);
   }
 
   .partners-image img {

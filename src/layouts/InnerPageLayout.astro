@@ -1,0 +1,25 @@
+---
+import Layout from './Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import PageHero from '../components/PageHero.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  heroLabel: string;
+  heroTitle: string;
+  heroSubtitle?: string;
+}
+
+const { title, description, heroLabel, heroTitle, heroSubtitle } = Astro.props;
+---
+
+<Layout title={title} description={description}>
+  <Navbar />
+  <main>
+    <PageHero label={heroLabel} title={heroTitle} subtitle={heroSubtitle} />
+    <slot />
+  </main>
+  <Footer />
+</Layout>

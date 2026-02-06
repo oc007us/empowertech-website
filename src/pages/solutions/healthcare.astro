@@ -1,0 +1,151 @@
+---
+import InnerPageLayout from '../../layouts/InnerPageLayout.astro';
+import InvertedImage from '../../components/InvertedImage.astro';
+import SectionCTA from '../../components/SectionCTA.astro';
+import slide01 from '../../assets/images/platform-slides/01_horizontal_core_vertical_packs.png';
+import slide10 from '../../assets/images/platform-slides/10_deployment_options.png';
+---
+
+<InnerPageLayout
+  title="Healthcare & Payer Solutions — Empower AI"
+  description="Regulated-ready AI for regional health plans, TPAs, and provider-sponsored systems."
+  heroLabel="Healthcare & Payer"
+  heroTitle="AI for Health Plans and Payer Organizations"
+  heroSubtitle="Composable, regulated-ready intelligence that turns data chaos into trusted, actionable knowledge — deployed securely, with zero hallucination and full explainability."
+>
+
+  <section class="inner-section container">
+    <div class="content-grid">
+      <div class="prose">
+        <h2>The Empower AI Difference</h2>
+        <p>Empower AI transforms fragmented, legacy-bound organizations into knowledge-driven enterprises. Unlike vendor-tied AI, it is agnostic, composable, and non-hallucinating — built for regulated deployments where trust and traceability are non-negotiable.</p>
+        <h3>Trusted AI with Full Provenance</h3>
+        <p>Every response is grounded in verifiable sources with traceable reasoning. No hallucination. No probabilistic guessing. Audit-ready by default.</p>
+        <h3>Semantic Data Unification</h3>
+        <p>Federates data across health systems, claims platforms, provider networks, and member databases into a unified knowledge fabric — without requiring core system replacement.</p>
+        <h3>Explainable Automation</h3>
+        <p>Automates complex workflows (claims adjudication, compliance monitoring, fraud detection) with full transparency into how decisions are made.</p>
+        <h3>Composable Integration</h3>
+        <p>Works alongside existing Salesforce and Microsoft ecosystems, enriching them with factual, domain-grounded intelligence rather than replacing them.</p>
+      </div>
+      <div class="fade-in">
+        <InvertedImage src={slide01} alt="Enterprise AI Architecture: Empower AI Core + Vertical Packs" />
+      </div>
+    </div>
+  </section>
+
+  <section class="inner-section alt-bg">
+    <div class="container prose">
+      <h2>Expected Outcomes</h2>
+      <table class="data-table">
+        <thead>
+          <tr><th>Metric</th><th>Expected Impact</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Claims Processing Speed</strong></td><td>30-50% faster</td></tr>
+          <tr><td><strong>Manual Compliance Checks</strong></td><td>40% reduction</td></tr>
+          <tr><td><strong>Fraud-Related Losses</strong></td><td>20% reduction</td></tr>
+          <tr><td><strong>Time to ROI</strong></td><td>6 months on initial pilot</td></tr>
+          <tr><td><strong>Member Satisfaction</strong></td><td>Improved through faster, more accurate service</td></tr>
+          <tr><td><strong>NCQA Ratings</strong></td><td>Improvement through proactive compliance and quality management</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="inner-section container prose">
+    <h2>The Challenge for Regional Health Plans</h2>
+    <div class="challenge-grid">
+      <div class="card fade-in">
+        <h3>Fragmented Systems</h3>
+        <p>Claims, provider, and member domains live in disconnected systems with inconsistent data models. Cross-domain insights require manual reconciliation.</p>
+      </div>
+      <div class="card fade-in">
+        <h3>Poor Data Quality</h3>
+        <p>Unstructured or incomplete datasets limit actionable intelligence. Traditional analytics tools cannot reason over messy healthcare data.</p>
+      </div>
+      <div class="card fade-in">
+        <h3>Regulated Environment</h3>
+        <p>HIPAA, CMS, and NCQA requirements constrain technology deployment. Generic AI tools lack the governance infrastructure.</p>
+      </div>
+      <div class="card fade-in">
+        <h3>Slow Time-to-Market</h3>
+        <p>New programs, compliance updates, and process changes take months to deploy through traditional channels.</p>
+      </div>
+      <div class="card fade-in">
+        <h3>Vendor Dependency</h3>
+        <p>Vendor-provided AI layers lack domain reasoning, healthcare-specific knowledge structures, and deployment flexibility for regulated operations.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="inner-section alt-bg">
+    <div class="container">
+      <div class="content-grid">
+        <div class="prose">
+          <h2>Priority Use Cases</h2>
+          <h3>Claims & Pre-Authorization Automation</h3>
+          <p>Extract, validate, and auto-adjudicate claims with rule-aware, explainable automation. <strong>Impact:</strong> 30-50% faster claims processing with reduced error rates.</p>
+          <h3>Compliance Intelligence</h3>
+          <p>Continuous HIPAA and NCQA monitoring with proactive audit readiness. <strong>Impact:</strong> 40% fewer manual compliance checks.</p>
+          <h3>Member & Provider Assistants</h3>
+          <p>AI-powered copilots for call centers, brokers, and staff that deliver factual, provenance-backed responses to inquiries.</p>
+          <h3>Data Fabric & Cross-System Insights</h3>
+          <p>Unify data across owner health systems and partner networks to generate actionable, cross-domain analytics.</p>
+          <h3>Fraud Detection & Risk Monitoring</h3>
+          <p>Pattern recognition across claims and provider data to identify anomalies and automate investigation. <strong>Impact:</strong> 20% reduction in fraud-related losses.</p>
+          <h3>IT Modernization Assistant</h3>
+          <p>Assess and document legacy systems for migration planning. Map dependencies, identify risks, and generate migration roadmaps.</p>
+        </div>
+        <div class="fade-in">
+          <InvertedImage src={slide10} alt="Deployment Options — Cloud, On-Premises, Air-Gapped" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="inner-section container prose">
+    <h2>Why Not Vendor AI?</h2>
+    <p>Unlike Salesforce Einstein or Microsoft Copilot, Empower AI is not tied to a CRM or productivity suite. It focuses on regulated reasoning, knowledge provenance, and safe automation.</p>
+    <table class="data-table">
+      <thead>
+        <tr><th>Dimension</th><th>Vendor AI</th><th>Empower AI</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Scope</strong></td><td>Bounded by vendor platform</td><td>Agnostic across all systems</td></tr>
+        <tr><td><strong>Domain Reasoning</strong></td><td>Generic</td><td>Healthcare-specific ontologies and policies</td></tr>
+        <tr><td><strong>Hallucination Risk</strong></td><td>Present</td><td>Eliminated through provenance-grounded reasoning</td></tr>
+        <tr><td><strong>Deployment</strong></td><td>Vendor cloud</td><td>Customer's HIPAA-secure environment</td></tr>
+        <tr><td><strong>Explainability</strong></td><td>Limited</td><td>Full decision traces and audit trails</td></tr>
+        <tr><td><strong>Integration</strong></td><td>Within vendor ecosystem</td><td>Composable across any system</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <SectionCTA
+    subtitle="See how Empower AI can transform your health plan operations."
+    secondaryText="View All Solutions"
+    secondaryHref="/solutions/"
+  />
+</InnerPageLayout>
+
+<style>
+  .challenge-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+    margin-top: var(--space-8);
+  }
+
+  .challenge-grid h3 {
+    margin-top: 0;
+  }
+
+  @media (max-width: 1024px) {
+    .challenge-grid {
+      grid-template-columns: 1fr;
+      max-width: 520px;
+      margin-inline: auto;
+    }
+  }
+</style>

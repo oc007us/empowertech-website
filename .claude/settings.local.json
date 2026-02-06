@@ -10,6 +10,9 @@
       "Bash(ls:*)",
       "Read(//Users/ocohen/git/empowertech-website/**)",
       "Bash(identify:*)"
+    ],
+    "additionalDirectories": [
+      "/Users/ocohen/git/empowertech-website/src/pages"
     ]
   }
 }
