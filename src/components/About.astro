@@ -1,0 +1,143 @@
+---
+import { Image } from 'astro:assets';
+import whatIsEmpower from '../assets/WhatIsEmpowerAI.png';
+---
+
+<section id="platform" class="section about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text fade-in">
+        <p class="section-label">The Platform</p>
+        <h2 class="section-title">What is Empower AI?</h2>
+
+        <blockquote class="about-quote">
+          A Semantic Intelligence Platform for regulated enterprises &mdash; a horizontal
+          foundation you can build many vertical AI products on.
+        </blockquote>
+
+        <div class="about-blocks">
+          <div class="about-block">
+            <h3>What it does</h3>
+            <ul>
+              <li>Ingests and organizes enterprise knowledge into a model-driven semantic fabric &mdash; structured, explainable, evidence-backed</li>
+              <li>Orchestrates AI agents and workflows to create real systems of action, not just chatbots</li>
+              <li>Generates enterprise software deterministically from models &mdash; APIs, workflows, UI, integration scaffolding</li>
+            </ul>
+          </div>
+
+          <div class="about-block">
+            <h3>Why it matters</h3>
+            <p>Regulated industries need AI that is:</p>
+            <ul class="check-list">
+              <li>Accurate &mdash; not hallucinating</li>
+              <li>Auditable &mdash; provenance and decision trace</li>
+              <li>Governed &mdash; policies, constraints</li>
+              <li>Privately deployable &mdash; VPC / on-prem / air-gapped</li>
+              <li>Operational &mdash; acts in workflows, not just answers questions</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-image fade-in">
+        <Image src={whatIsEmpower} alt="What is Empower AI — platform architecture overview" width={600} quality={80} />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about {
+    background: var(--color-surface);
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-16);
+    align-items: center;
+  }
+
+  .about-quote {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-white);
+    line-height: var(--line-height-relaxed);
+    border-left: 3px solid var(--color-accent-1);
+    padding-left: var(--space-6);
+    margin-bottom: var(--space-10);
+  }
+
+  .about-blocks {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+  }
+
+  .about-block h3 {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-white);
+    margin-bottom: var(--space-4);
+  }
+
+  .about-block p {
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-3);
+  }
+
+  .about-block ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .about-block li {
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-normal);
+    padding-left: var(--space-6);
+    position: relative;
+  }
+
+  .about-block li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--color-accent-1);
+  }
+
+  .check-list li::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 2px;
+    background: linear-gradient(135deg, var(--color-accent-1), var(--color-accent-2));
+    top: 9px;
+  }
+
+  .about-image {
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-image img {
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  }
+
+  @media (max-width: 1024px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-10);
+    }
+
+    .about-image {
+      order: -1;
+    }
+  }
+</style>

@@ -4,7 +4,11 @@
       "Bash(node:*)",
       "Bash(npm:*)",
       "Bash(magick:*)",
-      "WebFetch(domain:evilmartians.com)"
+      "WebFetch(domain:evilmartians.com)",
+      "Bash(du:*)",
+      "Bash(curl:*)",
+      "Bash(ls:*)",
+      "Read(//Users/ocohen/git/empowertech-website/**)"
     ]
   }
 }

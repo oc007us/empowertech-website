@@ -1,0 +1,201 @@
+---
+import { Image } from 'astro:assets';
+import deliveryImg from '../assets/How is Empower Delivered.png';
+---
+
+<section id="delivery" class="section delivery">
+  <div class="container">
+    <div class="delivery-header fade-in">
+      <p class="section-label">Delivery Model</p>
+      <h2 class="section-title">Flexible Delivery. Enterprise Outcomes.</h2>
+      <p class="section-subtitle">
+        Choose the model that fits your organization's speed, risk profile, and internal capabilities.
+      </p>
+    </div>
+
+    <div class="delivery-columns">
+      <div class="card delivery-card fade-in">
+        <div class="delivery-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+          </svg>
+        </div>
+        <h3>Empower-Led Implementation</h3>
+        <p class="delivery-subtitle">Professional Services</p>
+        <ul>
+          <li>Rapid discovery + readiness assessment</li>
+          <li>Architecture + governance blueprint</li>
+          <li>Build first vertical AI workflows (copilots, agents, apps)</li>
+          <li>Deep enterprise integrations (CRM/ERP/EMR, data, identity, security)</li>
+          <li>Production-grade pilot &rarr; scale plan</li>
+        </ul>
+        <p class="delivery-best-for"><strong>Best for:</strong> Fastest time-to-value, complex environments, regulated rollouts</p>
+      </div>
+
+      <div class="card delivery-card featured fade-in">
+        <div class="delivery-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <h3>Customer-Led Build</h3>
+        <p class="delivery-subtitle">Enablement + Tooling</p>
+        <ul>
+          <li>Training + onboarding for platform and governance</li>
+          <li>SDKs, accelerators, reference architectures</li>
+          <li>Deployment automation + runbooks</li>
+          <li>Ongoing support + advisory</li>
+        </ul>
+        <p class="delivery-best-for"><strong>Best for:</strong> Strong internal engineering teams, iterative build, long-term self-sufficiency</p>
+      </div>
+
+      <div class="card delivery-card fade-in">
+        <div class="delivery-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 0C1.46 6.7 1.33 10.28 4 13l8 8 8-8c2.67-2.72 2.54-6.3.42-8.42z"/>
+          </svg>
+        </div>
+        <h3>Partner Ecosystem Delivery</h3>
+        <p class="delivery-subtitle">Certified Partners</p>
+        <ul>
+          <li>Certified partners implement vertical solutions</li>
+          <li>Global SIs for enterprise rollouts (Accenture, Deloitte, KPMG, PwC)</li>
+          <li>Vertical boutiques for domain depth</li>
+          <li>Optional managed services for ongoing operation</li>
+        </ul>
+        <p class="delivery-best-for"><strong>Best for:</strong> Scaling across sites/regions, change management, multi-client delivery</p>
+      </div>
+    </div>
+
+    <p class="delivery-tagline fade-in">One platform. Multiple paths to outcomes.</p>
+
+    <div class="delivery-image fade-in">
+      <Image src={deliveryImg} alt="How Empower AI is delivered — implementation paths" width={900} quality={80} />
+    </div>
+  </div>
+</section>
+
+<style>
+  .delivery {
+    background: var(--color-surface);
+  }
+
+  .delivery-header {
+    text-align: center;
+    margin-bottom: var(--space-16);
+  }
+
+  .delivery-header .section-subtitle {
+    margin-inline: auto;
+  }
+
+  .delivery-columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+    margin-bottom: var(--space-10);
+  }
+
+  .delivery-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .delivery-card.featured {
+    border-color: rgba(50, 69, 255, 0.3);
+    background: linear-gradient(180deg, rgba(50, 69, 255, 0.06) 0%, var(--color-card) 100%);
+  }
+
+  .delivery-icon {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-md);
+    background: linear-gradient(135deg, rgba(50, 69, 255, 0.12), rgba(188, 82, 238, 0.12));
+    color: var(--color-accent-1);
+  }
+
+  .delivery-card h3 {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-white);
+  }
+
+  .delivery-subtitle {
+    font-size: var(--font-size-sm);
+    color: var(--color-accent-2);
+    font-weight: var(--font-weight-medium);
+    margin-top: calc(-1 * var(--space-2));
+  }
+
+  .delivery-card ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    flex-grow: 1;
+  }
+
+  .delivery-card li {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-normal);
+    padding-left: var(--space-5);
+    position: relative;
+  }
+
+  .delivery-card li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--color-accent-1);
+  }
+
+  .delivery-best-for {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--color-border);
+    margin-top: auto;
+  }
+
+  .delivery-best-for strong {
+    color: var(--color-white);
+  }
+
+  .delivery-tagline {
+    text-align: center;
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-12);
+  }
+
+  .delivery-image {
+    display: flex;
+    justify-content: center;
+  }
+
+  .delivery-image img {
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  }
+
+  @media (max-width: 1024px) {
+    .delivery-columns {
+      grid-template-columns: 1fr;
+      max-width: 520px;
+      margin-inline: auto;
+    }
+  }
+</style>

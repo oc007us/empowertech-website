@@ -1,0 +1,194 @@
+---
+const navLinks = [
+  { label: 'Platform', href: '#platform' },
+  { label: 'Delivery', href: '#delivery' },
+  { label: 'Why Empower', href: '#why' },
+  { label: 'Partners', href: '#partners' },
+];
+---
+
+<nav class="navbar" id="navbar">
+  <div class="nav-inner container">
+    <a href="/" class="nav-logo">
+      <img src="/logo.png" alt="Empower AI" width="160" height="47" />
+    </a>
+
+    <!-- Mobile toggle -->
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox" aria-label="Toggle navigation" />
+    <label for="nav-toggle" class="nav-hamburger" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <div class="nav-menu">
+      <ul class="nav-links">
+        {navLinks.map((link) => (
+          <li><a href={link.href} class="nav-link">{link.label}</a></li>
+        ))}
+      </ul>
+      <a href="#contact" class="btn btn-primary nav-cta">Request a Demo</a>
+    </div>
+  </div>
+</nav>
+
+<style>
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(10, 11, 20, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--color-border);
+    height: var(--nav-height);
+  }
+
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .nav-logo img {
+    height: 36px;
+    width: auto;
+  }
+
+  /* Desktop menu */
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    gap: var(--space-8);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: var(--space-8);
+  }
+
+  .nav-link {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-secondary);
+    transition: color var(--transition-fast);
+    position: relative;
+  }
+
+  .nav-link:hover {
+    color: var(--color-white);
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(135deg, var(--color-accent-1), var(--color-accent-2));
+    transition: width var(--transition-base);
+    border-radius: 1px;
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  .nav-cta {
+    padding: var(--space-2) var(--space-6);
+    font-size: var(--font-size-sm);
+  }
+
+  /* Hamburger — hidden on desktop */
+  .nav-toggle-checkbox {
+    display: none;
+  }
+
+  .nav-hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+    z-index: 10;
+  }
+
+  .nav-hamburger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: var(--color-text);
+    border-radius: 2px;
+    transition: all var(--transition-base);
+    transform-origin: center;
+  }
+
+  /* Mobile */
+  @media (max-width: 768px) {
+    .nav-hamburger {
+      display: flex;
+    }
+
+    .nav-menu {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100dvh;
+      background: rgba(10, 11, 20, 0.98);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: var(--space-10);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity var(--transition-base), visibility var(--transition-base);
+    }
+
+    .nav-links {
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-8);
+    }
+
+    .nav-link {
+      font-size: var(--font-size-xl);
+    }
+
+    /* Open state */
+    .nav-toggle-checkbox:checked ~ .nav-menu {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .nav-toggle-checkbox:checked ~ .nav-hamburger span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .nav-toggle-checkbox:checked ~ .nav-hamburger span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .nav-toggle-checkbox:checked ~ .nav-hamburger span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+  }
+</style>
+
+<script>
+  // Close mobile menu on link click
+  document.querySelectorAll('.nav-link, .nav-cta').forEach((link) => {
+    link.addEventListener('click', () => {
+      const toggle = document.getElementById('nav-toggle') as HTMLInputElement;
+      if (toggle) toggle.checked = false;
+    });
+  });
+</script>

@@ -1,0 +1,157 @@
+<footer id="contact" class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="/logo.png" alt="Empower AI" width="140" height="41" class="footer-logo" />
+        <p class="footer-tagline">Semantic Intelligence for Regulated Enterprise.</p>
+        <p class="footer-desc">
+          Build governed vertical AI &mdash; fast. From knowledge to action, safely.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Platform</h4>
+        <ul>
+          <li><a href="#platform">What is Empower AI</a></li>
+          <li><a href="#platform">Value Pillars</a></li>
+          <li><a href="#delivery">Delivery Model</a></li>
+          <li><a href="#why">Why Empower</a></li>
+          <li><a href="#partners">Partner Program</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>Industries</h4>
+        <ul>
+          <li><a href="#platform">Healthcare</a></li>
+          <li><a href="#platform">Life Sciences</a></li>
+          <li><a href="#platform">Medical Devices</a></li>
+          <li><a href="#platform">Pharma</a></li>
+          <li><a href="#platform">Insurance</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-cta">
+        <h4>Get Started</h4>
+        <p>Ready to build governed AI systems for your enterprise?</p>
+        <a href="mailto:info@empowertech.ai" class="btn btn-primary footer-btn">Request a Demo</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; {new Date().getFullYear()} Empower Technologies. All rights reserved.</p>
+      <p class="footer-domain">empowertech.ai</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: var(--color-surface);
+    border-top: 1px solid var(--color-border);
+    padding-top: var(--space-16);
+    padding-bottom: var(--space-8);
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+    gap: var(--space-10);
+    margin-bottom: var(--space-12);
+  }
+
+  .footer-logo {
+    margin-bottom: var(--space-4);
+    opacity: 0.9;
+  }
+
+  .footer-tagline {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    background: linear-gradient(135deg, var(--color-accent-1), var(--color-accent-2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: var(--space-3);
+  }
+
+  .footer-desc {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    line-height: var(--line-height-relaxed);
+  }
+
+  .footer-links h4,
+  .footer-cta h4 {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-white);
+    margin-bottom: var(--space-4);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .footer-links ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .footer-links a {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    transition: color var(--transition-fast);
+  }
+
+  .footer-links a:hover {
+    color: var(--color-white);
+  }
+
+  .footer-cta p {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-4);
+    line-height: var(--line-height-relaxed);
+  }
+
+  .footer-btn {
+    padding: var(--space-2) var(--space-6);
+    font-size: var(--font-size-sm);
+  }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: var(--space-8);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .footer-bottom p {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+  }
+
+  .footer-domain {
+    font-weight: var(--font-weight-medium);
+  }
+
+  @media (max-width: 1024px) {
+    .footer-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-8);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .footer-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .footer-bottom {
+      flex-direction: column;
+      gap: var(--space-2);
+      text-align: center;
+    }
+  }
+</style>

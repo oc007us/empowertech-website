@@ -1,0 +1,283 @@
+---
+import { Image } from 'astro:assets';
+import partnerImg from '../assets/EmpowerPartnerProgram.png';
+---
+
+<section id="partners" class="section partners">
+  <div class="container">
+    <div class="partners-header fade-in">
+      <p class="section-label">Partner Ecosystem</p>
+      <h2 class="section-title">Scale Through Partners</h2>
+      <p class="section-subtitle">
+        A network of trusted delivery partners trained and certified on Empower methods, tooling, and best practices &mdash;
+        enabling safe scale across industries and geographies.
+      </p>
+    </div>
+
+    <!-- Partner Tiers -->
+    <div class="tiers-grid">
+      <div class="card tier-card fade-in">
+        <div class="tier-badge tier-1">Tier 1</div>
+        <h3>Registered Partner</h3>
+        <p class="tier-who">Boutique consultancies, small SIs, vertical specialists</p>
+        <ul>
+          <li>Sales enablement kit (deck, demos, one-pagers)</li>
+          <li>Access to reference architectures + best practices</li>
+          <li>Lead registration eligibility</li>
+        </ul>
+        <p class="tier-req">Basic training + agreement</p>
+      </div>
+
+      <div class="card tier-card tier-featured fade-in">
+        <div class="tier-badge tier-2">Tier 2</div>
+        <h3>Certified Delivery Partner</h3>
+        <p class="tier-who">Firms actively implementing for clients</p>
+        <ul>
+          <li>Certification badge</li>
+          <li>Implementation accelerators + templates</li>
+          <li>Joint solution packaging (vertical kits)</li>
+          <li>Deal support / solution engineering office hours</li>
+          <li>Lead sharing (performance-based)</li>
+        </ul>
+        <p class="tier-req">Certified staff + first successful deployment</p>
+      </div>
+
+      <div class="card tier-card fade-in">
+        <div class="tier-badge tier-3">Tier 3</div>
+        <h3>Premier / Strategic Partner</h3>
+        <p class="tier-who">Top partners with repeatable delivery (including global SIs)</p>
+        <ul>
+          <li>Co-selling + joint account planning</li>
+          <li>Priority roadmap influence</li>
+          <li>Advanced enablement (train-the-trainer)</li>
+          <li>Early access features + partner sandbox</li>
+          <li>Joint marketing / case studies</li>
+        </ul>
+        <p class="tier-req">Volume targets, quality SLAs, annual business plan</p>
+      </div>
+    </div>
+
+    <!-- Certifications -->
+    <div class="certs-section fade-in">
+      <h3 class="certs-title">Certification Tracks</h3>
+      <p class="certs-subtitle">Three stackable tracks ensure partners deliver consistent, governed outcomes.</p>
+
+      <div class="certs-grid">
+        <div class="cert-card">
+          <div class="cert-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/>
+              <line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/>
+            </svg>
+          </div>
+          <h4>Platform Engineer</h4>
+          <p>Deployment patterns, multi-tenant ops, security, RBAC, observability, upgrade playbooks</p>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="5" r="3"/><circle cx="5" cy="19" r="3"/><circle cx="19" cy="19" r="3"/>
+              <line x1="12" y1="8" x2="5" y2="16"/><line x1="12" y1="8" x2="19" y2="16"/>
+            </svg>
+          </div>
+          <h4>Semantic Modeler</h4>
+          <p>Ontology/taxonomy foundations, semantic ingestion, provenance, constraints, anti-hallucination</p>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4"/>
+            </svg>
+          </div>
+          <h4>Agentic Workflow Builder</h4>
+          <p>Orchestration templates, tool-calling + guardrails, progressive delegation, testing + audit traces</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="partners-image fade-in">
+      <Image src={partnerImg} alt="Empower AI Partner Program overview" width={900} quality={80} />
+    </div>
+  </div>
+</section>
+
+<style>
+  .partners {
+    background: var(--color-surface);
+  }
+
+  .partners-header {
+    text-align: center;
+    margin-bottom: var(--space-16);
+  }
+
+  .partners-header .section-subtitle {
+    margin-inline: auto;
+  }
+
+  /* Tiers */
+  .tiers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+    margin-bottom: var(--space-16);
+  }
+
+  .tier-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .tier-featured {
+    border-color: rgba(50, 69, 255, 0.3);
+    background: linear-gradient(180deg, rgba(50, 69, 255, 0.06) 0%, var(--color-card) 100%);
+  }
+
+  .tier-badge {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    padding: var(--space-1) var(--space-3);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: var(--radius-sm);
+  }
+
+  .tier-1 { background: rgba(107, 114, 128, 0.2); color: #9ca3af; }
+  .tier-2 { background: rgba(50, 69, 255, 0.15); color: #6b8aff; }
+  .tier-3 { background: rgba(188, 82, 238, 0.15); color: #d48bee; }
+
+  .tier-card h3 {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-white);
+  }
+
+  .tier-who {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    font-style: italic;
+  }
+
+  .tier-card ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    flex-grow: 1;
+  }
+
+  .tier-card li {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    padding-left: var(--space-5);
+    position: relative;
+  }
+
+  .tier-card li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--color-accent-1);
+  }
+
+  .tier-req {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--color-border);
+    margin-top: auto;
+  }
+
+  /* Certifications */
+  .certs-section {
+    text-align: center;
+    margin-bottom: var(--space-16);
+  }
+
+  .certs-title {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-white);
+    margin-bottom: var(--space-3);
+  }
+
+  .certs-subtitle {
+    font-size: var(--font-size-base);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-10);
+  }
+
+  .certs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+    text-align: left;
+  }
+
+  .cert-card {
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-6);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .cert-icon {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-sm);
+    background: rgba(50, 69, 255, 0.08);
+    color: var(--color-accent-1);
+  }
+
+  .cert-card h4 {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-white);
+  }
+
+  .cert-card p {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-relaxed);
+  }
+
+  .partners-image {
+    display: flex;
+    justify-content: center;
+  }
+
+  .partners-image img {
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  }
+
+  @media (max-width: 1024px) {
+    .tiers-grid,
+    .certs-grid {
+      grid-template-columns: 1fr;
+      max-width: 520px;
+      margin-inline: auto;
+    }
+
+    .tiers-grid {
+      margin-bottom: var(--space-12);
+    }
+  }
+</style>
