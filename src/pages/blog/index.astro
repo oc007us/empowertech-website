@@ -17,10 +17,13 @@ const sortedPosts = posts.sort((a, b) => b.data.sortDate.localeCompare(a.data.so
     <div class="container">
       <div class="blog-grid">
         {sortedPosts.map((post) => (
-          <a href={`/blog/${post.id}/`} class="blog-card card fade-in">
+          <a href={`/blog/${post.id}/`} class="blog-card fade-in">
             {post.data.thumbImage && (
-              <img src={post.data.thumbImage} alt="" class="blog-card-thumb" />
+              <div class="blog-card-image">
+                <img src={post.data.thumbImage} alt="" class="blog-card-thumb" />
+              </div>
             )}
+            <div class="blog-card-body">
             <div class="blog-card-tags">
               {post.data.tags.map((tag: string) => (
                 <span class="blog-card-tag">{tag}</span>
@@ -34,6 +37,7 @@ const sortedPosts = posts.sort((a, b) => b.data.sortDate.localeCompare(a.data.so
               <span>{post.data.readTime}</span>
             </div>
             <span class="blog-card-cta">Read article &rarr;</span>
+            </div>
           </a>
         ))}
       </div>
@@ -46,7 +50,7 @@ const sortedPosts = posts.sort((a, b) => b.data.sortDate.localeCompare(a.data.so
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--space-8);
-    max-width: 800px;
+    max-width: 860px;
     margin-inline: auto;
   }
 
@@ -55,20 +59,30 @@ const sortedPosts = posts.sort((a, b) => b.data.sortDate.localeCompare(a.data.so
     text-decoration: none;
     cursor: pointer;
     overflow: hidden;
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-base);
+  }
+
+  .blog-card:hover {
+    background: var(--color-card-hover);
+    border-color: var(--color-border-hover);
+  }
+
+  .blog-card-image {
+    background: rgba(255, 255, 255, 0.02);
+    border-bottom: 1px solid var(--color-border);
   }
 
   .blog-card-thumb {
     display: block;
-    width: calc(100% + 2 * var(--space-8));
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-    margin: calc(-1 * var(--space-8)) calc(-1 * var(--space-8)) 0;
-    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
-    border-bottom: 1px solid var(--color-border);
+    width: 100%;
+    height: auto;
   }
 
-  .blog-card:has(.blog-card-thumb) .blog-card-tags {
-    margin-top: var(--space-6);
+  .blog-card-body {
+    padding: var(--space-6) var(--space-8) var(--space-8);
   }
 
   .blog-card-tags {
