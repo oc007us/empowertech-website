@@ -9,7 +9,10 @@
       "Bash(curl:*)",
       "Bash(ls:*)",
       "Read(//Users/ocohen/git/empowertech-website/**)",
-      "Bash(identify:*)"
+      "Bash(identify:*)",
+      "Bash(for slug in agentic architecture blog contact field-service healthcare home partners pharma platform solutions who-we-help why)",
+      "Bash(do cp -r \"/Users/ocohen/git/empowertech-website/WORK/WebsiteContent/images/$slug\" \"/Users/ocohen/git/empowertech-website/public/images/pages/$slug\")",
+      "Bash(done)"
     ],
     "additionalDirectories": [
       "/Users/ocohen/git/empowertech-website/src/pages"

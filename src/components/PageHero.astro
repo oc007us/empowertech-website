@@ -3,13 +3,16 @@ interface Props {
   label: string;
   title: string;
   subtitle?: string;
+  heroImage?: string;
 }
 
-const { label, title, subtitle } = Astro.props;
+const { label, title, subtitle, heroImage } = Astro.props;
 ---
 
 <section class="page-hero">
   <div class="page-hero-bg">
+    {heroImage && <img src={heroImage} alt="" class="page-hero-image" />}
+    <div class="page-hero-overlay"></div>
     <div class="page-hero-gradient-1"></div>
     <div class="page-hero-gradient-2"></div>
   </div>
@@ -32,6 +35,21 @@ const { label, title, subtitle } = Astro.props;
     position: absolute;
     inset: 0;
     overflow: hidden;
+  }
+
+  .page-hero-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.3;
+  }
+
+  .page-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(10, 11, 20, 0.4) 0%, rgba(10, 11, 20, 0.85) 100%);
   }
 
   .page-hero-gradient-1 {

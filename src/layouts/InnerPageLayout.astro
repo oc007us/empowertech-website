@@ -10,15 +10,17 @@ interface Props {
   heroLabel: string;
   heroTitle: string;
   heroSubtitle?: string;
+  heroImage?: string;
+  ogImage?: string;
 }
 
-const { title, description, heroLabel, heroTitle, heroSubtitle } = Astro.props;
+const { title, description, heroLabel, heroTitle, heroSubtitle, heroImage, ogImage } = Astro.props;
 ---
 
-<Layout title={title} description={description}>
+<Layout title={title} description={description} ogImage={ogImage}>
   <Navbar />
   <main>
-    <PageHero label={heroLabel} title={heroTitle} subtitle={heroSubtitle} />
+    <PageHero label={heroLabel} title={heroTitle} subtitle={heroSubtitle} heroImage={heroImage} />
     <slot />
   </main>
   <Footer />
