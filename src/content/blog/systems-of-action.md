@@ -6,6 +6,9 @@ sortDate: "2026-02-06"
 author: "Empower AI"
 readTime: "7 min read"
 tags: ["Agentic AI", "Enterprise Transformation", "Systems of Action"]
+heroImage: "/images/blog/systems-of-action/hero.webp"
+thumbImage: "/images/blog/systems-of-action/thumb.webp"
+ogImage: "/images/blog/systems-of-action/og.png"
 ---
 
 ## The Three Phases of Software

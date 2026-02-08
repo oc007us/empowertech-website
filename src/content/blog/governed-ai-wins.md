@@ -6,6 +6,9 @@ sortDate: "2026-02-05"
 author: "Empower AI"
 readTime: "7 min read"
 tags: ["Governed AI", "Enterprise AI", "Trust", "Regulated Industries"]
+heroImage: "/images/blog/governed-ai-wins/hero.webp"
+thumbImage: "/images/blog/governed-ai-wins/thumb.webp"
+ogImage: "/images/blog/governed-ai-wins/og.png"
 ---
 
 ## The Market Just Told You Something Important

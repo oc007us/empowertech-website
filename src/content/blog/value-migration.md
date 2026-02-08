@@ -6,6 +6,9 @@ sortDate: "2026-02-07"
 author: "Empower AI"
 readTime: "6 min read"
 tags: ["AI Strategy", "Enterprise AI", "Agentic AI"]
+heroImage: "/images/blog/value-migration/hero.webp"
+thumbImage: "/images/blog/value-migration/thumb.webp"
+ogImage: "/images/blog/value-migration/og.png"
 ---
 
 ## The Signal in the Noise
