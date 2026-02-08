@@ -93,6 +93,70 @@
     --pagefind-ui-border-radius: 10px;
     --pagefind-ui-font: 'Inter', system-ui, -apple-system, sans-serif;
   }
+
+  /* Search input */
+  .pagefind-ui__search-input {
+    color: #f0f0f5 !important;
+    background: #0a0b14 !important;
+    border-color: rgba(255, 255, 255, 0.12) !important;
+  }
+
+  .pagefind-ui__search-input::placeholder {
+    color: rgba(240, 240, 245, 0.4) !important;
+  }
+
+  .pagefind-ui__search-clear {
+    color: rgba(240, 240, 245, 0.5) !important;
+    background: none !important;
+  }
+
+  .pagefind-ui__search-clear:hover {
+    color: #f0f0f5 !important;
+  }
+
+  /* Results count */
+  .pagefind-ui__message {
+    color: rgba(240, 240, 245, 0.5) !important;
+    font-size: 0.8rem !important;
+    padding-block: 0.75rem !important;
+  }
+
+  /* Result items */
+  .pagefind-ui__result {
+    border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
+    padding: 1rem 0 !important;
+  }
+
+  .pagefind-ui__result-link,
+  .pagefind-ui__result-title {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+  }
+
+  .pagefind-ui__result-link:hover {
+    color: #7b8aff !important;
+  }
+
+  .pagefind-ui__result-excerpt {
+    color: rgba(240, 240, 245, 0.6) !important;
+    line-height: 1.6 !important;
+    font-size: 0.85rem !important;
+  }
+
+  .pagefind-ui__result-nested .pagefind-ui__result-link,
+  .pagefind-ui__result-nested .pagefind-ui__result-title {
+    color: rgba(240, 240, 245, 0.85) !important;
+    font-weight: 500 !important;
+    font-size: 0.85rem !important;
+  }
+
+  /* Search term highlights */
+  .pagefind-ui__result mark {
+    color: #ffffff !important;
+    background: rgba(50, 69, 255, 0.35) !important;
+    border-radius: 2px;
+    padding: 0.05em 0.2em;
+  }
 </style>
 
 <script>
