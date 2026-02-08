@@ -1,13 +1,12 @@
 ---
-import { Image } from 'astro:assets';
-import logo from '../assets/EmpowerAI_logo_transparent.png';
+import Logo from './Logo.astro';
 ---
 
 <footer id="contact" class="footer">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <Image src={logo} alt="Empower AI" height={41} quality={90} class="footer-logo" />
+        <div class="footer-logo"><Logo height={41} /></div>
         <p class="footer-tagline">Semantic Intelligence for Regulated Enterprise.</p>
         <p class="footer-desc">
           Build governed vertical AI &mdash; fast. From knowledge to action, safely.
@@ -67,7 +66,6 @@ import logo from '../assets/EmpowerAI_logo_transparent.png';
   .footer-logo {
     margin-bottom: var(--space-4);
     opacity: 0.9;
-    filter: invert(1) hue-rotate(180deg);
   }
 
   .footer-tagline {

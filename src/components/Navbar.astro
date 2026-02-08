@@ -1,6 +1,5 @@
 ---
-import { Image } from 'astro:assets';
-import logo from '../assets/EmpowerAI_logo_transparent.png';
+import Logo from './Logo.astro';
 import Search from './Search.astro';
 
 const currentPath = Astro.url.pathname;
@@ -26,8 +25,8 @@ const solutionLinks = [
 
 <nav class="navbar" id="navbar">
   <div class="nav-inner container">
-    <a href="/" class="nav-logo">
-      <Image src={logo} alt="Empower AI" height={36} quality={90} />
+    <a href="/" class="nav-logo" aria-label="Empower AI — Home">
+      <Logo height={36} />
     </a>
 
     <!-- Mobile toggle -->
@@ -92,10 +91,8 @@ const solutionLinks = [
     height: 100%;
   }
 
-  .nav-logo img {
-    height: 36px;
-    width: auto;
-    filter: invert(1) hue-rotate(180deg);
+  .nav-logo {
+    text-decoration: none;
   }
 
   /* Desktop menu */
@@ -229,8 +226,12 @@ const solutionLinks = [
 
   /* Mobile */
   @media (max-width: 768px) {
-    .nav-logo img {
-      height: 30px;
+    .nav-logo :global(.logo) {
+      --logo-h: 30px;
+    }
+
+    .nav-logo :global(.logo-tagline) {
+      display: none;
     }
 
     .nav-hamburger {
