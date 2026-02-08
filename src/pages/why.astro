@@ -5,6 +5,7 @@ import SectionCTA from '../components/SectionCTA.astro';
 import { Image } from 'astro:assets';
 import slide15 from '../assets/images/platform-slides/15_moat_stack.png';
 import palantir from '../assets/images/diagrams/Empower-Positioning-vs-Palantir.png';
+import raiFlow from '../assets/images/diagrams/SustainableAndResponsibleAI.png';
 ---
 
 <InnerPageLayout
@@ -95,6 +96,24 @@ import palantir from '../assets/images/diagrams/Empower-Positioning-vs-Palantir.
           <div class="proof-stat gradient-text">Weeks</div>
           <p>From zero to live — not months — and easily extensible across teams.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="inner-section container">
+    <div class="content-grid">
+      <div class="prose">
+        <h2>Sustainable &amp; Responsible AI by Design</h2>
+        <p>Most responsible AI programs stall at principles. Empower AI turns those principles into enforceable, measurable infrastructure.</p>
+        <p>Your RAI framework &mdash; transparency, human oversight, use-case guardrails, risk tiers, audit requirements &mdash; is encoded directly into the platform as runtime constraints. Every copilot and agent inherits these guardrails automatically, producing decision-traced outputs that are transparent, auditable, and aligned with your policies.</p>
+        <ul>
+          <li><strong>Efficiency-first architecture.</strong> Small models, token budgets, and best-fit model routing &mdash; no massive retraining, no runaway compute.</li>
+          <li><strong>Ingest once, reuse everywhere.</strong> Knowledge is structured once and shared across copilots and agents, eliminating redundant processing.</li>
+          <li><strong>Responsibility as code.</strong> Guardrails, provenance tracking, and human-in-the-loop controls are enforced at the platform level &mdash; not left to individual teams.</li>
+        </ul>
+      </div>
+      <div class="dark-image fade-in">
+        <Image src={raiFlow} alt="From Responsible-AI Principles to Decision-Traced Copilots — Empower AI flow diagram" width={560} quality={80} />
       </div>
     </div>
   </section>
