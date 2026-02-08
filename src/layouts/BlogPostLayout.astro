@@ -53,6 +53,17 @@ const { title, description, date, author, readTime, tags, heroImage, ogImage } =
         </div>
       </div>
 
+      <div class="blog-cta container">
+        <div class="blog-cta-card">
+          <p class="blog-cta-heading">Ready to see governed AI in action?</p>
+          <p class="blog-cta-desc">Learn how Empower AI helps regulated enterprises move from pilots to production-grade systems of action.</p>
+          <div class="blog-cta-actions">
+            <a href="/contact/" class="btn btn-primary">Request a Demo</a>
+            <a href="/platform/" class="btn btn-secondary">Explore the Platform</a>
+          </div>
+        </div>
+      </div>
+
       <div class="blog-post-footer container">
         <a href="/blog/" class="btn btn-secondary">&larr; Back to Blog</a>
       </div>
@@ -173,6 +184,42 @@ const { title, description, date, author, readTime, tags, heroImage, ogImage } =
   .blog-prose {
     border-top: 1px solid var(--color-border);
     padding-top: var(--space-10);
+  }
+
+  .blog-cta {
+    max-width: 800px;
+    padding-top: var(--space-10);
+  }
+
+  .blog-cta-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-10);
+    text-align: center;
+  }
+
+  .blog-cta-heading {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-white);
+    margin-bottom: var(--space-3);
+  }
+
+  .blog-cta-desc {
+    font-size: var(--font-size-base);
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-relaxed);
+    margin-bottom: var(--space-6);
+    max-width: 520px;
+    margin-inline: auto;
+  }
+
+  .blog-cta-actions {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-4);
+    flex-wrap: wrap;
   }
 
   .blog-post-footer {
