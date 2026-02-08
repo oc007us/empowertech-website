@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import logo from '../assets/EmpowerAI_logo_transparent.png';
+import Search from './Search.astro';
 
 const currentPath = Astro.url.pathname;
 
@@ -64,7 +65,8 @@ const solutionLinks = [
         <li><a href="/partners/" class:list={['nav-link', { active: isActive('/partners/') }]}>Partners</a></li>
         <li><a href="/blog/" class:list={['nav-link', { active: isActive('/blog/') }]}>Blog</a></li>
       </ul>
-      <a href="mailto:info@empowertech.ai" class="btn btn-primary nav-cta">Request a Demo</a>
+      <Search />
+      <a href="/contact/" class="btn btn-primary nav-cta">Request a Demo</a>
     </div>
   </div>
 </nav>
