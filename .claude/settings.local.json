@@ -15,7 +15,8 @@
       "Bash(done)",
       "Bash(grep:*)",
       "Bash(python3:*)",
-      "WebFetch(domain:empowertech.ai)"
+      "WebFetch(domain:empowertech.ai)",
+      "Bash(xargs:*)"
     ],
     "additionalDirectories": [
       "/Users/ocohen/git/empowertech-website/src/pages"
