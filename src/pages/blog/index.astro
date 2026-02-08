@@ -4,6 +4,22 @@ import { getCollection } from 'astro:content';
 
 const posts = await getCollection('blog');
 const sortedPosts = posts.sort((a, b) => b.data.sortDate.localeCompare(a.data.sortDate));
+
+// Calculate tag statistics
+const tagCounts = new Map<string, number>();
+posts.forEach(post => {
+  post.data.tags.forEach((tag: string) => {
+    tagCounts.set(tag, (tagCounts.get(tag) || 0) + 1);
+  });
+});
+
+// Sort tags by count descending, then alphabetically
+const sortedTags = Array.from(tagCounts.entries())
+  .sort((a, b) => {
+    if (b[1] !== a[1]) return b[1] - a[1];
+    return a[0].localeCompare(b[0]);
+  })
+  .map(([tag, count]) => ({ tag, count }));
 ---
 
 <InnerPageLayout
@@ -15,32 +31,50 @@ const sortedPosts = posts.sort((a, b) => b.data.sortDate.localeCompare(a.data.so
   heroImage="/images/pages/blog/hero.png"
   ogImage="/images/pages/blog/og.png"
 >
-  <section class="inner-section">
+  <section class="tag-filter-section">
     <div class="container">
+      <div class="tag-filter-bar">
+        <button class="tag-filter-btn active" data-tag="all">
+          All <span class="tag-count">{posts.length}</span>
+        </button>
+        {sortedTags.map(({ tag, count }) => (
+          <button class="tag-filter-btn" data-tag={tag}>
+            {tag} <span class="tag-count">{count}</span>
+          </button>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="inner-section blog-section">
+    <div class="container">
+      <p class="blog-filter-status" id="blog-filter-status"></p>
       <div class="blog-grid">
         {sortedPosts.map((post) => (
-          <a href={`/blog/${post.id}/`} class="blog-card fade-in">
-            {post.data.thumbImage && (
-              <div class="blog-card-image">
-                <img src={post.data.thumbImage} alt="" class="blog-card-thumb" />
+          <article class="blog-card fade-in" data-tags={post.data.tags.join(',')}>
+            <a href={`/blog/${post.id}/`} class="blog-card-link">
+              {post.data.thumbImage && (
+                <div class="blog-card-image">
+                  <img src={post.data.thumbImage} alt="" class="blog-card-thumb" />
+                </div>
+              )}
+              <div class="blog-card-body">
+                <div class="blog-card-tags">
+                  {post.data.tags.map((tag: string) => (
+                    <span class="blog-card-tag" data-tag={tag}>{tag}</span>
+                  ))}
+                </div>
+                <h2 class="blog-card-title">{post.data.title}</h2>
+                <p class="blog-card-desc">{post.data.description}</p>
+                <div class="blog-card-meta">
+                  <span>{post.data.date}</span>
+                  <span class="blog-card-divider">&middot;</span>
+                  <span>{post.data.readTime}</span>
+                </div>
+                <span class="blog-card-cta">Read article &rarr;</span>
               </div>
-            )}
-            <div class="blog-card-body">
-            <div class="blog-card-tags">
-              {post.data.tags.map((tag: string) => (
-                <span class="blog-card-tag">{tag}</span>
-              ))}
-            </div>
-            <h2 class="blog-card-title">{post.data.title}</h2>
-            <p class="blog-card-desc">{post.data.description}</p>
-            <div class="blog-card-meta">
-              <span>{post.data.date}</span>
-              <span class="blog-card-divider">&middot;</span>
-              <span>{post.data.readTime}</span>
-            </div>
-            <span class="blog-card-cta">Read article &rarr;</span>
-            </div>
-          </a>
+            </a>
+          </article>
         ))}
       </div>
     </div>
@@ -48,6 +82,89 @@ const sortedPosts = posts.sort((a, b) => b.data.sortDate.localeCompare(a.data.so
 </InnerPageLayout>
 
 <style>
+  /* Tag Filter Bar */
+  .tag-filter-section {
+    padding-top: var(--space-6);
+    padding-bottom: var(--space-2);
+    position: sticky;
+    top: var(--nav-height);
+    z-index: 10;
+    background: linear-gradient(to bottom, var(--color-bg) 85%, transparent);
+  }
+
+  .tag-filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    justify-content: center;
+    max-width: 860px;
+    margin-inline: auto;
+  }
+
+  .tag-filter-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-4);
+    font-family: var(--font-family);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-secondary);
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    transition: all var(--transition-base);
+  }
+
+  .tag-filter-btn:hover {
+    color: var(--color-white);
+    background: var(--color-card-hover);
+    border-color: var(--color-border-hover);
+  }
+
+  .tag-filter-btn.active {
+    color: var(--color-white);
+    background: linear-gradient(135deg, var(--color-accent-1), var(--color-accent-2));
+    border-color: transparent;
+    box-shadow: 0 4px 16px rgba(50, 69, 255, 0.3);
+  }
+
+  .tag-count {
+    font-size: 0.65rem;
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-muted);
+    background: rgba(255, 255, 255, 0.06);
+    min-width: 18px;
+    height: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-full);
+    padding-inline: 4px;
+    transition: all var(--transition-fast);
+  }
+
+  .tag-filter-btn.active .tag-count {
+    color: var(--color-white);
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  /* Filter status */
+  .blog-filter-status {
+    max-width: 860px;
+    margin-inline: auto;
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-6);
+    min-height: 1.5em;
+  }
+
+  .blog-section {
+    padding-top: var(--space-6);
+  }
+
+  /* Blog Grid */
   .blog-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -58,18 +175,26 @@ const sortedPosts = posts.sort((a, b) => b.data.sortDate.localeCompare(a.data.so
 
   .blog-card {
     display: block;
-    text-decoration: none;
-    cursor: pointer;
     overflow: hidden;
     background: var(--color-card);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-lg);
-    transition: all var(--transition-base);
+    transition: background var(--transition-base), border-color var(--transition-base), opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .blog-card.hidden {
+    display: none;
   }
 
   .blog-card:hover {
     background: var(--color-card-hover);
     border-color: var(--color-border-hover);
+  }
+
+  .blog-card-link {
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
   }
 
   .blog-card-image {
@@ -101,6 +226,14 @@ const sortedPosts = posts.sort((a, b) => b.data.sortDate.localeCompare(a.data.so
     padding: var(--space-1) var(--space-3);
     border-radius: var(--radius-sm);
     border: 1px solid rgba(50, 69, 255, 0.2);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+  }
+
+  .blog-card-tag:hover {
+    background: rgba(50, 69, 255, 0.25);
+    border-color: rgba(50, 69, 255, 0.4);
+    color: var(--color-white);
   }
 
   .blog-card-title {
@@ -149,4 +282,110 @@ const sortedPosts = posts.sort((a, b) => b.data.sortDate.localeCompare(a.data.so
   .blog-card:hover .blog-card-cta {
     color: var(--color-accent-2);
   }
+
+  @media (max-width: 768px) {
+    .tag-filter-section {
+      position: relative;
+      top: 0;
+    }
+
+    .tag-filter-bar {
+      justify-content: flex-start;
+    }
+
+    .tag-filter-btn {
+      padding: var(--space-1) var(--space-3);
+    }
+  }
 </style>
+
+<script>
+  function initBlogFiltering() {
+    const cards = document.querySelectorAll<HTMLElement>('.blog-card');
+    const filterBtns = document.querySelectorAll<HTMLElement>('.tag-filter-btn');
+    const cardTags = document.querySelectorAll<HTMLElement>('.blog-card-tag');
+    const statusEl = document.getElementById('blog-filter-status');
+
+    function getTagFromURL(): string {
+      const params = new URLSearchParams(window.location.search);
+      return params.get('tag') || 'all';
+    }
+
+    function updateURL(tag: string) {
+      const url = new URL(window.location.href);
+      if (tag === 'all') {
+        url.searchParams.delete('tag');
+      } else {
+        url.searchParams.set('tag', tag);
+      }
+      window.history.pushState({}, '', url.toString());
+    }
+
+    function applyFilter(tag: string) {
+      let visibleCount = 0;
+
+      cards.forEach(card => {
+        const cardTagList = card.dataset.tags?.split(',') || [];
+        const show = tag === 'all' || cardTagList.includes(tag);
+        if (show) {
+          card.classList.remove('hidden');
+          visibleCount++;
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
+      // Update active button
+      filterBtns.forEach(btn => {
+        if ((btn.dataset.tag || 'all') === tag) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+
+      // Update status text
+      if (statusEl) {
+        if (tag === 'all') {
+          statusEl.textContent = '';
+        } else {
+          statusEl.textContent = `Showing ${visibleCount} post${visibleCount !== 1 ? 's' : ''} tagged "${tag}"`;
+        }
+      }
+    }
+
+    // Filter bar buttons
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const tag = btn.dataset.tag || 'all';
+        applyFilter(tag);
+        updateURL(tag);
+      });
+    });
+
+    // Card tag clicks — filter instead of navigating
+    cardTags.forEach(tagEl => {
+      tagEl.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const tag = tagEl.dataset.tag || 'all';
+        applyFilter(tag);
+        updateURL(tag);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+
+    // Browser back/forward
+    window.addEventListener('popstate', () => {
+      applyFilter(getTagFromURL());
+    });
+
+    // Initialize from URL
+    const initialTag = getTagFromURL();
+    if (initialTag !== 'all') {
+      applyFilter(initialTag);
+    }
+  }
+
+  initBlogFiltering();
+</script>
