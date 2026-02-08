@@ -13,7 +13,9 @@
       "Bash(for slug in agentic architecture blog contact field-service healthcare home partners pharma platform solutions who-we-help why)",
       "Bash(do cp -r \"/Users/ocohen/git/empowertech-website/WORK/WebsiteContent/images/$slug\" \"/Users/ocohen/git/empowertech-website/public/images/pages/$slug\")",
       "Bash(done)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(python3:*)",
+      "WebFetch(domain:empowertech.ai)"
     ],
     "additionalDirectories": [
       "/Users/ocohen/git/empowertech-website/src/pages"
