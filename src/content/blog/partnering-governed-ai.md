@@ -28,7 +28,7 @@ Below are the **Top 5** we see most often, and how partnering with **Empower AI*
 
 ---
 
-## 1) "Prototype Success" vs "Production Reality"
+## 1. "Prototype Success" vs "Production Reality"
 
 Most AI engagements still optimize for the demo: a chat UI, impressive outputs, a pilot with friendly users.
 
@@ -50,7 +50,7 @@ Regulated production AI requires something else entirely:
 
 ---
 
-## 2) In-App AI Silos Don't Deliver Cross-System Outcomes
+## 2. In-App AI Silos Don't Deliver Cross-System Outcomes
 
 In-app copilots are sandboxed. Real enterprise work isn't.
 
@@ -66,7 +66,7 @@ Claims adjudication touches member records, policy docs, provider networks, and 
 
 ---
 
-## 3) RAG-Only Approaches Collapse Under Audit and Edge Cases
+## 3. RAG-Only Approaches Collapse Under Audit and Edge Cases
 
 Chunk + vector search + LLM can be useful, but in regulated environments it often fails when it matters most:
 
@@ -86,7 +86,7 @@ Chunk + vector search + LLM can be useful, but in regulated environments it ofte
 
 ---
 
-## 4) Governance is Treated as a Phase Instead of a Foundation
+## 4. Governance is Treated as a Phase Instead of a Foundation
 
 Many teams say: "We'll add approvals, logging, controls, and compliance later."
 
@@ -102,7 +102,7 @@ In regulated AI, "later" is where projects die.
 
 ---
 
-## 5) Delivery Doesn't Compound — Every Project Reinvents the Wheel
+## 5. Delivery Doesn't Compound — Every Project Reinvents the Wheel
 
 The biggest economic advantage in enterprise AI is reuse:
 

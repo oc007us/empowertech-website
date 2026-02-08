@@ -29,13 +29,7 @@ const solutionLinks = [
       <Logo height={36} />
     </a>
 
-    <!-- Mobile toggle -->
     <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox" aria-label="Toggle navigation" />
-    <label for="nav-toggle" class="nav-hamburger" aria-hidden="true">
-      <span></span>
-      <span></span>
-      <span></span>
-    </label>
 
     <div class="nav-menu">
       <ul class="nav-links">
@@ -64,8 +58,16 @@ const solutionLinks = [
         <li><a href="/partners/" class:list={['nav-link', { active: isActive('/partners/') }]}>Partners</a></li>
         <li><a href="/blog/" class:list={['nav-link', { active: isActive('/blog/') }]}>Blog</a></li>
       </ul>
-      <Search />
       <a href="/contact/" class="btn btn-primary nav-cta">Request a Demo</a>
+    </div>
+
+    <div class="nav-controls">
+      <Search />
+      <label for="nav-toggle" class="nav-hamburger" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
     </div>
   </div>
 </nav>
@@ -100,6 +102,14 @@ const solutionLinks = [
     display: flex;
     align-items: center;
     gap: var(--space-8);
+    margin-left: auto;
+  }
+
+  .nav-controls {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    margin-left: var(--space-6);
   }
 
   .nav-links {
@@ -306,15 +316,15 @@ const solutionLinks = [
       visibility: visible;
     }
 
-    .nav-toggle-checkbox:checked ~ .nav-hamburger span:nth-child(1) {
+    .nav-toggle-checkbox:checked ~ .nav-controls .nav-hamburger span:nth-child(1) {
       transform: rotate(45deg) translate(5px, 5px);
     }
 
-    .nav-toggle-checkbox:checked ~ .nav-hamburger span:nth-child(2) {
+    .nav-toggle-checkbox:checked ~ .nav-controls .nav-hamburger span:nth-child(2) {
       opacity: 0;
     }
 
-    .nav-toggle-checkbox:checked ~ .nav-hamburger span:nth-child(3) {
+    .nav-toggle-checkbox:checked ~ .nav-controls .nav-hamburger span:nth-child(3) {
       transform: rotate(-45deg) translate(5px, -5px);
     }
   }

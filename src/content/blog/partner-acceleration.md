@@ -46,7 +46,7 @@ A partner that solves those systematically will stand out immediately.
 
 ---
 
-## 1) Differentiate with "Governed Outcomes," not "AI Features"
+## 1. Differentiate with "Governed Outcomes," not "AI Features"
 
 Every firm can add AI "capabilities" to a proposal. Few can credibly promise:
 
@@ -60,7 +60,7 @@ Every firm can add AI "capabilities" to a proposal. Few can credibly promise:
 
 ---
 
-## 2) Turn your best work into reusable accelerators (assets that compound)
+## 2. Turn your best work into reusable accelerators (assets that compound)
 
 Empower AI helps convert expertise into reusable building blocks you can carry from client to client.
 
@@ -85,7 +85,7 @@ Empower AI helps convert expertise into reusable building blocks you can carry f
 
 ---
 
-## 3) Reduce delivery risk with a platform designed for regulated environments
+## 3. Reduce delivery risk with a platform designed for regulated environments
 
 Regulated AI fails in predictable ways: missing audit trails, weak provenance, uncontrolled data movement, unsafe actions.
 
@@ -101,7 +101,7 @@ Empower AI's runtime is built for those realities:
 
 ---
 
-## 4) Deliver cross-system orchestration (where the real value lives)
+## 4. Deliver cross-system orchestration (where the real value lives)
 
 The highest-value AI outcomes are cross-system:
 
@@ -113,7 +113,7 @@ The highest-value AI outcomes are cross-system:
 
 ---
 
-## 5) Enable a true "build + run" model with an operating system for improvement
+## 5. Enable a true "build + run" model with an operating system for improvement
 
 Governed AI isn't "ship it and forget it." It requires:
 
