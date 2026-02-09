@@ -33,7 +33,7 @@ const sortedTags = Array.from(tagCounts.entries())
 >
   <section class="tag-filter-section">
     <div class="container">
-      <div class="tag-filter-bar">
+      <div class="tag-filter-bar" id="tag-filter-bar">
         <button class="tag-filter-btn active" data-tag="all">
           All <span class="tag-count">{posts.length}</span>
         </button>
@@ -43,6 +43,10 @@ const sortedTags = Array.from(tagCounts.entries())
           </button>
         ))}
       </div>
+      <button class="tag-expand-btn" id="tag-expand-btn" aria-expanded="false">
+        <span class="tag-expand-label">Show more</span>
+        <svg class="tag-expand-icon" width="12" height="7" viewBox="0 0 12 7" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
     </div>
   </section>
 
@@ -99,6 +103,45 @@ const sortedTags = Array.from(tagCounts.entries())
     justify-content: center;
     max-width: 860px;
     margin-inline: auto;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .tag-filter-bar.collapsed {
+    /* 3 rows: ~3 * (button height ~34px + gap 8px) */
+    max-height: 120px;
+  }
+
+  .tag-expand-btn {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+    margin: var(--space-2) auto 0;
+    padding: var(--space-1) var(--space-3);
+    font-family: var(--font-family);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-muted);
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color var(--transition-fast);
+  }
+
+  .tag-expand-btn:hover {
+    color: var(--color-white);
+  }
+
+  .tag-expand-icon {
+    transition: transform 0.3s ease;
+  }
+
+  .tag-expand-btn[aria-expanded="true"] .tag-expand-icon {
+    transform: rotate(180deg);
+  }
+
+  .tag-expand-btn.hidden {
+    display: none;
   }
 
   .tag-filter-btn {
@@ -388,4 +431,42 @@ const sortedTags = Array.from(tagCounts.entries())
   }
 
   initBlogFiltering();
+
+  // Tag bar expand/collapse
+  function initTagExpand() {
+    const bar = document.getElementById('tag-filter-bar');
+    const btn = document.getElementById('tag-expand-btn');
+    if (!bar || !btn) return;
+
+    const label = btn.querySelector('.tag-expand-label');
+
+    // Check if content overflows 3 rows (~120px)
+    const collapsedMax = 120;
+    const naturalHeight = bar.scrollHeight;
+
+    if (naturalHeight <= collapsedMax) {
+      btn.classList.add('hidden');
+      return;
+    }
+
+    // Start collapsed
+    bar.classList.add('collapsed');
+
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      if (expanded) {
+        bar.classList.add('collapsed');
+        bar.style.maxHeight = '';
+        btn.setAttribute('aria-expanded', 'false');
+        if (label) label.textContent = 'Show more';
+      } else {
+        bar.classList.remove('collapsed');
+        bar.style.maxHeight = naturalHeight + 'px';
+        btn.setAttribute('aria-expanded', 'true');
+        if (label) label.textContent = 'Show less';
+      }
+    });
+  }
+
+  initTagExpand();
 </script>
