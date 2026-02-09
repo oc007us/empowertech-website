@@ -15,7 +15,7 @@ function processDir(dir) {
       const prefix = depth ? depth.split('/').map(() => '..').join('/') + '/' : './';
 
       let html = readFileSync(full, 'utf-8');
-      html = html.replace(/(href|src|content)="\/(?!\/)/g, `$1="${prefix}`);
+      html = html.replace(/(href|src|srcset|content)="\/(?!\/)/g, `$1="${prefix}`);
       writeFileSync(full, html);
       console.log(`postbuild: fixed paths in ${full} (prefix: ${prefix})`);
     }
