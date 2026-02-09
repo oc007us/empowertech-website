@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(__NEW_LINE_4017dd0a07c0a4c0__ magick /tmp/enpraxis-v2-dark-trimmed.png -resize 500x /tmp/enpraxis-v2-dark-500.png)"
+    ]
+  }
+}

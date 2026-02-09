@@ -1,0 +1,341 @@
+---
+import InnerPageLayout from '../../layouts/InnerPageLayout.astro';
+import SectionCTA from '../../components/SectionCTA.astro';
+---
+
+<InnerPageLayout
+  title="Compute Efficiency — Empower AI"
+  description="77-97% fewer AI tokens than pure agentic development. Research-backed analysis of production applications shows Model-Driven Engineering dramatically reduces inference costs."
+  heroLabel="Compute Efficiency"
+  heroTitle="Build More. Burn Fewer Tokens."
+  heroSubtitle="AI inference costs are about to spike 2-3x. Our quantitative analysis of production enterprise applications shows Model-Driven Engineering reduces token consumption by 77-97% compared to pure AI-agentic development."
+  heroImage="/images/pages/compute-efficiency/hero.png"
+  ogImage="/images/pages/compute-efficiency/og.png"
+>
+
+  <section class="inner-section container">
+    <div class="content-grid">
+      <div class="prose">
+        <h2>The Research</h2>
+        <p>We analyzed production Empower applications to understand the token efficiency difference between building with pure Claude Code and building with the Empower MDD platform.</p>
+        <p><strong>Our analysis:</strong></p>
+        <ul>
+          <li>372,000 lines of code analyzed</li>
+          <li>5,727 source files examined</li>
+          <li>17+ code generators evaluated</li>
+          <li>Production ShakeIQ and Empower Admin applications benchmarked</li>
+        </ul>
+        <p>The findings were unambiguous: Model-Driven Engineering eliminates massive token consumption by shifting work from AI inference to deterministic code generation.</p>
+      </div>
+      <div class="fade-in">
+        <div class="stat-highlight">
+          <div class="stat-content">
+            <span class="stat-label">Token Reduction</span>
+            <div class="stat-value gradient-text">77-97%</div>
+            <span class="stat-subtext">Fewer AI Tokens</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="inner-section alt-bg">
+    <div class="container">
+      <div class="content-grid">
+        <div class="prose">
+          <h2>Token Consumption Comparison</h2>
+          <p>Pure AI-agentic development burns tokens across every aspect of development. MDD collapses token consumption by moving code generation to deterministic, local execution.</p>
+          <table class="data-table">
+            <thead>
+              <tr><th>Metric</th><th>AI-Agentic</th><th>Empower MDD</th><th>Savings</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Complex App (372K LOC)</strong></td><td>350M tokens</td><td>80M tokens</td><td><span class="savings-highlight">77%</span></td></tr>
+              <tr><td><strong>CRUD App (130K LOC)</strong></td><td>120M tokens</td><td>3M tokens</td><td><span class="savings-highlight">97.5%</span></td></tr>
+              <tr><td><strong>Framework Upgrade</strong></td><td>150M tokens</td><td>25M tokens</td><td><span class="savings-highlight">83%</span></td></tr>
+              <tr><td><strong>Language Migration</strong></td><td>300M tokens</td><td>35M tokens</td><td><span class="savings-highlight">88%</span></td></tr>
+            </tbody>
+          </table>
+          <p class="table-note">Token estimates based on production application analysis. AI-agentic figures assume full Claude Opus workflow across development, testing, and iteration cycles.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="inner-section container">
+    <div class="content-grid">
+      <div class="prose">
+        <h2>How It Works</h2>
+        <p>The key insight: most code is deterministic and repetitive. Rather than asking an AI to generate the same patterns repeatedly, MDD captures those patterns once in compact model definitions, then generates code locally with zero AI tokens.</p>
+        <p><strong>The math:</strong></p>
+        <ul>
+          <li>764 lines of model definition</li>
+          <li>127,575 lines of generated code</li>
+          <li><strong>50:1 code generation ratio</strong></li>
+          <li>Code generation runs locally with ZERO AI tokens</li>
+          <li>Developers only use AI tokens for: model refinement + custom business logic</li>
+        </ul>
+        <p>This is why CRUD apps see 97.5% token reduction — the vast majority of lines are generated from models. Complex apps still achieve 77% reduction because custom business logic still requires some AI thought, but the base is generated, not invented.</p>
+      </div>
+      <div class="fade-in">
+        <div class="pipeline-viz">
+          <div class="pipeline-stage">
+            <div class="stage-label">Model Definition</div>
+            <div class="stage-code">764 LOC</div>
+          </div>
+          <div class="pipeline-arrow">→</div>
+          <div class="pipeline-stage highlight">
+            <div class="stage-label">Code Generator</div>
+            <div class="stage-code">0 AI Tokens</div>
+          </div>
+          <div class="pipeline-arrow">→</div>
+          <div class="pipeline-stage">
+            <div class="stage-label">Generated Code</div>
+            <div class="stage-code">127K LOC</div>
+          </div>
+          <div class="pipeline-arrow">→</div>
+          <div class="pipeline-stage">
+            <div class="stage-label">+ Custom Logic</div>
+            <div class="stage-code">2.5K LOC</div>
+          </div>
+          <div class="pipeline-arrow">→</div>
+          <div class="pipeline-stage complete">
+            <div class="stage-label">Complete App</div>
+            <div class="stage-code">130K LOC</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="inner-section alt-bg">
+    <div class="container">
+      <div class="content-grid">
+        <div class="prose">
+          <h2>Enterprise Scale Impact</h2>
+          <p>At scale, the token savings compound dramatically. Consider a 100-person engineering organization building enterprise applications over three years.</p>
+          <table class="data-table">
+            <thead>
+              <tr><th>Timeline</th><th>AI-Agentic (100 devs)</th><th>Empower MDD</th><th>Annual Savings</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Year 1</strong></td><td>$400K</td><td>$92K</td><td>$308K</td></tr>
+              <tr><td><strong>Year 2</strong> (price spike)</td><td>$1.2M</td><td>$280K</td><td>$920K</td></tr>
+              <tr><td><strong>Year 3</strong></td><td>$2.4M</td><td>$550K</td><td>$1.85M</td></tr>
+              <tr class="total-row"><td><strong>3-Year Total</strong></td><td><strong>$4.0M</strong></td><td><strong>$922K</strong></td><td><strong>$3.08M</strong></td></tr>
+            </tbody>
+          </table>
+          <p class="table-note"><strong>Why the exponential growth?</strong> Pure agentic systems compound the problem — single AI workflows consuming more tokens in an hour than a human developer uses in a month. As application complexity grows and inference prices spike (expected 2-3x), the cost differential becomes untenable. MDD decouples cost from complexity.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="inner-section container">
+    <div class="content-grid">
+      <div class="prose">
+        <h2>The Evolution Advantage</h2>
+        <p>The token savings don't just apply to initial development — they compound over the application lifecycle. Framework upgrades, dependency updates, and technology migrations that would normally require full rewrites become efficient regeneration events.</p>
+        <p><strong>Framework Upgrade Example:</strong> Changing a web framework means updating 120 templates and generator rules. All downstream code regenerates automatically. Cost: 25M tokens. The agentic equivalent: rewriting the entire application by hand with AI assistance. Cost: 150M tokens.</p>
+        <p><strong>Technology Migration Example:</strong> Moving from one database or language to another normally requires rewriting thousands of lines. With MDD, you write a new generator plugin and regenerate. All business logic stays the same. Cost: 35M tokens vs. 300M tokens for full agentic rewrite.</p>
+        <p><strong>The architecture:</strong> 17 parallel generators across the stack (database, API, UI, services, testing). Each evolution means updating 1-2 generators, not the entire application. This is why mature Empower applications save 80-90% tokens per evolution compared to starting from scratch with agentic development.</p>
+      </div>
+      <div class="fade-in">
+        <div class="evolution-grid">
+          <div class="evolution-item">
+            <div class="evolution-icon">🔄</div>
+            <div class="evolution-title">Framework Change</div>
+            <div class="evolution-detail">Update templates → Regenerate → 83% savings</div>
+          </div>
+          <div class="evolution-item">
+            <div class="evolution-icon">🗄️</div>
+            <div class="evolution-title">Database Migration</div>
+            <div class="evolution-detail">New generator plugin → Regenerate → 88% savings</div>
+          </div>
+          <div class="evolution-item">
+            <div class="evolution-icon">🔌</div>
+            <div class="evolution-title">System Integration</div>
+            <div class="evolution-detail">New connector → Regenerate → 85% savings</div>
+          </div>
+          <div class="evolution-item">
+            <div class="evolution-icon">🎯</div>
+            <div class="evolution-title">Language Change</div>
+            <div class="evolution-detail">New target runtime → Regenerate → 88% savings</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="inner-section alt-bg">
+    <div class="container">
+      <div class="content-grid">
+        <div class="prose">
+          <h2>The Compute Crisis Context</h2>
+          <p>These token efficiency gains matter more today than ever. The AI compute landscape is entering a critical constraint period:</p>
+          <ul>
+            <li><strong>Supply constrained through 2028</strong> — Hyperscalers are building compute capacity, but demand is growing faster than supply</li>
+            <li><strong>Memory costs spiking 40-60%</strong> — HBM (high-bandwidth memory) for GPUs is supply-limited and expensive</li>
+            <li><strong>Hyperscalers hoarding compute</strong> — The largest cloud providers are reserving capacity for their own inference workloads</li>
+            <li><strong>Enterprise inference costs expected to 2-3x</strong> — As supply tightens and demand grows, pricing will follow</li>
+          </ul>
+          <p>In this environment, pure agentic development becomes prohibitively expensive at scale. MDD is the strategic response — building enterprise software with 77-97% fewer AI tokens means enterprises can scale without being held hostage by inference costs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <SectionCTA
+    secondaryText="Get Your Assessment"
+    secondaryHref="/contact/"
+  />
+</InnerPageLayout>
+
+<style>
+  .stat-highlight {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-8);
+    border: 1px solid rgba(50, 69, 255, 0.2);
+    border-radius: var(--radius-lg);
+    background: linear-gradient(135deg, rgba(50, 69, 255, 0.08) 0%, rgba(188, 82, 238, 0.08) 100%);
+  }
+
+  .stat-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2);
+    text-align: center;
+  }
+
+  .stat-label {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .stat-value {
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    font-weight: var(--font-weight-bold);
+    line-height: 1;
+  }
+
+  .stat-subtext {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+  }
+
+  .table-note {
+    margin-top: var(--space-4);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    font-style: italic;
+  }
+
+  .savings-highlight {
+    display: inline-block;
+    padding: var(--space-1) var(--space-2);
+    background: rgba(50, 69, 255, 0.15);
+    border-radius: var(--radius-sm);
+    color: #6b8aff;
+    font-weight: var(--font-weight-semibold);
+  }
+
+  .pipeline-viz {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    padding: var(--space-6);
+    border: 1px solid rgba(50, 69, 255, 0.2);
+    border-radius: var(--radius-lg);
+    background: rgba(50, 69, 255, 0.03);
+  }
+
+  .pipeline-stage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-4);
+    border-radius: var(--radius-md);
+    background: rgba(18, 19, 31, 0.5);
+    border: 1px solid rgba(188, 82, 238, 0.15);
+  }
+
+  .pipeline-stage.highlight {
+    background: rgba(50, 69, 255, 0.1);
+    border-color: rgba(50, 69, 255, 0.3);
+  }
+
+  .pipeline-stage.complete {
+    background: rgba(188, 82, 238, 0.1);
+    border-color: rgba(188, 82, 238, 0.3);
+  }
+
+  .stage-label {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .stage-code {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text);
+    font-family: 'Monaco', 'Menlo', monospace;
+  }
+
+  .pipeline-arrow {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-secondary);
+    opacity: 0.5;
+  }
+
+  .evolution-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-4);
+  }
+
+  .evolution-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-4);
+    border-radius: var(--radius-lg);
+    background: rgba(18, 19, 31, 0.5);
+    border: 1px solid rgba(188, 82, 238, 0.15);
+    text-align: center;
+  }
+
+  .evolution-icon {
+    font-size: 2rem;
+  }
+
+  .evolution-title {
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text);
+    font-size: var(--font-size-sm);
+  }
+
+  .evolution-detail {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-secondary);
+  }
+
+  .total-row {
+    border-top: 2px solid rgba(50, 69, 255, 0.3);
+    background: rgba(50, 69, 255, 0.05);
+  }
+
+  .total-row td {
+    font-weight: var(--font-weight-semibold);
+  }
+</style>
