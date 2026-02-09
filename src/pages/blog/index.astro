@@ -108,8 +108,7 @@ const sortedTags = Array.from(tagCounts.entries())
   }
 
   .tag-filter-bar.collapsed {
-    /* 3 rows: ~3 * (button height ~34px + gap 8px) */
-    max-height: 120px;
+    max-height: var(--tag-bar-collapsed-height, 120px);
   }
 
   .tag-expand-btn {
@@ -449,17 +448,36 @@ const sortedTags = Array.from(tagCounts.entries())
     if (!bar || !btn) return;
 
     const label = btn.querySelector('.tag-expand-label');
+    const buttons = bar.querySelectorAll<HTMLElement>('.tag-filter-btn');
 
-    // Check if content overflows 3 rows (~120px)
-    const collapsedMax = 120;
+    // Measure actual height of exactly 3 rows from rendered button positions
+    function calcCollapsedHeight(): number {
+      const barTop = bar!.getBoundingClientRect().top;
+      const rows: number[] = [];
+      buttons.forEach(b => {
+        const top = Math.round(b.getBoundingClientRect().top - barTop);
+        if (rows.indexOf(top) === -1) rows.push(top);
+      });
+      rows.sort((a, b) => a - b);
+      if (rows.length <= 3) return bar!.scrollHeight;
+      // Bottom of 3rd row = top of 4th row
+      return rows[3];
+    }
+
+    // Temporarily remove collapse to measure natural height
+    bar.classList.remove('collapsed');
+    bar.style.maxHeight = 'none';
     const naturalHeight = bar.scrollHeight;
+    const collapsedMax = calcCollapsedHeight();
+    bar.style.maxHeight = '';
 
     if (naturalHeight <= collapsedMax) {
       btn.classList.add('hidden');
       return;
     }
 
-    // Start collapsed
+    // Apply measured height and start collapsed
+    bar.style.setProperty('--tag-bar-collapsed-height', collapsedMax + 'px');
     bar.classList.add('collapsed');
 
     btn.addEventListener('click', () => {
