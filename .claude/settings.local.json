@@ -17,7 +17,8 @@
       "Bash(python3:*)",
       "WebFetch(domain:empowertech.ai)",
       "Bash(xargs:*)",
-      "Bash(/opt/homebrew/bin/cwebp:*)"
+      "Bash(/opt/homebrew/bin/cwebp:*)",
+      "Bash(brew list:*)"
     ],
     "additionalDirectories": [
       "/Users/ocohen/git/empowertech-website/src/pages"
