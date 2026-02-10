@@ -137,57 +137,55 @@ import SectionCTA from '../../components/SectionCTA.astro';
   </section>
 
   <!-- Section 2: Skills — The Talent Inversion -->
-  <section class="inner-section alt-bg">
-    <div class="container">
-      <div class="content-grid">
-        <div class="prose">
-          <h2>Skills: The Talent Inversion</h2>
-          <p>Agentic coding demands a <em>superset</em> of traditional development skills. You need engineers who understand architecture, frameworks, security, testing, deployment — <strong>and</strong> can prompt effectively, review AI-generated code critically, and debug non-deterministic output. It's harder than regular development, not easier.</p>
-          <p>ASE inverts the skill profile entirely:</p>
-          <div class="role-cards">
-            <div class="role-card">
-              <h3>Domain Modelers</h3>
-              <p>DDD, data modeling, API design thinking. <strong>20-30 hour ramp.</strong> A business analyst with domain knowledge can get here faster than a junior developer.</p>
-            </div>
-            <div class="role-card">
-              <h3>Generator Engineers</h3>
-              <p>Small, specialized team maintaining code generators. Deep framework expertise, <strong>amortized across the entire organization.</strong></p>
-            </div>
-            <div class="role-card">
-              <h3>Delegate Developers</h3>
-              <p>Write custom business logic in the <code>src/main</code> layer. Traditional coding, but <strong>scoped to the interesting parts.</strong></p>
-            </div>
+  <section class="inner-section container">
+    <div class="content-grid">
+      <div class="prose">
+        <h2>Skills: The Talent Inversion</h2>
+        <p>Agentic coding demands a <em>superset</em> of traditional development skills. You need engineers who understand architecture, frameworks, security, testing, deployment — <strong>and</strong> can prompt effectively, review AI-generated code critically, and debug non-deterministic output. It's harder than regular development, not easier.</p>
+        <p>ASE inverts the skill profile entirely:</p>
+        <div class="role-cards">
+          <div class="role-card">
+            <h3>Domain Modelers</h3>
+            <p>DDD, data modeling, API design thinking. <strong>20-30 hour ramp.</strong> A business analyst with domain knowledge can get here faster than a junior developer.</p>
           </div>
-          <p>The CTO implication: ASE makes your talent pool wider and your specialization sharper. Agentic coding makes an already-scarce skill set even scarcer.</p>
+          <div class="role-card">
+            <h3>Generator Engineers</h3>
+            <p>Small, specialized team maintaining code generators. Deep framework expertise, <strong>amortized across the entire organization.</strong></p>
+          </div>
+          <div class="role-card">
+            <h3>Delegate Developers</h3>
+            <p>Write custom business logic in the <code>src/main</code> layer. Traditional coding, but <strong>scoped to the interesting parts.</strong></p>
+          </div>
         </div>
-        <div class="fade-in">
-          <div class="skills-comparison">
-            <div class="skills-bar">
-              <div class="skills-header">Agentic Coding: Required Skills</div>
-              <div class="skill-items all-required">
-                <span>Architecture</span>
-                <span>Frameworks</span>
-                <span>Security</span>
-                <span>Testing</span>
-                <span>DevOps</span>
-                <span>Prompt Eng.</span>
-                <span>Code Review</span>
-                <span>AI Debugging</span>
-              </div>
-              <div class="skills-note">Every developer needs all of these</div>
+        <p>The CTO implication: ASE makes your talent pool wider and your specialization sharper. Agentic coding makes an already-scarce skill set even scarcer.</p>
+      </div>
+      <div class="fade-in">
+        <div class="skills-comparison">
+          <div class="skills-bar">
+            <div class="skills-header">Agentic Coding: Required Skills</div>
+            <div class="skill-items all-required">
+              <span>Architecture</span>
+              <span>Frameworks</span>
+              <span>Security</span>
+              <span>Testing</span>
+              <span>DevOps</span>
+              <span>Prompt Eng.</span>
+              <span>Code Review</span>
+              <span>AI Debugging</span>
             </div>
-            <div class="skills-bar">
-              <div class="skills-header ase-header">ASE: Distributed Skills</div>
-              <div class="skill-items distributed">
-                <span class="modeler">DDD</span>
-                <span class="modeler">Data Modeling</span>
-                <span class="modeler">API Design</span>
-                <span class="generator">Frameworks</span>
-                <span class="generator">Templates</span>
-                <span class="delegate">Business Logic</span>
-              </div>
-              <div class="skills-note">Separated across specialized roles</div>
+            <div class="skills-note">Every developer needs all of these</div>
+          </div>
+          <div class="skills-bar">
+            <div class="skills-header ase-header">ASE: Distributed Skills</div>
+            <div class="skill-items distributed">
+              <span class="modeler">DDD</span>
+              <span class="modeler">Data Modeling</span>
+              <span class="modeler">API Design</span>
+              <span class="generator">Frameworks</span>
+              <span class="generator">Templates</span>
+              <span class="delegate">Business Logic</span>
             </div>
+            <div class="skills-note">Separated across specialized roles</div>
           </div>
         </div>
       </div>
@@ -195,27 +193,29 @@ import SectionCTA from '../../components/SectionCTA.astro';
   </section>
 
   <!-- Section 3: Abstraction -->
-  <section class="inner-section container">
-    <div class="content-grid">
-      <div class="prose">
-        <h2>Abstraction: From Code to Meaning</h2>
-        <p>Software history is a story of rising abstraction. Assembly gave way to C. C gave way to Java. Each step removed a layer of accidental complexity.</p>
-        <p>But here's what most people miss about agentic coding: <strong>it didn't raise the abstraction level.</strong> It made the existing level faster. You're still operating in code — Java, TypeScript, Python. The AI writes it instead of you, but the artifacts, the bugs, the reviews, the mental model are all at the code level.</p>
-        <p>ASE makes the leap that agentic coding didn't. The analogy isn't Assembly-to-C (still imperative, just higher level). It's <strong>C-to-SQL</strong> — a shift from imperative to declarative. You stop saying <em>how</em>. You start saying <em>what</em>.</p>
-      </div>
-      <div class="fade-in">
-        <div class="abstraction-ladder">
-          <div class="ladder-rung top">
-            <div class="rung-label">Semantic</div>
-            <div class="rung-desc">ASE: "Order aggregate with state machine and payment saga"</div>
-          </div>
-          <div class="ladder-rung mid">
-            <div class="rung-label">Code</div>
-            <div class="rung-desc">Agentic: "Write a Spring Boot controller with @RequestMapping..."</div>
-          </div>
-          <div class="ladder-rung bottom">
-            <div class="rung-label">Infrastructure</div>
-            <div class="rung-desc">Manual: Makefiles, build scripts, deployment configs</div>
+  <section class="inner-section alt-bg">
+    <div class="container">
+      <div class="content-grid">
+        <div class="prose">
+          <h2>Abstraction: From Code to Meaning</h2>
+          <p>Software history is a story of rising abstraction. Assembly gave way to C. C gave way to Java. Each step removed a layer of accidental complexity.</p>
+          <p>But here's what most people miss about agentic coding: <strong>it didn't raise the abstraction level.</strong> It made the existing level faster. You're still operating in code — Java, TypeScript, Python. The AI writes it instead of you, but the artifacts, the bugs, the reviews, the mental model are all at the code level.</p>
+          <p>ASE makes the leap that agentic coding didn't. The analogy isn't Assembly-to-C (still imperative, just higher level). It's <strong>C-to-SQL</strong> — a shift from imperative to declarative. You stop saying <em>how</em>. You start saying <em>what</em>.</p>
+        </div>
+        <div class="fade-in">
+          <div class="abstraction-ladder">
+            <div class="ladder-rung top">
+              <div class="rung-label">Semantic</div>
+              <div class="rung-desc">ASE: "Order aggregate with state machine and payment saga"</div>
+            </div>
+            <div class="ladder-rung mid">
+              <div class="rung-label">Code</div>
+              <div class="rung-desc">Agentic: "Write a Spring Boot controller with @RequestMapping..."</div>
+            </div>
+            <div class="ladder-rung bottom">
+              <div class="rung-label">Infrastructure</div>
+              <div class="rung-desc">Manual: Makefiles, build scripts, deployment configs</div>
+            </div>
           </div>
         </div>
       </div>
@@ -223,11 +223,10 @@ import SectionCTA from '../../components/SectionCTA.astro';
   </section>
 
   <!-- Section 4: Business vs. Technology Focus -->
-  <section class="inner-section alt-bg">
-    <div class="container">
-      <div class="content-grid">
-        <div class="prose">
-          <h2>Business vs. Technology: Where Attention Goes</h2>
+  <section class="inner-section container">
+    <div class="content-grid">
+      <div class="prose">
+        <h2>Business vs. Technology: Where Attention Goes</h2>
           <p>With agentic coding, every conversation with the AI is fundamentally about technology. "Create a Spring Boot controller with these annotations." "Add React hooks for state management." "Wire up the gRPC service definition." The business intent is implicit, buried in prompt context that the AI may or may not preserve across interactions.</p>
           <p>With ASE, the .empower model <strong>is</strong> the business specification. When you declare an <code>OrderAggregate</code> with status transitions, event definitions, and saga orchestration, you're capturing business rules in a formal, version-controlled, human-readable artifact. Technology is invisible.</p>
           <p>This has a second-order effect that CTOs underestimate: <span class="gradient-text">the semantic specifications are the documentation.</span> They're the single source of truth for what the system does. New team members read the .empower models to understand the business domain — not thousands of lines of generated code.</p>
@@ -256,8 +255,9 @@ import SectionCTA from '../../components/SectionCTA.astro';
   </section>
 
   <!-- Section 5: Scalability — Three Axes -->
-  <section class="inner-section container">
-    <div class="content-grid">
+  <section class="inner-section alt-bg">
+    <div class="container">
+      <div class="content-grid">
       <div class="prose">
         <h2>Scalability: Three Axes</h2>
         <p>Scalability isn't one dimension. It's three, and they interact.</p>
@@ -310,15 +310,15 @@ import SectionCTA from '../../components/SectionCTA.astro';
           </div>
         </div>
       </div>
+      </div>
     </div>
   </section>
 
   <!-- Section 6: Determinism, Governance, Knowledge -->
-  <section class="inner-section alt-bg">
-    <div class="container">
-      <div class="content-grid">
-        <div class="prose">
-          <h2>What Else Changes</h2>
+  <section class="inner-section container">
+    <div class="content-grid">
+      <div class="prose">
+        <h2>What Else Changes</h2>
           <p>Beyond skills, abstraction, business focus, and scalability, three additional dimensions separate ASE from agentic coding — and for regulated enterprises, these may be the most important.</p>
 
           <div class="differentiator-cards">
@@ -358,8 +358,9 @@ import SectionCTA from '../../components/SectionCTA.astro';
   </section>
 
   <!-- Section 7: The Complete Comparison -->
-  <section class="inner-section container">
-    <div class="content-grid full-width">
+  <section class="inner-section alt-bg">
+    <div class="container">
+      <div class="content-grid full-width">
       <div class="prose">
         <h2>The Complete Comparison</h2>
         <p>Every dimension tells the same story: agentic coding optimizes within the existing paradigm. ASE changes the paradigm.</p>
@@ -425,13 +426,13 @@ import SectionCTA from '../../components/SectionCTA.astro';
           </tbody>
         </table>
       </div>
+      </div>
     </div>
   </section>
 
   <!-- Section 8: Economics Link -->
-  <section class="inner-section alt-bg">
-    <div class="container">
-      <div class="content-grid">
+  <section class="inner-section container">
+    <div class="content-grid">
         <div class="prose">
           <h2>The Economics Follow the Paradigm</h2>
           <p>When you operate at a higher abstraction level, the economic advantages aren't accidental — they're structural. Every dimension of ASE's paradigm advantage maps to a measurable token reduction:</p>
@@ -462,10 +463,10 @@ import SectionCTA from '../../components/SectionCTA.astro';
           </div>
         </div>
       </div>
-    </div>
   </section>
 
   <SectionCTA secondaryText="See the Paradigm in Action" secondaryHref="/contact/" />
+
 </InnerPageLayout>
 
 <style>
