@@ -316,43 +316,38 @@ import SectionCTA from '../../components/SectionCTA.astro';
 
   <!-- Section 6: Determinism, Governance, Knowledge -->
   <section class="inner-section container">
-    <div class="content-grid">
-      <div class="prose">
-        <h2>What Else Changes</h2>
-          <p>Beyond skills, abstraction, business focus, and scalability, three additional dimensions separate ASE from agentic coding — and for regulated enterprises, these may be the most important.</p>
+    <h2>What Else Changes</h2>
+    <p class="section-intro">Beyond skills, abstraction, business focus, and scalability, five additional dimensions separate ASE from agentic coding — and for regulated enterprises, these may be the most important.</p>
 
-          <div class="differentiator-cards">
-            <div class="diff-card">
-              <div class="diff-icon">&#9670;</div>
-              <h3>Determinism</h3>
-              <p>ASE generates the same code from the same spec, every time. Agentic coding is probabilistic — same prompt, different code each run. For SOC2, HIPAA, or any regulated context, deterministic reproducibility isn't optional.</p>
-            </div>
+    <div class="differentiator-cards">
+      <div class="diff-card fade-in">
+        <div class="diff-icon">&#9670;</div>
+        <h3>Determinism</h3>
+        <p>ASE generates the same code from the same spec, every time. Agentic coding is probabilistic — same prompt, different code each run. For SOC2, HIPAA, or any regulated context, deterministic reproducibility isn't optional.</p>
+      </div>
 
-            <div class="diff-card">
-              <div class="diff-icon">&#9670;</div>
-              <h3>Governance &amp; Traceability</h3>
-              <p>Every line of ASE-generated code traces back to a specific semantic rule. Complete audit chain: spec &rarr; generator template &rarr; generated artifact &rarr; runtime behavior. Agentic coding has no such chain — the provenance of each line is a probability distribution.</p>
-            </div>
+      <div class="diff-card fade-in">
+        <div class="diff-icon">&#9670;</div>
+        <h3>Governance &amp; Traceability</h3>
+        <p>Every line of ASE-generated code traces back to a specific semantic rule. Complete audit chain: spec &rarr; generator template &rarr; generated artifact &rarr; runtime behavior. Agentic coding has no such chain — the provenance of each line is a probability distribution.</p>
+      </div>
 
-            <div class="diff-card">
-              <div class="diff-icon">&#9670;</div>
-              <h3>Knowledge Capture</h3>
-              <p>.empower models are formal, version-controlled business specifications that survive developer turnover. They <em>are</em> the organizational memory. Agentic prompts are ephemeral — lost in chat sessions, scattered across machines, impossible to audit. When your senior dev leaves, what leaves with them?</p>
-            </div>
+      <div class="diff-card fade-in">
+        <div class="diff-icon">&#9670;</div>
+        <h3>Knowledge Capture</h3>
+        <p>Empower DSL definitions are formal, version-controlled business specifications that survive developer turnover. They <em>are</em> the organizational memory. Agentic prompts are ephemeral — lost in chat sessions, scattered across machines, impossible to audit. When your senior dev leaves, what leaves with them?</p>
+      </div>
 
-            <div class="diff-card">
-              <div class="diff-icon">&#9670;</div>
-              <h3>Technology Independence</h3>
-              <p>Semantic specs are tech-agnostic. Swap Spring Boot for Quarkus by writing a new generator plugin — existing specs don't change. Add a Rust backend: new generator, zero model changes. Agentic code is bound to whatever stack the AI was told to use.</p>
-            </div>
+      <div class="diff-card fade-in">
+        <div class="diff-icon">&#9670;</div>
+        <h3>Technology Independence</h3>
+        <p>Semantic specs are tech-agnostic. Swap Spring Boot for Quarkus by writing a new generator plugin — existing specs don't change. Add a Rust backend: new generator, zero model changes. Agentic code is bound to whatever stack the AI was told to use.</p>
+      </div>
 
-            <div class="diff-card">
-              <div class="diff-icon">&#9670;</div>
-              <h3>Correctness by Construction</h3>
-              <p>Generated code from battle-tested templates (91.8% test coverage on generators) doesn't have the class of bugs AI-generated code has: hallucinations, subtle architectural drift, inconsistent patterns across files. The generation process itself is tested.</p>
-            </div>
-          </div>
-        </div>
+      <div class="diff-card fade-in">
+        <div class="diff-icon">&#9670;</div>
+        <h3>Correctness by Construction</h3>
+        <p>Generated code from battle-tested templates (91.8% test coverage on generators) doesn't have the class of bugs AI-generated code has: hallucinations, subtle architectural drift, inconsistent patterns across files. The generation process itself is tested.</p>
       </div>
     </div>
   </section>
@@ -979,12 +974,20 @@ import SectionCTA from '../../components/SectionCTA.astro';
   .legend-agentic { color: #ff6b6b; }
   .legend-ase { color: #00e6b4; }
 
+  .section-intro {
+    color: var(--color-text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    max-width: 800px;
+    margin-bottom: 2rem;
+  }
+
   /* Differentiator cards */
   .differentiator-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
-    margin: 2rem 0;
+    margin: 1rem 0;
   }
 
   .diff-card {
