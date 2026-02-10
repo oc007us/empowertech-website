@@ -12,6 +12,63 @@ import SectionCTA from '../../components/SectionCTA.astro';
   heroImage="/images/pages/ase-paradigm/hero.png"
   ogImage="/images/pages/ase-paradigm/og.png"
 >
+  <!-- Section 0: The Bottom Line -->
+  <section class="inner-section container">
+    <div class="bottom-line-grid">
+      <div class="bottom-line-stat fade-in">
+        <div class="bl-number">1/5<span class="bl-unit">th</span></div>
+        <div class="bl-label">the time</div>
+      </div>
+      <div class="bottom-line-stat fade-in">
+        <div class="bl-number">1/5<span class="bl-unit">th</span></div>
+        <div class="bl-label">the people</div>
+      </div>
+      <div class="bottom-line-stat fade-in">
+        <div class="bl-number">1/5<span class="bl-unit">th</span></div>
+        <div class="bl-label">the tokens</div>
+      </div>
+    </div>
+    <p class="bottom-line-summary">From business goals to production code. That's the bottom line.</p>
+  </section>
+
+  <!-- Section 0.5: What This Looks Like -->
+  <section class="inner-section alt-bg">
+    <div class="container">
+      <div class="content-grid">
+        <div class="prose">
+          <h2>What This Looks Like</h2>
+          <p>Instead of telling an AI to write Spring Boot controllers and React components, you write a business specification: <em>"Order aggregate with status transitions, payment saga, and shipment tracking."</em></p>
+          <p>The Empower platform translates that specification into production code &mdash; deterministically, across every technology stack, consuming zero AI tokens.</p>
+        </div>
+        <div class="fade-in">
+          <div class="visual-placeholder abstraction-visual">
+            <div class="visual-content">
+              <div class="compression-demo">
+                <div class="compression-input">
+                  <div class="compression-label">Business specification</div>
+                  <div class="compression-metric">764 lines</div>
+                  <div class="compression-note">Domain meaning in .empower</div>
+                </div>
+                <div class="compression-arrow">&darr;</div>
+                <div class="compression-middle">
+                  <div class="compression-label">Empower Platform</div>
+                  <div class="compression-metric">17 Generators</div>
+                  <div class="compression-note">Deterministic &middot; Zero tokens</div>
+                </div>
+                <div class="compression-arrow">&darr;</div>
+                <div class="compression-output">
+                  <div class="compression-label">Production code</div>
+                  <div class="compression-metric">127,575 lines</div>
+                  <div class="compression-note">Java, TS, gRPC, GraphQL, Flutter, Dart</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Section 1: The Paradigm Shift -->
   <section class="inner-section container">
     <div class="content-grid">
@@ -37,6 +94,42 @@ import SectionCTA from '../../components/SectionCTA.astro';
             <div class="paradigm-label ase">ASE</div>
             <p class="paradigm-desc">Human specifies meaning, code is a side effect</p>
             <div class="paradigm-level">Abstraction: <strong>Semantics</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 1.5: Why You Need a Platform -->
+  <section class="inner-section alt-bg">
+    <div class="container">
+      <div class="content-grid">
+        <div class="prose">
+          <h2>Why You Can't Just Prompt Your Way There</h2>
+          <p>If the idea is "describe business intent and get code," why not just tell an LLM what you want? Because LLMs alone can't bridge the gap.</p>
+          <p>An LLM can generate <em>plausible</em> code from a prompt. But it can't guarantee that code is consistent, correct, reproducible, or aligned with a formal domain model. It doesn't know your business rules from last Tuesday's chat session. It can't regenerate the same output twice. It hallucinates patterns it was never trained on.</p>
+          <p>What's missing is a <strong>translation engine</strong> &mdash; a platform that turns structured business specifications into a formal domain model that deterministic generators can transform into production code. Every time. Across every stack. With complete traceability.</p>
+          <p>That's what Empower is: the semantic platform between your business intent and your production code. The .empower DSL gives AI a formal grammar &mdash; 156 semantic constructs &mdash; so that domain modelers express meaning with precision, and generators produce code with certainty. The AI still plays a role: it helps author and reason about specs, and it writes the custom delegate logic that requires genuine intelligence. But the heavy lifting &mdash; the 98% that's boilerplate &mdash; is deterministic, tested, and reproducible.</p>
+        </div>
+        <div class="fade-in">
+          <div class="platform-flow">
+            <div class="flow-step">
+              <div class="flow-icon">&#9998;</div>
+              <div class="flow-label">Business Intent</div>
+              <div class="flow-desc">Domain experts describe what the system should do</div>
+            </div>
+            <div class="flow-arrow">&rarr;</div>
+            <div class="flow-step highlight-step">
+              <div class="flow-icon">&#9670;</div>
+              <div class="flow-label">Empower Platform</div>
+              <div class="flow-desc">Formal DSL + semantic grammar + deterministic generators</div>
+            </div>
+            <div class="flow-arrow">&rarr;</div>
+            <div class="flow-step">
+              <div class="flow-icon">&#9654;</div>
+              <div class="flow-label">Production Code</div>
+              <div class="flow-desc">Consistent, traceable, reproducible &mdash; across every stack</div>
+            </div>
           </div>
         </div>
       </div>
@@ -108,8 +201,9 @@ import SectionCTA from '../../components/SectionCTA.astro';
         <h2>Abstraction: From Code to Meaning</h2>
         <p>Software history is a story of rising abstraction. Assembly gave way to C. C gave way to Java. Each step removed a layer of accidental complexity.</p>
         <p>But here's what most people miss about agentic coding: <strong>it didn't raise the abstraction level.</strong> It made the existing level faster. You're still operating in code — Java, TypeScript, Python. The AI writes it instead of you, but the artifacts, the bugs, the reviews, the mental model are all at the code level.</p>
-        <p>ASE makes the leap that agentic coding didn't. Your .empower specification declares 156 types of semantic constructs — aggregates, events, services, rules, contracts — expressed in domain language. The 17 code generators translate these into Java, TypeScript, gRPC, GraphQL, Flutter, Dart, and MongoDB simultaneously.</p>
-        <p>The analogy isn't Assembly-to-C (still imperative, just higher level). It's <strong>C-to-SQL</strong> — a shift from imperative to declarative. You stop saying <em>how</em>. You start saying <em>what</em>.</p>
+        <p>ASE makes the leap that agentic coding didn't. The analogy isn't Assembly-to-C (still imperative, just higher level). It's <strong>C-to-SQL</strong> — a shift from imperative to declarative. You stop saying <em>how</em>. You start saying <em>what</em>.</p>
+      </div>
+      <div class="fade-in">
         <div class="abstraction-ladder">
           <div class="ladder-rung top">
             <div class="rung-label">Semantic</div>
@@ -122,31 +216,6 @@ import SectionCTA from '../../components/SectionCTA.astro';
           <div class="ladder-rung bottom">
             <div class="rung-label">Infrastructure</div>
             <div class="rung-desc">Manual: Makefiles, build scripts, deployment configs</div>
-          </div>
-        </div>
-      </div>
-      <div class="fade-in">
-        <div class="visual-placeholder abstraction-visual">
-          <div class="visual-content">
-            <div class="compression-demo">
-              <div class="compression-input">
-                <div class="compression-label">.empower spec</div>
-                <div class="compression-metric">764 lines</div>
-                <div class="compression-note">Business meaning</div>
-              </div>
-              <div class="compression-arrow">&darr;</div>
-              <div class="compression-middle">
-                <div class="compression-label">17 Generators</div>
-                <div class="compression-metric">Zero tokens</div>
-                <div class="compression-note">Deterministic translation</div>
-              </div>
-              <div class="compression-arrow">&darr;</div>
-              <div class="compression-output">
-                <div class="compression-label">Production code</div>
-                <div class="compression-metric">127,575 lines</div>
-                <div class="compression-note">Java, TS, gRPC, GraphQL, Flutter, Dart</div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -400,6 +469,107 @@ import SectionCTA from '../../components/SectionCTA.astro';
 </InnerPageLayout>
 
 <style>
+  /* Bottom line stats */
+  .bottom-line-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    text-align: center;
+  }
+
+  .bottom-line-stat {
+    padding: 1.5rem;
+  }
+
+  .bl-number {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1;
+    background: linear-gradient(135deg, var(--color-accent-1), var(--color-accent-2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bl-unit {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .bl-label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    margin-top: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .bottom-line-summary {
+    text-align: center;
+    font-size: 1.15rem;
+    color: var(--color-text-secondary);
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  /* Platform flow diagram */
+  .platform-flow {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+
+  .flow-step {
+    flex: 1;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    background: var(--color-card);
+    border: 1px solid rgba(50, 69, 255, 0.2);
+    border-radius: 10px;
+  }
+
+  .flow-step.highlight-step {
+    background: linear-gradient(135deg, rgba(50, 69, 255, 0.12), rgba(188, 82, 238, 0.12));
+    border-color: rgba(50, 69, 255, 0.35);
+  }
+
+  .flow-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-accent-1);
+  }
+
+  .highlight-step .flow-icon {
+    background: linear-gradient(135deg, var(--color-accent-1), var(--color-accent-2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .flow-label {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--color-text);
+    margin-bottom: 0.35rem;
+  }
+
+  .flow-desc {
+    font-size: 0.8rem;
+    color: var(--color-text-secondary);
+    line-height: 1.4;
+  }
+
+  .flow-arrow {
+    color: var(--color-accent-1);
+    font-size: 1.25rem;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
   /* Paradigm comparison card */
   .paradigm-card {
     display: flex;
@@ -981,6 +1151,35 @@ import SectionCTA from '../../components/SectionCTA.astro';
   }
 
   @media (max-width: 768px) {
+    .bottom-line-grid {
+      gap: 1rem;
+    }
+
+    .bl-number {
+      font-size: 2.5rem;
+    }
+
+    .bl-unit {
+      font-size: 1.1rem;
+    }
+
+    .bl-label {
+      font-size: 0.85rem;
+    }
+
+    .bottom-line-summary {
+      font-size: 1rem;
+    }
+
+    .platform-flow {
+      flex-direction: column;
+      padding: 1rem 0;
+    }
+
+    .flow-arrow {
+      transform: rotate(90deg);
+    }
+
     .paradigm-card {
       flex-direction: column;
     }
