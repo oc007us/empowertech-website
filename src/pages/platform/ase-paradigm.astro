@@ -321,32 +321,32 @@ import SectionCTA from '../../components/SectionCTA.astro';
 
     <div class="differentiator-cards">
       <div class="diff-card fade-in">
-        <div class="diff-icon">&#9670;</div>
-        <h3>Determinism</h3>
+        <div class="diff-card-header"><span class="diff-icon">&#9670;</span>
+        <h3>Determinism</h3></div>
         <p>ASE generates the same code from the same spec, every time. Agentic coding is probabilistic — same prompt, different code each run. For SOC2, HIPAA, or any regulated context, deterministic reproducibility isn't optional.</p>
       </div>
 
       <div class="diff-card fade-in">
-        <div class="diff-icon">&#9670;</div>
-        <h3>Governance &amp; Traceability</h3>
+        <div class="diff-card-header"><span class="diff-icon">&#9670;</span>
+        <h3>Governance &amp; Traceability</h3></div>
         <p>Every line of ASE-generated code traces back to a specific semantic rule. Complete audit chain: spec &rarr; generator template &rarr; generated artifact &rarr; runtime behavior. Agentic coding has no such chain — the provenance of each line is a probability distribution.</p>
       </div>
 
       <div class="diff-card fade-in">
-        <div class="diff-icon">&#9670;</div>
-        <h3>Knowledge Capture</h3>
+        <div class="diff-card-header"><span class="diff-icon">&#9670;</span>
+        <h3>Knowledge Capture</h3></div>
         <p>Empower DSL definitions are formal, version-controlled business specifications that survive developer turnover. They <em>are</em> the organizational memory. Agentic prompts are ephemeral — lost in chat sessions, scattered across machines, impossible to audit. When your senior dev leaves, what leaves with them?</p>
       </div>
 
       <div class="diff-card fade-in">
-        <div class="diff-icon">&#9670;</div>
-        <h3>Technology Independence</h3>
+        <div class="diff-card-header"><span class="diff-icon">&#9670;</span>
+        <h3>Technology Independence</h3></div>
         <p>Semantic specs are tech-agnostic. Swap Spring Boot for Quarkus by writing a new generator plugin — existing specs don't change. Add a Rust backend: new generator, zero model changes. Agentic code is bound to whatever stack the AI was told to use.</p>
       </div>
 
       <div class="diff-card fade-in">
-        <div class="diff-icon">&#9670;</div>
-        <h3>Correctness by Construction</h3>
+        <div class="diff-card-header"><span class="diff-icon">&#9670;</span>
+        <h3>Correctness by Construction</h3></div>
         <p>Generated code from battle-tested templates (91.8% test coverage on generators) doesn't have the class of bugs AI-generated code has: hallucinations, subtle architectural drift, inconsistent patterns across files. The generation process itself is tested.</p>
       </div>
     </div>
@@ -997,14 +997,21 @@ import SectionCTA from '../../components/SectionCTA.astro';
     border: 1px solid rgba(50, 69, 255, 0.2);
   }
 
-  .diff-icon {
-    color: var(--color-accent-1);
-    font-size: 1.25rem;
+  .diff-card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
     margin-bottom: 0.75rem;
   }
 
+  .diff-icon {
+    color: var(--color-accent-1);
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+
   .diff-card h3 {
-    margin: 0 0 0.75rem 0;
+    margin: 0;
     color: var(--color-text);
     font-size: 1.05rem;
   }
