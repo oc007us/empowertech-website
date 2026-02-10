@@ -19,7 +19,8 @@
       "Bash(xargs:*)",
       "Bash(/opt/homebrew/bin/cwebp:*)",
       "Bash(brew list:*)",
-      "Bash(__NEW_LINE_ce9bfd30df245591__ magick /tmp/enpraxis-v2-clean-trimmed.png -resize 500x /tmp/enpraxis-v2-clean-500.png)"
+      "Bash(__NEW_LINE_ce9bfd30df245591__ magick /tmp/enpraxis-v2-clean-trimmed.png -resize 500x /tmp/enpraxis-v2-clean-500.png)",
+      "Bash(git status:*)"
     ],
     "additionalDirectories": [
       "/Users/ocohen/git/empowertech-website/src/pages"
