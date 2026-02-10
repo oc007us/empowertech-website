@@ -103,26 +103,22 @@ import SectionCTA from '../components/SectionCTA.astro';
 
       <div class="principle-cards">
         <div class="principle-card fade-in">
-          <div class="principle-icon">&#9670;</div>
-          <h3>Embodied Action</h3>
+          <div class="principle-header"><span class="principle-icon">&#9670;</span><h3>Embodied Action</h3></div>
           <p>Intelligence that doesn't act is incomplete. Every capability we build is measured by what it enables people and systems to <em>do</em> &mdash; not what it can discuss.</p>
         </div>
 
         <div class="principle-card fade-in">
-          <div class="principle-icon">&#9670;</div>
-          <h3>Epistemic Trust</h3>
+          <div class="principle-header"><span class="principle-icon">&#9670;</span><h3>Epistemic Trust</h3></div>
           <p>If a system can't explain how it reached a conclusion, it shouldn't be making decisions. We build AI with justified beliefs &mdash; grounded in formal semantics, traceable through every layer.</p>
         </div>
 
         <div class="principle-card fade-in">
-          <div class="principle-icon">&#9670;</div>
-          <h3>Semantic Grounding</h3>
+          <div class="principle-header"><span class="principle-icon">&#9670;</span><h3>Semantic Grounding</h3></div>
           <p>Meaning isn't a prompt. It's a formal, version-controlled specification that machines can reason about and humans can review. We ground every action in domain semantics, not statistical patterns.</p>
         </div>
 
         <div class="principle-card fade-in">
-          <div class="principle-icon">&#9670;</div>
-          <h3>Purposeful Autonomy</h3>
+          <div class="principle-header"><span class="principle-icon">&#9670;</span><h3>Purposeful Autonomy</h3></div>
           <p>Autonomy without governance is chaos. We give agents the ability to act independently &mdash; within policy boundaries that humans define, audit, and evolve. Self-mastery, not self-direction.</p>
         </div>
       </div>
@@ -366,14 +362,21 @@ import SectionCTA from '../components/SectionCTA.astro';
     border: 1px solid rgba(50, 69, 255, 0.2);
   }
 
-  .principle-icon {
-    color: var(--color-accent-1);
-    font-size: 1.1rem;
+  .principle-header {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
     margin-bottom: 0.75rem;
   }
 
+  .principle-icon {
+    color: var(--color-accent-1);
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+
   .principle-card h3 {
-    margin: 0 0 0.75rem 0;
+    margin: 0;
     color: var(--color-text);
     font-size: 1.05rem;
   }
