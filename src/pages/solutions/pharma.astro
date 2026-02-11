@@ -17,22 +17,20 @@ import slide06 from '../../assets/images/platform-slides/06_governance_provenanc
 >
 
   <section class="inner-section container">
-    <div class="content-grid">
-      <div class="prose">
-        <h2>FDA Clinical Decision Support Alignment</h2>
-        <p>
-          Empower AI includes a productized Clinical CDS Mode designed for alignment with the FDA's Clinical Decision Support software guidance. CDS Mode exemplifies how governed agentic orchestration — decision traces, basis packages, policy gates, and safe write-backs — applies specifically to clinical pharma.
-        </p>
-        <h3>CDS Lane Classifier</h3>
-        <p>Automatically classifies each workflow as Non-Device or Device-lane based on input types and use case characteristics.</p>
-        <h3>Basis Package Generation</h3>
-        <p>Every recommendation is accompanied by a structured "glass-box" Basis Package containing patient-specific inputs, citations to evidence sources, plain-language logic summary, and model provenance.</p>
-        <h3>Decision Trace Capture</h3>
-        <p>The system records the full pragmatic trace: user question, clarification questions, resolved context, accept/modify/reject actions, approvals, and exception routing.</p>
-      </div>
-      <div class="fade-in">
+    <div class="prose single-column-feature">
+      <h2>FDA Clinical Decision Support Alignment</h2>
+      <div class="fade-in feature-image">
         <InvertedImage src={slide03} alt="Decision Trace Pipeline — Trigger, Context, Evidence, Policy, Approvals" />
       </div>
+      <p>
+        Empower AI includes a productized Clinical CDS Mode designed for alignment with the FDA's Clinical Decision Support software guidance. CDS Mode exemplifies how governed agentic orchestration — decision traces, basis packages, policy gates, and safe write-backs — applies specifically to clinical pharma.
+      </p>
+      <h3>CDS Lane Classifier</h3>
+      <p>Automatically classifies each workflow as Non-Device or Device-lane based on input types and use case characteristics.</p>
+      <h3>Basis Package Generation</h3>
+      <p>Every recommendation is accompanied by a structured "glass-box" Basis Package containing patient-specific inputs, citations to evidence sources, plain-language logic summary, and model provenance.</p>
+      <h3>Decision Trace Capture</h3>
+      <p>The system records the full pragmatic trace: user question, clarification questions, resolved context, accept/modify/reject actions, approvals, and exception routing.</p>
     </div>
   </section>
 
@@ -134,6 +132,15 @@ import slide06 from '../../assets/images/platform-slides/06_governance_provenanc
 </InnerPageLayout>
 
 <style>
+  .single-column-feature {
+    max-width: 800px;
+    margin-inline: auto;
+  }
+
+  .feature-image {
+    margin-bottom: var(--space-8);
+  }
+
   .pharma-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

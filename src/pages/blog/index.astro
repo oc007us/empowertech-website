@@ -33,20 +33,18 @@ const sortedTags = Array.from(tagCounts.entries())
 >
   <section class="tag-filter-section">
     <div class="container">
-      <div class="tag-filter-bar" id="tag-filter-bar">
-        <button class="tag-filter-btn active" data-tag="all">
-          All <span class="tag-count">{posts.length}</span>
-        </button>
-        {sortedTags.map(({ tag, count }) => (
-          <button class="tag-filter-btn" data-tag={tag}>
-            {tag} <span class="tag-count">{count}</span>
+      <div class="tag-scroll-wrapper" id="tag-scroll-wrapper">
+        <div class="tag-filter-bar" id="tag-filter-bar">
+          <button class="tag-filter-btn active" data-tag="all">
+            All <span class="tag-count">{posts.length}</span>
           </button>
-        ))}
+          {sortedTags.map(({ tag, count }) => (
+            <button class="tag-filter-btn" data-tag={tag}>
+              {tag} <span class="tag-count">{count}</span>
+            </button>
+          ))}
+        </div>
       </div>
-      <button class="tag-expand-btn" id="tag-expand-btn" aria-expanded="false">
-        <span class="tag-expand-label">Show more</span>
-        <svg class="tag-expand-icon" width="12" height="7" viewBox="0 0 12 7" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
     </div>
   </section>
 
@@ -96,50 +94,55 @@ const sortedTags = Array.from(tagCounts.entries())
     background: linear-gradient(to bottom, var(--color-bg) 85%, transparent);
   }
 
-  .tag-filter-bar {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-2);
-    justify-content: center;
+  .tag-scroll-wrapper {
+    position: relative;
     max-width: 860px;
     margin-inline: auto;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
   }
 
-  .tag-filter-bar.collapsed {
-    max-height: var(--tag-bar-collapsed-height, 120px);
+  .tag-scroll-wrapper::before,
+  .tag-scroll-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 40px;
+    z-index: 2;
+    pointer-events: none;
+    transition: opacity var(--transition-fast);
+    opacity: 0;
   }
 
-  .tag-expand-btn {
+  .tag-scroll-wrapper::before {
+    left: 0;
+    background: linear-gradient(to right, var(--color-bg), transparent);
+  }
+
+  .tag-scroll-wrapper::after {
+    right: 0;
+    background: linear-gradient(to left, var(--color-bg), transparent);
+  }
+
+  .tag-scroll-wrapper.can-scroll-left::before {
+    opacity: 1;
+  }
+
+  .tag-scroll-wrapper.can-scroll-right::after {
+    opacity: 1;
+  }
+
+  .tag-filter-bar {
     display: flex;
-    align-items: center;
-    gap: var(--space-1);
-    margin: var(--space-2) auto 0;
-    padding: var(--space-1) var(--space-3);
-    font-family: var(--font-family);
-    font-size: var(--font-size-xs);
-    font-weight: var(--font-weight-medium);
-    color: var(--color-text-muted);
-    background: none;
-    border: none;
-    cursor: pointer;
-    transition: color var(--transition-fast);
+    flex-wrap: nowrap;
+    gap: var(--space-2);
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-block: var(--space-1);
   }
 
-  .tag-expand-btn:hover {
-    color: var(--color-white);
-  }
-
-  .tag-expand-icon {
-    transition: transform 0.3s ease;
-  }
-
-  .tag-expand-btn[aria-expanded="true"] .tag-expand-icon {
-    transform: rotate(180deg);
-  }
-
-  .tag-expand-btn.hidden {
+  .tag-filter-bar::-webkit-scrollbar {
     display: none;
   }
 
@@ -154,9 +157,11 @@ const sortedTags = Array.from(tagCounts.entries())
     color: var(--color-text-secondary);
     background: var(--color-card);
     border: 1px solid var(--color-border);
-    border-radius: var(--radius-full);
+    border-radius: 9999px;
     cursor: pointer;
     transition: all var(--transition-base);
+    flex-shrink: 0;
+    white-space: nowrap;
   }
 
   .tag-filter-btn:hover {
@@ -182,7 +187,7 @@ const sortedTags = Array.from(tagCounts.entries())
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border-radius: var(--radius-full);
+    border-radius: 9999px;
     padding-inline: 4px;
     transition: all var(--transition-fast);
   }
@@ -333,10 +338,6 @@ const sortedTags = Array.from(tagCounts.entries())
       padding-bottom: 0;
     }
 
-    .tag-filter-bar {
-      justify-content: flex-start;
-    }
-
     .tag-filter-btn {
       padding: var(--space-1) var(--space-3);
     }
@@ -441,60 +442,48 @@ const sortedTags = Array.from(tagCounts.entries())
 
   initBlogFiltering();
 
-  // Tag bar expand/collapse
-  function initTagExpand() {
+  // Tag bar horizontal scroll with fade indicators
+  function initTagScroll() {
+    const wrapper = document.getElementById('tag-scroll-wrapper');
     const bar = document.getElementById('tag-filter-bar');
-    const btn = document.getElementById('tag-expand-btn');
-    if (!bar || !btn) return;
+    if (!wrapper || !bar) return;
 
-    const label = btn.querySelector('.tag-expand-label');
-    const buttons = bar.querySelectorAll<HTMLElement>('.tag-filter-btn');
-
-    // Measure actual height of exactly 3 rows from rendered button positions
-    function calcCollapsedHeight(): number {
-      const barTop = bar!.getBoundingClientRect().top;
-      const rows: number[] = [];
-      buttons.forEach(b => {
-        const top = Math.round(b.getBoundingClientRect().top - barTop);
-        if (rows.indexOf(top) === -1) rows.push(top);
-      });
-      rows.sort((a, b) => a - b);
-      if (rows.length <= 3) return bar!.scrollHeight;
-      // Bottom of 3rd row = top of 4th row
-      return rows[3];
+    function updateFades() {
+      const { scrollLeft, scrollWidth, clientWidth } = bar!;
+      wrapper!.classList.toggle('can-scroll-left', scrollLeft > 2);
+      wrapper!.classList.toggle('can-scroll-right', scrollLeft + clientWidth < scrollWidth - 2);
     }
 
-    // Temporarily remove collapse to measure natural height
-    bar.classList.remove('collapsed');
-    bar.style.maxHeight = 'none';
-    const naturalHeight = bar.scrollHeight;
-    const collapsedMax = calcCollapsedHeight();
-    bar.style.maxHeight = '';
+    bar.addEventListener('scroll', updateFades, { passive: true });
 
-    if (naturalHeight <= collapsedMax) {
-      btn.classList.add('hidden');
-      return;
-    }
-
-    // Apply measured height and start collapsed
-    bar.style.setProperty('--tag-bar-collapsed-height', collapsedMax + 'px');
-    bar.classList.add('collapsed');
-
-    btn.addEventListener('click', () => {
-      const expanded = btn.getAttribute('aria-expanded') === 'true';
-      if (expanded) {
-        bar.classList.add('collapsed');
-        bar.style.maxHeight = '';
-        btn.setAttribute('aria-expanded', 'false');
-        if (label) label.textContent = 'Show more';
-      } else {
-        bar.classList.remove('collapsed');
-        bar.style.maxHeight = naturalHeight + 'px';
-        btn.setAttribute('aria-expanded', 'true');
-        if (label) label.textContent = 'Show less';
-      }
+    let resizeTimer: ReturnType<typeof setTimeout>;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(updateFades, 100);
     });
+
+    // Scroll active tag into view when selected
+    function scrollActiveIntoView() {
+      const active = bar!.querySelector('.tag-filter-btn.active') as HTMLElement | null;
+      if (active) {
+        active.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      }
+    }
+
+    bar.querySelectorAll<HTMLElement>('.tag-filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        requestAnimationFrame(scrollActiveIntoView);
+      });
+    });
+
+    // Initial state
+    updateFades();
+
+    // If page loaded with ?tag=..., scroll that tag into view
+    if (new URLSearchParams(window.location.search).get('tag')) {
+      requestAnimationFrame(scrollActiveIntoView);
+    }
   }
 
-  initTagExpand();
+  initTagScroll();
 </script>
