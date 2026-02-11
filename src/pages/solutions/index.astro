@@ -6,11 +6,12 @@ import SectionCTA from '../../components/SectionCTA.astro';
 const pharmaIcon = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v6.5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 .5-.5V2"/><path d="M9 2H5a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-4"/><path d="M12 12v6"/><path d="M9 15h6"/></svg>';
 const fieldIcon = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>';
 const healthIcon = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>';
+const financeIcon = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M3 10h18"/><path d="M5 6l7-3 7 3"/><path d="M4 10v11"/><path d="M20 10v11"/><path d="M8 14v4"/><path d="M12 14v4"/><path d="M16 14v4"/></svg>';
 ---
 
 <InnerPageLayout
   title="Solutions — EnPraxis AI"
-  description="Empower AI delivers governed, explainable AI solutions for regulated industries — from pharma to healthcare to field service."
+  description="Empower AI delivers governed, explainable AI solutions for regulated industries — from pharma to healthcare to field service to financial services."
   heroLabel="Solutions"
   heroTitle="AI Solutions for Regulated Industries"
   heroSubtitle="Empower AI applies the same governed agentic orchestration platform across verticals — delivering domain-specific intelligence with full explainability and compliance-readiness."
@@ -42,6 +43,12 @@ const healthIcon = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" 
         description="Regulated-ready AI for health plans, TPAs, and provider-sponsored systems — from claims automation to compliance intelligence to fraud detection."
         href="/solutions/healthcare/"
         icon={healthIcon}
+      />
+      <IndustryCard
+        title="Financial Services"
+        description="Epistemic AI for banks, insurers, wealth managers, and asset managers — governed data access, zero hallucination, explainable analytics, and regulatory-safe AI."
+        href="/solutions/financial-services/"
+        icon={financeIcon}
       />
     </div>
   </section>
@@ -84,7 +91,7 @@ const healthIcon = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" 
 <style>
   .solutions-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--space-6);
   }
 

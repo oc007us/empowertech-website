@@ -1,0 +1,138 @@
+---
+import InnerPageLayout from '../../layouts/InnerPageLayout.astro';
+import InvertedImage from '../../components/InvertedImage.astro';
+import SectionCTA from '../../components/SectionCTA.astro';
+import fsKnowledgeFabric from '../../assets/images/diagrams/GovernedIntelligenceForFinancialServices.png';
+import fsEpistemicEngine from '../../assets/images/diagrams/EmpowerAI-GovernedFinancialPlatforms.png';
+---
+
+<InnerPageLayout
+  title="Financial Services Solutions — EnPraxis AI"
+  description="Epistemic AI for banks, insurers, wealth managers, and asset managers — governed data access, zero hallucination, explainable analytics, and regulatory-safe AI."
+  heroLabel="Financial Services"
+  heroTitle="AI for Risk-Sensitive, Data-Intensive Financial Enterprises"
+  heroSubtitle="Financial institutions need AI that is safe, deterministic, provenance-aware, and explainable. Empower AI delivers the epistemic intelligence layer that makes governed AI adoption possible — without sacrificing compliance, auditability, or trust."
+  heroImage="/images/pages/financial-services/hero.png"
+  ogImage="/images/pages/financial-services/og.png"
+>
+
+  <section class="inner-section container">
+    <div class="content-grid">
+      <div class="prose">
+        <h2>What Empower AI Delivers</h2>
+        <h3>Trustworthy AI Over Enterprise Data</h3>
+        <p>Empower integrates with data warehouses, risk systems, core banking platforms, policy documents, regulatory rules, and customer service knowledge. It allows AI-driven intelligence without breaking governance, privacy, explainability, or compliance.</p>
+        <h3>Epistemic Reasoning: No Hallucination</h3>
+        <p>Every answer includes source citations, data lineage, business rules applied, regulatory constraints considered, and model provenance. Empower distinguishes validated financial facts from model-derived hypotheses and uncertain or incomplete information.</p>
+        <h3>Multi-Graph Knowledge Fabric</h3>
+        <p>Empower builds a three-graph epistemic model: a <strong>Domain Graph</strong> of validated entities (accounts, instruments, risk models, KPIs), a <strong>Subject Graph</strong> of LLM-extracted hypotheses (customer intents, fraud indicators, policy interpretations), and a <strong>Lexical Graph</strong> of immutable source-of-truth documents (regulatory filings, contracts, SOPs, disclosures).</p>
+        <h3>Regulatory Alignment</h3>
+        <p>Empower's epistemic architecture supports SEC, FINRA, SOX, OCC, CFPB, GDPR, and internal governance frameworks &mdash; delivering audit-traceable decision narratives across every interaction.</p>
+      </div>
+      <div class="fade-in">
+        <InvertedImage src={fsKnowledgeFabric} alt="Governed Intelligence for Financial Services — Multi-Graph Knowledge Fabric" />
+      </div>
+    </div>
+  </section>
+
+  <section class="inner-section alt-bg">
+    <div class="container prose">
+      <h2>The Challenge for Financial Institutions</h2>
+      <div class="challenge-grid">
+        <div class="card fade-in">
+          <h3>Heavy Regulation</h3>
+          <p>SEC, FINRA, OCC, CFPB, and SOX requirements constrain every technology deployment. Generic AI tools lack the governance infrastructure to operate safely in this environment.</p>
+        </div>
+        <div class="card fade-in">
+          <h3>Data Complexity at Scale</h3>
+          <p>Petabyte-scale warehouses, fragmented systems, and legacy platforms make cross-domain insights difficult. Traditional analytics require manual reconciliation across disconnected data models.</p>
+        </div>
+        <div class="card fade-in">
+          <h3>Legacy Modernization Pressure</h3>
+          <p>Banks and insurers must modernize without disrupting operations. Rip-and-replace is not an option &mdash; new AI capabilities must layer onto existing infrastructure.</p>
+        </div>
+        <div class="card fade-in">
+          <h3>Ungoverned AI Risk</h3>
+          <p>Hallucination-prone LLMs, opaque model behavior, and black-box automation create compliance exposure. Risk teams routinely block GenAI pilots that lack explainability and audit trails.</p>
+        </div>
+        <div class="card fade-in">
+          <h3>Metric Inconsistency</h3>
+          <p>KPI definitions vary across business units, teams, and tools. Slightly different definitions produce conflicting numbers &mdash; eroding executive trust and complicating regulatory reporting.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="inner-section container">
+    <div class="content-grid">
+      <div class="prose">
+        <h2>Priority Use Cases</h2>
+        <h3>Customer Service &amp; Contact Centers</h3>
+        <p>Intelligent case summarization, policy-accurate explanations, complaint interpretation with evidence-linked reasoning, and error-proofing of agent responses. <strong>Impact:</strong> Faster resolution, reduced escalations, improved CSAT.</p>
+        <h3>Wealth &amp; Advisory</h3>
+        <p>Explain investment recommendations using regulatory-compliant language. Map client questions to validated financial concepts. Ensure consistent definitions of risk scores, allocations, and product profiles. <strong>Impact:</strong> Advisor productivity + regulatory defensibility.</p>
+        <h3>Fraud Analysis &amp; Risk</h3>
+        <p>Detect contradictions, connect patterns across transactions and documents, and generate reasoning trails for suspicious activity. <strong>Impact:</strong> Reduced investigation time, improved risk insights.</p>
+        <h3>Insurance Claims</h3>
+        <p>Deterministic interpretation of coverage rules, evidence-linked reasoning for approvals and denials, and consistent application of policy language. <strong>Impact:</strong> Consistency, fairness, auditability.</p>
+        <h3>Lending &amp; Credit</h3>
+        <p>Interpret underwriting guidelines, translate credit decisions into explainable narratives, and validate model-driven decisions against policy constraints. <strong>Impact:</strong> Transparent, compliant decisioning.</p>
+        <h3>Governance &amp; Compliance</h3>
+        <p>Model Risk Management, documentation intelligence, compliance Q&amp;A, control adherence verification, and regulatory reporting workflows. <strong>Impact:</strong> Lower risk, fewer findings, faster audits.</p>
+        <h3>Analytics: Safe Semantic Layer</h3>
+        <p>Natural-language analytics that cannot bypass governance. Metric definitions resolved through the Domain Graph. SQL and BI explanations with full lineage. <strong>Impact:</strong> Safe self-service BI, reduced data engineering load.</p>
+      </div>
+      <div class="fade-in">
+        <InvertedImage src={fsEpistemicEngine} alt="Empower AI — Epistemic Intelligence Engine for Governed Financial Platforms" />
+      </div>
+    </div>
+  </section>
+
+  <section class="inner-section alt-bg">
+    <div class="container prose">
+      <h2>Expected Outcomes</h2>
+      <table class="data-table">
+        <thead>
+          <tr><th>Capability</th><th>Impact</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Governed AI Access to Data</strong></td><td>AI-driven analytics without bypassing governance, lineage, or regulatory constraints</td></tr>
+          <tr><td><strong>Zero Hallucination</strong></td><td>Every answer grounded in verified sources with full provenance and evidence trails</td></tr>
+          <tr><td><strong>Explainable Analytics</strong></td><td>Transparent reasoning that satisfies risk, compliance, and executive review</td></tr>
+          <tr><td><strong>Consistent KPI Definitions</strong></td><td>Single source-of-truth semantic layer eliminates metric confusion across business units</td></tr>
+          <tr><td><strong>Regulatory-Safe AI</strong></td><td>Architecture aligned with SEC, FINRA, SOX, OCC, CFPB, and GDPR requirements</td></tr>
+          <tr><td><strong>Policy-Accurate Responses</strong></td><td>Customer-facing and internal AI that applies policy language correctly and consistently</td></tr>
+          <tr><td><strong>Reduced Analyst Backlog</strong></td><td>Safe self-service analytics reduces dependency on central data teams</td></tr>
+          <tr><td><strong>Faster Audits</strong></td><td>Built-in audit trails and decision traces reduce preparation time and findings</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <SectionCTA
+    subtitle="See how Empower AI can transform your financial services operations."
+    secondaryText="View All Solutions"
+    secondaryHref="/solutions/"
+  />
+</InnerPageLayout>
+
+<style>
+  .challenge-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+    margin-top: var(--space-8);
+  }
+
+  .challenge-grid h3 {
+    margin-top: 0;
+  }
+
+  @media (max-width: 1024px) {
+    .challenge-grid {
+      grid-template-columns: 1fr;
+      max-width: 520px;
+      margin-inline: auto;
+    }
+  }
+</style>
