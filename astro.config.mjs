@@ -4,7 +4,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://empowertech.ai',
+  site: 'https://enpraxis.ai',
   outDir: './docs',
   trailingSlash: 'always',
   integrations: [sitemap()],

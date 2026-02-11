@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://empowertech.ai/sitemap-index.xml
+Sitemap: https://enpraxis.ai/sitemap-index.xml
