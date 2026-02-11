@@ -17,21 +17,19 @@ import fsEpistemicEngine from '../../assets/images/diagrams/EmpowerAI-GovernedFi
 >
 
   <section class="inner-section container">
-    <div class="content-grid">
-      <div class="prose">
-        <h2>What Empower AI Delivers</h2>
-        <h3>Trustworthy AI Over Enterprise Data</h3>
-        <p>Empower integrates with data warehouses, risk systems, core banking platforms, policy documents, regulatory rules, and customer service knowledge. It allows AI-driven intelligence without breaking governance, privacy, explainability, or compliance.</p>
-        <h3>Epistemic Reasoning: No Hallucination</h3>
-        <p>Every answer includes source citations, data lineage, business rules applied, regulatory constraints considered, and model provenance. Empower distinguishes validated financial facts from model-derived hypotheses and uncertain or incomplete information.</p>
-        <h3>Multi-Graph Knowledge Fabric</h3>
-        <p>Empower builds a three-graph epistemic model: a <strong>Domain Graph</strong> of validated entities (accounts, instruments, risk models, KPIs), a <strong>Subject Graph</strong> of LLM-extracted hypotheses (customer intents, fraud indicators, policy interpretations), and a <strong>Lexical Graph</strong> of immutable source-of-truth documents (regulatory filings, contracts, SOPs, disclosures).</p>
-        <h3>Regulatory Alignment</h3>
-        <p>Empower's epistemic architecture supports SEC, FINRA, SOX, OCC, CFPB, GDPR, and internal governance frameworks &mdash; delivering audit-traceable decision narratives across every interaction.</p>
-      </div>
-      <div class="fade-in">
+    <div class="prose single-column-feature">
+      <div class="fade-in feature-image">
         <InvertedImage src={fsKnowledgeFabric} alt="Governed Intelligence for Financial Services — Multi-Graph Knowledge Fabric" />
       </div>
+      <h2>What Empower AI Delivers</h2>
+      <h3>Trustworthy AI Over Enterprise Data</h3>
+      <p>Empower integrates with data warehouses, risk systems, core banking platforms, policy documents, regulatory rules, and customer service knowledge. It allows AI-driven intelligence without breaking governance, privacy, explainability, or compliance.</p>
+      <h3>Epistemic Reasoning: No Hallucination</h3>
+      <p>Every answer includes source citations, data lineage, business rules applied, regulatory constraints considered, and model provenance. Empower distinguishes validated financial facts from model-derived hypotheses and uncertain or incomplete information.</p>
+      <h3>Multi-Graph Knowledge Fabric</h3>
+      <p>Empower builds a three-graph epistemic model: a <strong>Domain Graph</strong> of validated entities (accounts, instruments, risk models, KPIs), a <strong>Subject Graph</strong> of LLM-extracted hypotheses (customer intents, fraud indicators, policy interpretations), and a <strong>Lexical Graph</strong> of immutable source-of-truth documents (regulatory filings, contracts, SOPs, disclosures).</p>
+      <h3>Regulatory Alignment</h3>
+      <p>Empower's epistemic architecture supports SEC, FINRA, SOX, OCC, CFPB, GDPR, and internal governance frameworks &mdash; delivering audit-traceable decision narratives across every interaction.</p>
     </div>
   </section>
 
@@ -117,6 +115,15 @@ import fsEpistemicEngine from '../../assets/images/diagrams/EmpowerAI-GovernedFi
 </InnerPageLayout>
 
 <style>
+  .single-column-feature {
+    max-width: 800px;
+    margin-inline: auto;
+  }
+
+  .feature-image {
+    margin-bottom: var(--space-8);
+  }
+
   .challenge-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
