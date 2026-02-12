@@ -35,7 +35,7 @@ Field engineers facing a complex diagnostic situation don't need more documents.
 
 **What's needed:** A unified knowledge fabric that ingests and structures content from every source — manuals, service logs, CRM notes, known-fix databases, engineering bulletins — and delivers contextually relevant answers to specific diagnostic questions in seconds.
 
-![End-to-end field service and support knowledge flow](/images/blog/life-sciences-field-service-bottlenecks/field-service-end-to-end.jpg)
+![End-to-end field service and support knowledge flow](/images/blog/life-sciences-field-service-bottlenecks/field-service-end-to-end.png)
 *How fragmented knowledge sources across the service organization connect into an end-to-end intelligence system.*
 
 ---
