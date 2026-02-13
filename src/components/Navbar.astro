@@ -186,6 +186,7 @@ const whoWeHelpLinks = [
     padding-top: 12px;
     opacity: 0;
     visibility: hidden;
+    pointer-events: none;
     transform: translateY(-4px);
     transition: all var(--transition-base);
     z-index: 100;
@@ -201,6 +202,7 @@ const whoWeHelpLinks = [
   .nav-dropdown:focus-within .dropdown-menu {
     opacity: 1;
     visibility: visible;
+    pointer-events: auto;
     transform: translateY(0);
   }
 
